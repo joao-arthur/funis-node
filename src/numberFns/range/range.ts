@@ -1,4 +1,4 @@
-export function range(min: number, max: number) {
+export function range(min: number, max: number): readonly number[] {
     const length = Math.max(max - min + 1, 0);
 
     return Array(length)
