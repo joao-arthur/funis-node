@@ -1,0 +1,1 @@
+export { replaceAccentuation } from './replaceAccentuation';
