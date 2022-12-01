@@ -1,9 +1,9 @@
 import { clamp } from './clamp';
-import { isNumberValid } from './isNumberValid';
+import { isValid } from './isValid';
 import { range } from './range';
 
 export const numberFns = {
     clamp,
-    isNumberValid,
+    isValid,
     range,
 } as const;
