@@ -1,0 +1,1 @@
+export { promiseFns } from './promiseFns';

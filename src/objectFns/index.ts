@@ -1,0 +1,1 @@
+export { objectFns } from './objectFns';
