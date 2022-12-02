@@ -1,4 +1,4 @@
-import { arrayFns } from '../../arrayFns/arrayFns';
+import { arrayFns } from '../../arrayFns';
 import { entries } from '../entries';
 
 type returnType<K, V> = {
