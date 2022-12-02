@@ -7,6 +7,7 @@ describe('parseSuffixed', () => {
         expect(parseSuffixed('0px', 'px')).toBe(0);
         expect(parseSuffixed('-1.53m/s', 'm/s')).toBe(-1.53);
         expect(parseSuffixed('1.4kº', 'kº')).toBe(1.4);
+        expect(parseSuffixed('74%', '%')).toBe(74);
     });
 
     it('should return undefined for wrong suffix', () => {
@@ -17,7 +18,7 @@ describe('parseSuffixed', () => {
 
     it('should return undefined for values with prefix', () => {
         expect(parseSuffixed('speed: -4px', 'px')).toBe(undefined);
-        expect(parseSuffixed(':2em', 'rem')).toBe(undefined);
+        expect(parseSuffixed(':2em', 'em')).toBe(undefined);
     });
 
 });

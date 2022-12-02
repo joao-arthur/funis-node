@@ -1,0 +1,1 @@
+export { parsePrefixed } from './parsePrefixed';
