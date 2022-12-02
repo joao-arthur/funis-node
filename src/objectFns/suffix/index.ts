@@ -1,0 +1,1 @@
+export { suffix } from './suffix';
