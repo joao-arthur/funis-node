@@ -1,0 +1,1 @@
+export { serializesToSame } from './serializesToSame';
