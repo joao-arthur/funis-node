@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import { plainObject } from '../../types/plainObject';
 import { serialize } from './serialize';
 
 describe('serialize', () => {
@@ -36,5 +37,17 @@ describe('serialize', () => {
         expect(serialize(object)).toEqual(
             '{ empty: , oneValue: 1, multiValue: true, false, zaphod, 42 }',
         );
+    });
+
+    it('should serialize class instances', () => {
+        class Dog {
+            constructor(private readonly name: string) { }
+
+            bark() {
+                return 'wolf! wolf!';
+            }
+        }
+
+        expect(serialize(new Dog('Rex') as unknown as plainObject)).toEqual('{ name: Rex }');
     });
 });
