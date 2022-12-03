@@ -1,6 +1,6 @@
 import { plainObject } from '../../types/plainObject';
 
-export function suffix(object: plainObject, suffixValue: string) {
+export function suffix<T>(object: plainObject<T>, suffixValue: string): plainObject<T> {
     return Object.fromEntries(
         Object
             .entries(object)

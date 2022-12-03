@@ -1,6 +1,6 @@
 import { plainObject } from '../../types/plainObject';
 
-export function prefix(object: plainObject, prefixValue: string) {
+export function prefix<T>(object: plainObject<T>, prefixValue: string): plainObject<T> {
     return Object.fromEntries(
         Object
             .entries(object)
