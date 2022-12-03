@@ -1,0 +1,1 @@
+export { resolveTimeout } from './resolveTimeout';
