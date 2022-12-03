@@ -15,10 +15,7 @@ The aim of this library is to be a helper for modern day js, instead of a `polyf
 
 
 ### TODO
-
     - new ts module system
     - remove fns from module names
-    - number fns
-        - range step
     - promise fns
         - resolve and reject timeout content argument
