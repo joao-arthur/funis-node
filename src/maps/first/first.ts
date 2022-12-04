@@ -1,4 +1,4 @@
-import { last } from '../../arrays/last/last.js';
+import { first as arrayFirst } from '../../arrays/first/first.js';
 import { entries } from '../entries/entries.js';
 
 type returnType<K, V> = {
@@ -6,8 +6,8 @@ type returnType<K, V> = {
     readonly value: V;
 }
 
-export function top<K, V>(instance: Map<K, V>): returnType<K, V> | undefined {
-    const lastEntry = last(entries(instance));
+export function first<K, V>(instance: Map<K, V>): returnType<K, V> | undefined {
+    const lastEntry = arrayFirst(entries(instance));
     if (!lastEntry)
         return undefined;
     const [key, value] = lastEntry;

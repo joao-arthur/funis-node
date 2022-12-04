@@ -1,11 +1,11 @@
 import { prefix } from './prefix/prefix.js';
-import { suffix } from './suffix/suffix.js';
 import { serialize } from './serialize/serialize.js';
 import { serializesToSame } from './serializesToSame/serializesToSame.js';
+import { suffix } from './suffix/suffix.js';
 
 export const objects = {
     prefix,
-    suffix,
     serialize,
     serializesToSame,
+    suffix,
 } as const;

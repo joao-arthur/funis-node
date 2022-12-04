@@ -1,13 +1,13 @@
 import { entries } from './entries/entries.js';
-import { values } from './values/values.js';
+import { first } from './first/first.js';
 import { keys } from './keys/keys.js';
-import { top } from './top/top.js';
-import { bottom } from './bottom/bottom.js';
+import { last } from './last/last.js';
+import { values } from './values/values.js';
 
 export const maps = {
     entries,
-    values,
+    first,
     keys,
-    top,
-    bottom,
+    last,
+    values,
 } as const;
