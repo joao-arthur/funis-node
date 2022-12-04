@@ -12,5 +12,12 @@ describe('last', () => {
                 rejectTimeout('Aristotle', 5),
             ]),
         ).resolves.toBe('Socrates');
+        await expect(
+            last([
+                resolveTimeout('Socrates', 5),
+                resolveTimeout('Plato', 10),
+                rejectTimeout('Aristotle', 20),
+            ]),
+        ).rejects.toBe('Aristotle');
     });
 });

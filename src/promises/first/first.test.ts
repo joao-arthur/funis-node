@@ -12,5 +12,12 @@ describe('first', () => {
                 rejectTimeout('Aristotle', 5),
             ]),
         ).rejects.toBe('Aristotle');
+        await expect(
+            first([
+                resolveTimeout('Socrates', 5),
+                resolveTimeout('Plato', 10),
+                rejectTimeout('Aristotle', 20),
+            ]),
+        ).resolves.toBe('Socrates');
     });
 });
