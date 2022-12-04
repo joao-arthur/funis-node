@@ -1,4 +1,4 @@
-export function replaceAccentuation(value: string) {
+export function replaceAccentuation(value: string): string {
     return value
         .replaceAll(/á|à|ã|ä|â/g, 'a')
         .replaceAll(/Á|À|Ã|Ä|Â/g, 'A')
