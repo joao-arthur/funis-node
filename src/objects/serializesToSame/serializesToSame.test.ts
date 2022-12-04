@@ -3,7 +3,7 @@ import { plainObject } from '../../types/plainObject.js';
 import { serializesToSame } from './serializesToSame.js';
 
 describe('serializesToSame', () => {
-    it('should return if the plain values serializes to the same', () => {
+    it('should return wheter the plain values serializes to the same or not', () => {
         expect(serializesToSame(
             { x: 10.12, y: -1.53 },
             { x: 10.12, y: -1.53 },
@@ -14,7 +14,7 @@ describe('serializesToSame', () => {
         )).toBe(false);
     });
 
-    it('should return if the class instances serializes to the same', () => {
+    it('should return wheter the class instances serializes to the same or not', () => {
         class CartesianPoint {
             constructor(private readonly x: number, private readonly y: number) { }
         }

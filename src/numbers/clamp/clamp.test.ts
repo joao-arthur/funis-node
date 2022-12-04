@@ -14,12 +14,12 @@ describe('clamp', () => {
         expect(clamp(10, 10, 10)).toBe(10);
     });
 
-    it('should return the value when it it the max', () => {
+    it('should return the value when it is the max', () => {
         expect(clamp(5, -1, 5)).toBe(5);
         expect(clamp(12, 8, 12)).toBe(12);
     });
 
-    it('should return the value when it it the min', () => {
+    it('should return the value when it is the min', () => {
         expect(clamp(-1, -1, 5)).toBe(-1);
         expect(clamp(8, 8, 12)).toBe(8);
     });

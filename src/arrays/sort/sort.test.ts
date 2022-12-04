@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { sort } from './sort.js';
 
 describe('sort', () => {
-    it('should return a new sorted array', () => {
+    it('should return a new sorted array without modifing the old one', () => {
         const original = [9, 1, true, 'olá mundo'];
         const sorted = sort(original);
 

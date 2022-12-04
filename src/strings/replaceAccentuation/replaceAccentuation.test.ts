@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { replaceAccentuation } from './replaceAccentuation.js';
 
 describe('replaceAccentuation', () => {
-    it('should return the lower case accentuation', () => {
+    it('should replace the lower case accentuation', () => {
         expect(replaceAccentuation('áéíóú')).toBe('aeiou');
         expect(replaceAccentuation('àèìòù')).toBe('aeiou');
         expect(replaceAccentuation('ãẽĩõũ')).toBe('aeiou');
@@ -11,7 +11,7 @@ describe('replaceAccentuation', () => {
         expect(replaceAccentuation('ç')).toBe('c');
     });
 
-    it('should return the upper case accentuation', () => {
+    it('should replace the upper case accentuation', () => {
         expect(replaceAccentuation('ÁÉÍÓÚ')).toBe('AEIOU');
         expect(replaceAccentuation('ÀÈÌÒÙ')).toBe('AEIOU');
         expect(replaceAccentuation('ÃẼĨÕŨ')).toBe('AEIOU');

@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { suffix } from './suffix.js';
 
 describe('suffix', () => {
-    it('should prefix the keys', () => {
+    it('should suffix the keys', () => {
         expect(suffix(
             { a: 1, b: 2, c: 4 },
             '_test',

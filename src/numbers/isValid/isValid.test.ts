@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { isValid } from './isValid.js';
 
 describe('isValid', () => {
-    it('should return true if it is a valid number', () => {
+    it('should return true for valid number', () => {
         expect(isValid(1)).toBe(true);
         expect(isValid(-1)).toBe(true);
         expect(isValid(0)).toBe(true);
@@ -16,7 +16,7 @@ describe('isValid', () => {
         expect(isValid(Number.POSITIVE_INFINITY)).toBe(true);
     });
 
-    it('should return false if it is a invalid number', () => {
+    it('should return false for invalid number', () => {
         expect(isValid(Number.NaN)).toBe(false);
         expect(isValid(undefined)).toBe(false);
         expect(isValid(null)).toBe(false);
