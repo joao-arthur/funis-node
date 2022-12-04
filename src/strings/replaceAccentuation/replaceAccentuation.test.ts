@@ -53,4 +53,22 @@ describe('replaceAccentuation', () => {
         expect(replaceAccentuation('Ł')).toBe('L');
         expect(replaceAccentuation('Ŧ')).toBe('T');
     });
+
+    it('should return the non accent characters', () => {
+        expect(replaceAccentuation(
+            'abcdefghijklmnopqrstuvwyxz0123456789'),
+        ).toBe(
+            'abcdefghijklmnopqrstuvwyxz0123456789',
+        );
+        expect(replaceAccentuation(
+            'ABCDEFGHIJKLMNOPQRSTUVWYXZ0123456789'),
+        ).toBe(
+            'ABCDEFGHIJKLMNOPQRSTUVWYXZ0123456789',
+        );
+        expect(replaceAccentuation(
+            '¹²³£¢¬{[]}!@#$%¨&*()_+§/?°®ŧ←↓→øþ´ªæßªĸ´~º«»©“”nµ'),
+        ).toBe(
+            '¹²³£¢¬{[]}!@#$%¨&*()_+§/?°®ŧ←↓→øþ´ªæßªĸ´~º«»©“”nµ',
+        );
+    });
 });
