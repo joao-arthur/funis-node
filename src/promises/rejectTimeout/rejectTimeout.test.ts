@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { rejectTimeout } from './rejectTimeout';
+import { rejectTimeout } from './rejectTimeout.js';
 
 describe('rejectTimeout', () => {
     it('should reject the promise after the timeout', async () => {

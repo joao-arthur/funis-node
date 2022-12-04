@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
-import { rejectTimeout } from '../rejectTimeout';
-import { resolveTimeout } from '../resolveTimeout';
-import { first } from './first';
+import { rejectTimeout } from '../rejectTimeout/rejectTimeout.js';
+import { resolveTimeout } from '../resolveTimeout/resolveTimeout.js';
+import { first } from './first.js';
 
 describe('first', () => {
     it('should return the value of the first promise to resolve/reject', async () => {

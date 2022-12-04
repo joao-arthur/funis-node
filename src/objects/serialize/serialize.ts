@@ -1,4 +1,4 @@
-import { plainObject } from '../../types/plainObject';
+import { plainObject } from '../../types/plainObject.js';
 
 export function serialize<T>(object: plainObject<T>): string {
     function valueToString(value: T): string {

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { values } from './values';
+import { values } from './values.js';
 
 describe('values', () => {
     it('should return the values of the map in an array', () => {

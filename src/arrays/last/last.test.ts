@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { last } from './last';
+import { last } from './last.js';
 
 describe('last', () => {
     it('should return the last item of the array', () => {

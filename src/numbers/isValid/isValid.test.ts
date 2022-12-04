@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { isValid } from './isValid';
+import { isValid } from './isValid.js';
 
 describe('isValid', () => {
     it('should return true if it is a valid number', () => {

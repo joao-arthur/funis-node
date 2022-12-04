@@ -1,27 +1,29 @@
 {
     "compilerOptions": {
-        "target": "ESNext",
-        "lib": [
-            "esnext"
-        ],
-        "types": [
-            "vite/client",
-        ],
-        "skipLibCheck": true,
-        "esModuleInterop": true,
-        "allowSyntheticDefaultImports": true,
         "strict": true,
-        "strictFunctionTypes": true,
-        "strictNullChecks": true,
+        "noImplicitAny": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
         "forceConsistentCasingInFileNames": true,
         "noFallthroughCasesInSwitch": true,
-        "module": "esnext",
-        "moduleResolution": "node",
-        "resolveJsonModule": true,
+        "useUnknownInCatchVariables": true,
+        "lib": [
+            "ESNext",
+            "DOM"
+        ],
+        "skipLibCheck": true,
+        "noEmitOnError": true,
+        "module": "NodeNext",
+        "moduleResolution": "NodeNext",
+        "target": "ESNext",
         "isolatedModules": true,
-        "noEmit": true,
+        "sourceMap": true,
+        "outDir": "dist"
     },
     "include": [
-        "src"
+        "./src/**/*"
+    ],
+    "exclude": [
+        "./src/**/*.test.ts"
     ]
 }

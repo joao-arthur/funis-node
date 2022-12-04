@@ -1,1 +1,0 @@
-export { objects } from './objects';

@@ -2,11 +2,13 @@
     "name": "jsfns",
     "version": "0.1.0",
     "private": true,
+    "type": "module",
     "scripts": {
         "test": "vitest run",
         "test:dev": "vitest watch",
         "test:cov": "vitest run --coverage",
-        "lint": "eslint \"./src/**/*.{ts,tsx}\" --fix"
+        "lint": "eslint \"./src/**/*.ts\" --fix",
+        "build": "tsc"
     },
     "browserslist": [
         "defaults"

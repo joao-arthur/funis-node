@@ -1,8 +1,8 @@
-import { entries } from './entries';
-import { values } from './values';
-import { keys } from './keys';
-import { top } from './top';
-import { bottom } from './bottom';
+import { entries } from './entries/entries.js';
+import { values } from './values/values.js';
+import { keys } from './keys/keys.js';
+import { top } from './top/top.js';
+import { bottom } from './bottom/bottom.js';
 
 export const maps = {
     entries,

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { parsePrefixed } from './parsePrefixed';
+import { parsePrefixed } from './parsePrefixed.js';
 
 describe('parsePrefixed', () => {
     it('should parse prexifed values into number', () => {

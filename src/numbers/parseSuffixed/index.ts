@@ -1,1 +1,0 @@
-export { parseSuffixed } from './parseSuffixed';

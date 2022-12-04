@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { first } from './first';
+import { first } from './first.js';
 
 describe('first', () => {
     it('should return the first item of the array', () => {

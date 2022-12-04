@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { top } from './top';
+import { top } from './top.js';
 
 describe('top', () => {
     it('should return the values of the map in an array', () => {

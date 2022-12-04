@@ -1,5 +1,5 @@
-import { arrayFns } from '../../arrays';
-import { entries } from '../entries';
+import { last } from '../../arrays/last/last.js';
+import { entries } from '../entries/entries.js';
 
 type returnType<K, V> = {
     readonly key: K;
@@ -7,7 +7,7 @@ type returnType<K, V> = {
 }
 
 export function top<K, V>(instance: Map<K, V>): returnType<K, V> | undefined {
-    const lastEntry = arrayFns.last(entries(instance));
+    const lastEntry = last(entries(instance));
     if (!lastEntry)
         return undefined;
     const [key, value] = lastEntry;

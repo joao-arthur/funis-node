@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { parseSuffixed } from './parseSuffixed';
+import { parseSuffixed } from './parseSuffixed.js';
 
 describe('parseSuffixed', () => {
     it('should parse suffixed values into number', () => {

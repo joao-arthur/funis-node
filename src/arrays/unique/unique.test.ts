@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { unique } from './unique';
+import { unique } from './unique.js';
 
 describe('unique', () => {
     it('should return a new array with the unique values only', () => {

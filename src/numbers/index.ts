@@ -1,1 +1,0 @@
-export { numbers } from './numbers';

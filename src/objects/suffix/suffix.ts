@@ -1,4 +1,4 @@
-import { plainObject } from '../../types/plainObject';
+import { plainObject } from '../../types/plainObject.js';
 
 export function suffix<T>(object: plainObject<T>, suffixValue: string): plainObject<T> {
     return Object.fromEntries(

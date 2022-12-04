@@ -1,7 +1,7 @@
-import { prefix } from './prefix';
-import { suffix } from './suffix';
-import { serialize } from './serialize';
-import { serializesToSame } from './serializesToSame';
+import { prefix } from './prefix/prefix.js';
+import { suffix } from './suffix/suffix.js';
+import { serialize } from './serialize/serialize.js';
+import { serializesToSame } from './serializesToSame/serializesToSame.js';
 
 export const objects = {
     prefix,

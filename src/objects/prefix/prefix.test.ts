@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { prefix } from './prefix';
+import { prefix } from './prefix.js';
 
 describe('prefix', () => {
     it('should prefix the keys', () => {

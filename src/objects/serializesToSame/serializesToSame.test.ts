@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { plainObject } from '../../types/plainObject';
-import { serializesToSame } from './serializesToSame';
+import { plainObject } from '../../types/plainObject.js';
+import { serializesToSame } from './serializesToSame.js';
 
 describe('serializesToSame', () => {
     it('should return if the plain values serializes to the same', () => {

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { range } from './range';
+import { range } from './range.js';
 
 describe('range', () => {
     it('should return a range of numbers inclusively', () => {

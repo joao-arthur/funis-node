@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { clamp } from './clamp';
+import { clamp } from './clamp.js';
 
 describe('clamp', () => {
     it('should clamp the number between min and max', () => {

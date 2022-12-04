@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { replaceAccentuation } from './replaceAccentuation';
+import { replaceAccentuation } from './replaceAccentuation.js';
 
 describe('replaceAccentuation', () => {
     it('should return the lower case accentuation', () => {

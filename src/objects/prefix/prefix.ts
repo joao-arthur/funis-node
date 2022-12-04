@@ -1,4 +1,4 @@
-import { plainObject } from '../../types/plainObject';
+import { plainObject } from '../../types/plainObject.js';
 
 export function prefix<T>(object: plainObject<T>, prefixValue: string): plainObject<T> {
     return Object.fromEntries(
