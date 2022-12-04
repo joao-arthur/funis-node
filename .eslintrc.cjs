@@ -28,6 +28,7 @@ module.exports = {
             },
         ],
         '@typescript-eslint/indent': ['error', 4],
+        '@typescript-eslint/explicit-function-return-type': 'error',
         'arrow-parens': ['error', 'as-needed'],
         'operator-linebreak': [
             'error',

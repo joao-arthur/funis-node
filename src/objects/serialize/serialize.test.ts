@@ -43,7 +43,7 @@ describe('serialize', () => {
         class Dog {
             constructor(private readonly name: string) { }
 
-            bark() {
+            bark(): string {
                 return 'wolf! wolf!';
             }
         }
