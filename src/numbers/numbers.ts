@@ -4,7 +4,7 @@ import { range } from './range';
 import { parsePrefixed } from './parsePrefixed';
 import { parseSuffixed } from './parseSuffixed';
 
-export const numberFns = {
+export const numbers = {
     clamp,
     isValid,
     range,

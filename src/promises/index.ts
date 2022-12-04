@@ -1,1 +1,1 @@
-export { promiseFns } from './promiseFns';
+export { promises } from './promises';

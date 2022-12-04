@@ -1,1 +1,1 @@
-export { numberFns } from './numberFns';
+export { numbers } from './numbers';

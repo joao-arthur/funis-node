@@ -1,5 +1,5 @@
 import { replaceAccentuation } from './replaceAccentuation';
 
-export const stringFns = {
+export const strings = {
     replaceAccentuation,
 } as const;

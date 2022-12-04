@@ -1,1 +1,1 @@
-export { arrayFns } from './arrayFns';
+export { arrays } from './arrays';

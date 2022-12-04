@@ -1,1 +1,1 @@
-export { objectFns } from './objectFns';
+export { objects } from './objects';

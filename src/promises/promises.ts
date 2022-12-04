@@ -3,7 +3,7 @@ import { last } from './last';
 import { rejectTimeout } from './rejectTimeout';
 import { resolveTimeout } from './resolveTimeout';
 
-export const promiseFns = {
+export const promises = {
     first,
     last,
     rejectTimeout,

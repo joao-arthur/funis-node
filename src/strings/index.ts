@@ -1,1 +1,1 @@
-export { stringFns } from './stringFns';
+export { strings } from './strings';

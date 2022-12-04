@@ -3,7 +3,7 @@ import { last } from './last';
 import { sort } from './sort';
 import { unique } from './unique';
 
-export const arrayFns = {
+export const arrays = {
     first,
     last,
     sort,

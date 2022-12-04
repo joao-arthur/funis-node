@@ -4,7 +4,7 @@ import { keys } from './keys';
 import { top } from './top';
 import { bottom } from './bottom';
 
-export const mapFns = {
+export const maps = {
     entries,
     values,
     keys,
