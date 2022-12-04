@@ -1,4 +1,4 @@
-import { arrayFns } from '../../arrayFns';
+import { arrayFns } from '../../arrays';
 import { entries } from '../entries';
 
 type returnType<K, V> = {
@@ -6,8 +6,8 @@ type returnType<K, V> = {
     readonly value: V;
 }
 
-export function top<K, V>(instance: Map<K, V>): returnType<K, V> | undefined {
-    const lastEntry = arrayFns.last(entries(instance));
+export function bottom<K, V>(instance: Map<K, V>): returnType<K, V> | undefined {
+    const lastEntry = arrayFns.first(entries(instance));
     if (!lastEntry)
         return undefined;
     const [key, value] = lastEntry;
