@@ -9,6 +9,12 @@ The aim of this library is to be a helper for modern day js, instead of a `polyf
 
 > As a software developer you must focus on solving your client problems, not the javascript ones.
 
+## Features
+    - modularized functions
+    - ubiquous language
+    - type safe
+    - modern code
+
 ## License
 
 [MIT](LICENSE)
