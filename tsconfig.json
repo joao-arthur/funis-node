@@ -11,12 +11,14 @@
             "ESNext",
             "DOM"
         ],
-        "skipLibCheck": true,
-        "noEmitOnError": true,
         "module": "NodeNext",
         "moduleResolution": "NodeNext",
         "target": "ESNext",
+        "skipLibCheck": true,
+        "noEmitOnError": true,
         "isolatedModules": true,
+        "declaration": true,
+        "declarationMap": true,
         "sourceMap": true,
         "outDir": "dist"
     },
