@@ -11,9 +11,11 @@ The aim of this library is to be a helper for modern day js, instead of a `polyf
 
 ## Features
     - modularized functions
-    - ubiquous language
     - type safe
+    - minimal validation for passed values
+    - ubiquous language
     - modern code
+    - almost no side effects
 
 ## License
 
