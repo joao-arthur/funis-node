@@ -7,6 +7,8 @@
         "forceConsistentCasingInFileNames": true,
         "noFallthroughCasesInSwitch": true,
         "useUnknownInCatchVariables": true,
+        "noImplicitReturns": true,
+        "noImplicitOverride": true,
         "lib": [
             "ESNext",
             "DOM"
