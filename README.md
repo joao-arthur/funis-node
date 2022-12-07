@@ -1,7 +1,8 @@
 # jsfns
 
 Optionated type-safe utility library. Partially inspired by [radash](https://www.npmjs.com/package/radash).
-_jsFns_ provides a set of modularized basic operations that are common in a wide range of applications. It is a helper for `modern day js` and not a `polyfill library`.
+
+_jsFns_ provides a set of modularized basic operations that are common in a wide range of applications. It is a helper for `modern day js`.
 
 ## What it brings
 
