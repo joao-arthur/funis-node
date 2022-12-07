@@ -1,6 +1,6 @@
 # fnJS
 
-A optionated type-safe library for the functions the standand js lacks.
+A optionated type-safe library for the functions the standand js lacks. Partially inspired by [radash](https://www.npmjs.com/package/radash).
 
 ## The problem
 
