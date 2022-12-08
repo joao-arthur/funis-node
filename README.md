@@ -1,8 +1,10 @@
-# jsfns
+# funis
+
+> Latin word for **rope**. Because **fun**ction **is** the way to go.  
 
 Optionated type-safe utility library. Partially inspired by [radash](https://www.npmjs.com/package/radash).
 
-_jsFns_ provides a set of modularized basic operations that are common in a wide range of applications. It is a helper for `modern day js`.
+_funis_ provides a set of modularized basic operations that are common in a wide range of applications. It is a helper for `modern day js`.
 
 ## What it can offer
 
