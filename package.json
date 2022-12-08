@@ -1,12 +1,17 @@
 {
     "name": "jsfns",
+    "description": "optionated type-safe utility library",
+    "version": "0.1.0",
+    "license": "MIT",
     "author": {
         "name": "João Arthur",
         "email": "joao.lothamer@gmail.com"
     },
-    "version": "0.1.0",
-    "private": true,
+    "private": false,
     "type": "module",
+    "engines": {
+        "node": ">=18.7.0"
+    },
     "scripts": {
         "test": "vitest run",
         "test:dev": "vitest watch",
