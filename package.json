@@ -12,6 +12,15 @@
     "engines": {
         "node": ">=18.7.0"
     },
+    "exports": {
+        "arrays": "./src/arrays/arrays.js",
+        "maps": "./src/maps/maps.js",
+        "numbers": "./src/numbers/numbers.js",
+        "objects": "./src/objects/objects.js",
+        "promises": "./src/promises/promises.js",
+        "standard": "./src/standard/standard.js",
+        "string": "./src/string/string.js"
+    },
     "scripts": {
         "test": "vitest run",
         "test:dev": "vitest watch",
