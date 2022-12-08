@@ -3,10 +3,7 @@
     "description": "optionated type-safe utility library",
     "version": "0.1.0",
     "license": "MIT",
-    "author": {
-        "name": "João Arthur",
-        "email": "joao.lothamer@gmail.com"
-    },
+    "author": "João Arthur <joao.lothamer@gmail.com>",
     "private": false,
     "type": "module",
     "engines": {
