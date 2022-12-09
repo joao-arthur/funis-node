@@ -22,7 +22,7 @@
         "declaration": true,
         "declarationMap": true,
         "sourceMap": true,
-        "outDir": "dist/src"
+        "outDir": "dist"
     },
     "include": [
         "./src/**/*"
