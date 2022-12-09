@@ -1,7 +1,7 @@
 {
     "name": "funis",
     "description": "optionated type-safe utility library",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "license": "MIT",
     "author": "João Arthur <joao.lothamer@gmail.com>",
     "private": false,
@@ -10,40 +10,10 @@
         "node": ">=18.7.0"
     },
     "exports": {
-        "arrays": {
-            "import": "./src/arrays/arrays.js",
-            "require": "./src/arrays/arrays.js",
-            "types": "./src/arrays/arrays.d.ts"
-        },
-        "maps": {
-            "import": "./src/maps/maps.js",
-            "require": "./src/maps/maps.js",
-            "types": "./src/maps/maps.d.ts"
-        },
-        "numbers": {
-            "import": "./src/numbers/numbers.js",
-            "require": "./src/numbers/numbers.js",
-            "types": "./src/numbers/numbers.d.ts"
-        },
-        "objects": {
-            "import": "./src/objects/objects.js",
-            "require": "./src/objects/objects.js",
-            "types": "./src/objects/objects.d.ts"
-        },
-        "promises": {
-            "import": "./src/promises/promises.js",
-            "require": "./src/promises/promises.js",
-            "types": "./src/promises/promises.d.ts"
-        },
-        "standard": {
-            "import": "./src/standard/standard.js",
-            "require": "./src/standard/standard.js",
-            "types": "./src/standard/standard.d.ts"
-        },
-        "strings": {
-            "import": "./src/strings/strings.js",
-            "require": "./src/strings/strings.js",
-            "types": "./src/strings/strings.d.ts"
+        ".": {
+            "import": "./src/index.js",
+            "require": "./src/index.js",
+            "types": "./src/index.d.ts"
         }
     },
     "scripts": {
