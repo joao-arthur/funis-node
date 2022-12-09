@@ -1,7 +1,7 @@
 {
     "name": "funis",
     "description": "optionated type-safe utility library",
-    "version": "0.1.6",
+    "version": "0.1.7",
     "license": "MIT",
     "author": "João Arthur <joao.lothamer@gmail.com>",
     "private": false,
@@ -16,6 +16,7 @@
             "types": "./src/index.ts"
         }
     },
+    "main": "./src/index.ts",
     "scripts": {
         "test": "vitest run",
         "test:dev": "vitest watch",
