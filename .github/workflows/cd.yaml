@@ -1,0 +1,9 @@
+name: CD
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci.yml
