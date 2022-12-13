@@ -1,6 +1,6 @@
 import { plainObject } from '../../types/plainObject.js';
 
-export function serialize<T>(object: plainObject<T>): string {
+export function serialize<T>(obj: plainObject<T>): string {
     function valueToString(value: T): string {
         if (value instanceof Date)
             return value.toISOString();
@@ -10,7 +10,7 @@ export function serialize<T>(object: plainObject<T>): string {
     }
 
     const entries = Object
-        .entries(object)
+        .entries(obj)
         .filter(([, value]) => typeof value !== 'function')
         .map(([key, value]) => `${key}: ${valueToString(value)}`).join(', ');
 

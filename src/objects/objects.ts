@@ -1,11 +1,13 @@
-import { prefix } from './prefix/prefix.js';
+import { mapEntries } from './mapEntries/mapEntries.js';
+import { mapKeys } from './mapKeys/mapKeys.js';
+import { mapValues } from './mapValues/mapValues.js';
 import { serialize } from './serialize/serialize.js';
 import { serializesToSame } from './serializesToSame/serializesToSame.js';
-import { suffix } from './suffix/suffix.js';
 
 export const objects = {
-    prefix,
+    mapEntries,
+    mapKeys,
+    mapValues,
     serialize,
     serializesToSame,
-    suffix,
 } as const;
