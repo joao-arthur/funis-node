@@ -6,7 +6,7 @@ describe('groupToMap', () => {
         expect(groupToMap([], item => item)).toEqual(new Map());
     });
 
-    it('should return the items not present more than once', () => {
+    it('should group the items by the callback return value in a map', () => {
         expect(
             groupToMap([1, 2, 3], item => item),
         ).toEqual(
@@ -61,8 +61,8 @@ describe('groupToMap', () => {
                 ['fire', [{ type: 'fire', name: 'charmander' }]],
                 ['water', [
                     { type: 'water', name: 'squirtle' },
-                    { type: 'water', name: 'psyduck' }],
-                ],
+                    { type: 'water', name: 'psyduck' },
+                ]],
                 ['bug', [{ type: 'bug', name: 'caterpie' }]],
             ]),
         );

@@ -6,10 +6,12 @@ describe('groupToObject', () => {
         expect(groupToObject([], item => item)).toEqual({});
     });
 
-    it('should return the items not present more than once', () => {
+    it('should group the items by the callback return value in a object', () => {
         expect(
             groupToObject([1, 2, 3], item => item),
-        ).toEqual({ 1: [1], 2: [2], 3: [3] });
+        ).toEqual(
+            { 1: [1], 2: [2], 3: [3] },
+        );
         expect(
             groupToObject([1, 2, 3], item => item % 2),
         ).toEqual({ 1: [1, 3], 0: [2] });
@@ -19,7 +21,8 @@ describe('groupToObject', () => {
         expect(
             groupToObject(
                 ['George', 'Paul', 'John', 'Ringo'],
-                item => item === 'Ringo'),
+                item => item === 'Ringo',
+            ),
         ).toEqual({
             false: ['George', 'Paul', 'John'],
             true: ['Ringo'],
@@ -27,7 +30,8 @@ describe('groupToObject', () => {
         expect(
             groupToObject(
                 [false, true, false, true, false, true],
-                Boolean),
+                Boolean,
+            ),
         ).toEqual({
             false: [false, false, false],
             true: [true, true, true],

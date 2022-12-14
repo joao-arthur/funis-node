@@ -6,7 +6,7 @@ describe('groupToEntries', () => {
         expect(groupToEntries([], item => item)).toEqual([]);
     });
 
-    it('should return the items not present more than once', () => {
+    it('should group the items by the callback return value in entries', () => {
         expect(
             groupToEntries([1, 2, 3], item => item),
         ).toEqual(
@@ -52,16 +52,14 @@ describe('groupToEntries', () => {
                 ],
                 item => item.type,
             ),
-        ).toEqual(
-            ([
-                ['grass', [{ type: 'grass', name: 'bulbasaur' }]],
-                ['fire', [{ type: 'fire', name: 'charmander' }]],
-                ['water', [
-                    { type: 'water', name: 'squirtle' },
-                    { type: 'water', name: 'psyduck' }],
-                ],
-                ['bug', [{ type: 'bug', name: 'caterpie' }]],
-            ]),
-        );
+        ).toEqual([
+            ['grass', [{ type: 'grass', name: 'bulbasaur' }]],
+            ['fire', [{ type: 'fire', name: 'charmander' }]],
+            ['water', [
+                { type: 'water', name: 'squirtle' },
+                { type: 'water', name: 'psyduck' },
+            ]],
+            ['bug', [{ type: 'bug', name: 'caterpie' }]],
+        ]);
     });
 });
