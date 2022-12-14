@@ -8,6 +8,7 @@ import { sort } from './sort/sort.js';
 import { unique } from './unique/unique.js';
 import { disjoint } from './disjoint/disjoint.js';
 import { intersect } from './intersect/intersect.js';
+import { once } from './once/once.js';
 
 export const arrays = {
     groupToEntries,
@@ -20,4 +21,5 @@ export const arrays = {
     unique,
     disjoint,
     intersect,
+    once,
 } as const;
