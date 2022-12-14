@@ -17,10 +17,16 @@ describe('groupToArray', () => {
             groupToArray([1, 1, 2, 2, 3, 3], item => item),
         ).toEqual([[1, 1], [2, 2], [3, 3]]);
         expect(
-            groupToArray(['George', 'Paul', 'John', 'Ringo'], item => item === 'Ringo'),
+            groupToArray(
+                ['George', 'Paul', 'John', 'Ringo'],
+                item => item === 'Ringo',
+            ),
         ).toEqual([['George', 'Paul', 'John'], ['Ringo']]);
         expect(
-            groupToArray([false, true, false, true, false, true], Boolean),
+            groupToArray(
+                [false, true, false, true, false, true],
+                Boolean,
+            ),
         ).toEqual([[false, false, false], [true, true, true]]);
     });
 });

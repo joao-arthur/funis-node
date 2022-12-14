@@ -18,8 +18,18 @@ describe('parse', () => {
     });
 
     it('should parse prefixed and suffixed values into number', () => {
-        expect(parse('width: 100px', { prefix: 'width: ', suffix: 'px' })).toBe(100);
-        expect(parse('speed: -1.53m/s', { prefix: 'speed: ', suffix: 'm/s' })).toBe(-1.53);
+        expect(
+            parse(
+                'width: 100px',
+                { prefix: 'width: ', suffix: 'px' },
+            ),
+        ).toBe(100);
+        expect(
+            parse(
+                'speed: -1.53m/s',
+                { prefix: 'speed: ', suffix: 'm/s' },
+            ),
+        ).toBe(-1.53);
     });
 
 
@@ -36,17 +46,37 @@ describe('parse', () => {
     });
 
     it('should return undefined for wrong prefix and suffix', () => {
-        expect(parse('US$4 donnut', { prefix: 'R$', suffix: 'apple' })).toBe(undefined);
-        expect(parse('US$4 donnut', { prefix: 'US$', suffix: 'apple' })).toBe(undefined);
+        expect(
+            parse(
+                'US$4 donnut',
+                { prefix: 'R$', suffix: 'apple' },
+            ),
+        ).toBe(undefined);
+        expect(
+            parse(
+                'US$4 donnut',
+                { prefix: 'US$', suffix: 'apple' },
+            ),
+        ).toBe(undefined);
     });
 
     it('should return undefined for values with suffix', () => {
-        expect(parse('speed: -4px', { prefix: 'speed: ' })).toBe(undefined);
+        expect(
+            parse(
+                'speed: -4px',
+                { prefix: 'speed: ' },
+            ),
+        ).toBe(undefined);
         expect(parse(':2em', { prefix: ':' })).toBe(undefined);
     });
 
     it('should return undefined for values with prefix', () => {
-        expect(parse('speed: -4px', { suffix: 'px' })).toBe(undefined);
+        expect(
+            parse(
+                'speed: -4px',
+                { suffix: 'px' },
+            ),
+        ).toBe(undefined);
         expect(parse(':2em', { suffix: 'em' })).toBe(undefined);
     });
 });

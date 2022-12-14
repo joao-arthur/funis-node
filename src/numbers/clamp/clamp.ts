@@ -11,7 +11,11 @@ type clampOptions = {
 
 export function clamp(value: number, options: clampOptions): number {
     return pipe(
-        (current: number) => 'min' in options ? Math.max(current, options.min) : current,
-        (current: number) => 'max' in options ? Math.min(current, options.max) : current,
+        (current: number) => 'min' in options
+            ? Math.max(current, options.min)
+            : current,
+        (current: number) => 'max' in options
+            ? Math.min(current, options.max)
+            : current,
     )(value);
 }

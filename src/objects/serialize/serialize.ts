@@ -12,7 +12,10 @@ export function serialize<T>(obj: plainObject<T>): string {
     const entries = Object
         .entries(obj)
         .filter(([, value]) => typeof value !== 'function')
-        .map(([key, value]) => `${key}: ${valueToString(value)}`).join(', ');
+        .map(
+            ([key, value]) => `${key}: ${valueToString(value)}`,
+        )
+        .join(', ');
 
     return entries.length ? `{ ${entries} }` : '{ }';
 }

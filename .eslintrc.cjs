@@ -68,5 +68,11 @@ module.exports = {
         'eol-last': ['error', 'always'],
         'comma-dangle': ['error', 'always-multiline'],
         'quote-props': ['error', 'as-needed'],
+        'max-len': ['error', {
+            code: 70,
+            tabWidth: 4,
+            comments: 70,
+            ignoreStrings: true,
+        }],
     },
 };

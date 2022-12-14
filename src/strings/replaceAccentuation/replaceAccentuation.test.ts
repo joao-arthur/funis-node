@@ -27,7 +27,9 @@ describe('replaceAccentuation', () => {
     });
 
     it('should replace the lower case consonant accentuation', () => {
-        expect(replaceAccentuation('ćǵḱĺḿńṕŕśẃýź')).toBe('cgklmnprswyz');
+        expect(
+            replaceAccentuation('ćǵḱĺḿńṕŕśẃýź'),
+        ).toBe('cgklmnprswyz');
         expect(replaceAccentuation('ǹẁỳ')).toBe('nwy');
         expect(replaceAccentuation('ñṽỹ')).toBe('nvy');
         expect(replaceAccentuation('ḧẗẅẍÿ')).toBe('htwxy');
@@ -41,7 +43,9 @@ describe('replaceAccentuation', () => {
     });
 
     it('should replace the upper case consonant accentuation', () => {
-        expect(replaceAccentuation('ĆǴḰĹḾŃṔŔŚẂÝŹ')).toBe('CGKLMNPRSWYZ');
+        expect(
+            replaceAccentuation('ĆǴḰĹḾŃṔŔŚẂÝŹ'),
+        ).toBe('CGKLMNPRSWYZ');
         expect(replaceAccentuation('ǸẀỲ')).toBe('NWY');
         expect(replaceAccentuation('ÑṼỸ')).toBe('NVY');
         expect(replaceAccentuation('ḦẄẌŸ')).toBe('HWXY');
@@ -55,18 +59,18 @@ describe('replaceAccentuation', () => {
     });
 
     it('should return the non accent characters', () => {
-        expect(replaceAccentuation(
-            'abcdefghijklmnopqrstuvwyxz0123456789'),
+        expect(
+            replaceAccentuation('abcdefghijklmnopqrstuvwyxz0123456789'),
         ).toBe(
             'abcdefghijklmnopqrstuvwyxz0123456789',
         );
-        expect(replaceAccentuation(
-            'ABCDEFGHIJKLMNOPQRSTUVWYXZ0123456789'),
+        expect(
+            replaceAccentuation('ABCDEFGHIJKLMNOPQRSTUVWYXZ0123456789'),
         ).toBe(
             'ABCDEFGHIJKLMNOPQRSTUVWYXZ0123456789',
         );
-        expect(replaceAccentuation(
-            '¹²³£¢¬{[]}!@#$%¨&*()_+§/?°®←↓→þ´ªæßªĸ´~º«»©“”nµ'),
+        expect(
+            replaceAccentuation('¹²³£¢¬{[]}!@#$%¨&*()_+§/?°®←↓→þ´ªæßªĸ´~º«»©“”nµ'),
         ).toBe(
             '¹²³£¢¬{[]}!@#$%¨&*()_+§/?°®←↓→þ´ªæßªĸ´~º«»©“”nµ',
         );

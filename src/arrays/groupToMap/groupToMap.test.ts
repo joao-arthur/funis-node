@@ -23,14 +23,26 @@ describe('groupToMap', () => {
             new Map([[1, [1, 1]], [2, [2, 2]], [3, [3, 3]]]),
         );
         expect(
-            groupToMap(['George', 'Paul', 'John', 'Ringo'], item => item === 'Ringo'),
+            groupToMap(
+                ['George', 'Paul', 'John', 'Ringo'],
+                item => item === 'Ringo',
+            ),
         ).toEqual(
-            new Map([[false, ['George', 'Paul', 'John']], [true, ['Ringo']]]),
+            new Map([
+                [false, ['George', 'Paul', 'John']],
+                [true, ['Ringo']],
+            ]),
         );
         expect(
-            groupToMap([false, true, false, true, false, true], Boolean),
+            groupToMap(
+                [false, true, false, true, false, true],
+                Boolean,
+            ),
         ).toEqual(
-            new Map([[false, [false, false, false]], [true, [true, true, true]]]),
+            new Map([
+                [false, [false, false, false]],
+                [true, [true, true, true]],
+            ]),
         );
         expect(
             groupToMap(

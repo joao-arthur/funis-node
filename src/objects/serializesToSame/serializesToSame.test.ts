@@ -16,7 +16,10 @@ describe('serializesToSame', () => {
 
     it('should return wheter the class instances serializes to the same or not', () => {
         class CartesianPoint {
-            constructor(private readonly x: number, private readonly y: number) { }
+            constructor(
+                private readonly x: number,
+                private readonly y: number,
+            ) { }
         }
 
         expect(serializesToSame(

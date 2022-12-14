@@ -7,6 +7,8 @@ describe('camelCase', () => {
         expect(camelCase('j S o N')).toBe('jSON');
         expect(camelCase('hey')).toBe('hey');
         expect(camelCase('hey Joe')).toBe('heyJoe');
-        expect(camelCase('hey Jude dont m4ke it b4d')).toBe('heyJudeDontM4keItB4d');
+        expect(
+            camelCase('hey Jude dont m4ke it b4d'),
+        ).toBe('heyJudeDontM4keItB4d');
     });
 });

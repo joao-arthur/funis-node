@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 type unknownFn = (arg: unknown) => unknown;
 
 export function pipe<A, B>(

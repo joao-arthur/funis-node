@@ -5,9 +5,17 @@ describe('unique', () => {
     it('should return a new array with the unique values only', () => {
         const symbolValue = Symbol(1);
 
-        expect(unique(
-            [1, 1, 'john', 'john', true, false, true, symbolValue, symbolValue],
-        )).toEqual(
+        expect(unique([
+            1,
+            1,
+            'john',
+            'john',
+            true,
+            false,
+            true,
+            symbolValue,
+            symbolValue,
+        ])).toEqual(
             [1, 'john', true, false, symbolValue],
         );
         expect(unique([1])).toEqual([1]);

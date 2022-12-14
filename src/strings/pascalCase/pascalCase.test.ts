@@ -7,6 +7,8 @@ describe('pascalCase', () => {
         expect(pascalCase('j S o N')).toBe('JSON');
         expect(pascalCase('hey')).toBe('Hey');
         expect(pascalCase('hey Joe')).toBe('HeyJoe');
-        expect(pascalCase('hey Jude dont m4ke it b4d')).toBe('HeyJudeDontM4keItB4d');
+        expect(
+            pascalCase('hey Jude dont m4ke it b4d'),
+        ).toBe('HeyJudeDontM4keItB4d');
     });
 });

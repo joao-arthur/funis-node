@@ -3,6 +3,8 @@ import { resolveTimeout } from './resolveTimeout.js';
 
 describe('resolveTimeout', () => {
     it('should resolve the promise after the timeout', async () => {
-        await expect(resolveTimeout('Hello, promise!', 50)).resolves.toBe('Hello, promise!');
+        await expect(
+            resolveTimeout('Hello, promise!', 50),
+        ).resolves.toBe('Hello, promise!');
     });
 });

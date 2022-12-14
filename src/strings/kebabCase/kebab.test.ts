@@ -7,6 +7,8 @@ describe('kebabCase', () => {
         expect(kebabCase('j S o N')).toBe('j-s-o-n');
         expect(kebabCase('hey')).toBe('hey');
         expect(kebabCase('hey Joe')).toBe('hey-joe');
-        expect(kebabCase('hey Jude dont m4ke it b4d')).toBe('hey-jude-dont-m4ke-it-b4d');
+        expect(
+            kebabCase('hey Jude dont m4ke it b4d'),
+        ).toBe('hey-jude-dont-m4ke-it-b4d');
     });
 });

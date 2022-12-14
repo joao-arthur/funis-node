@@ -6,7 +6,9 @@ type returnType<K, V> = {
     readonly value: V;
 }
 
-export function first<K, V>(instance: Map<K, V>): returnType<K, V> | undefined {
+export function first<K, V>(
+    instance: Map<K, V>,
+): returnType<K, V> | undefined {
     const lastEntry = arrayFirst(entries(instance));
     if (!lastEntry)
         return undefined;
