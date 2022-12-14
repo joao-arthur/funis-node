@@ -1,5 +1,5 @@
-export function replaceAccentuation(value: string): string {
-    return Array.from(value).map(letter => {
+export function replaceAccentuation(str: string): string {
+    return Array.from(str).map(letter => {
         if ('áàãäâȁ'.includes(letter))
             return 'a';
         if ('ÁÀÃÄÂȀ'.includes(letter))

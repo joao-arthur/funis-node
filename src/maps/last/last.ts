@@ -7,9 +7,9 @@ type returnType<K, V> = {
 }
 
 export function last<K, V>(
-    instance: Map<K, V>,
+    map: Map<K, V>,
 ): returnType<K, V> | undefined {
-    const lastEntry = arrayLast(entries(instance));
+    const lastEntry = arrayLast(entries(map));
     if (!lastEntry)
         return undefined;
     const [key, value] = lastEntry;

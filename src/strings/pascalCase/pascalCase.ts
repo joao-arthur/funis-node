@@ -1,7 +1,7 @@
-export function pascalCase(value: string): string {
-    if (value === '')
+export function pascalCase(str: string): string {
+    if (str === '')
         return '';
-    return value
+    return str
         .split(' ')
         .map(word =>
             // eslint-disable-next-line max-len

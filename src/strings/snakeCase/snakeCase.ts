@@ -1,5 +1,5 @@
-export function snakeCase(value: string): string {
-    return value
+export function snakeCase(str: string): string {
+    return str
         .split(' ')
         .map(word => word.toLocaleLowerCase())
         .join('_');

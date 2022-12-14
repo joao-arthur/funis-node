@@ -9,7 +9,7 @@ type clampOptions = {
     readonly max: number;
 }
 
-export function clamp(value: number, options: clampOptions): number {
+export function clamp(num: number, options: clampOptions): number {
     return pipe(
         (current: number) => 'min' in options
             ? Math.max(current, options.min)
@@ -17,5 +17,5 @@ export function clamp(value: number, options: clampOptions): number {
         (current: number) => 'max' in options
             ? Math.min(current, options.max)
             : current,
-    )(value);
+    )(num);
 }

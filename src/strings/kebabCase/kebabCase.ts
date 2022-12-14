@@ -1,5 +1,5 @@
-export function kebabCase(value: string): string {
-    return value
+export function kebabCase(str: string): string {
+    return str
         .split(' ')
         .map(word => word.toLocaleLowerCase())
         .join('-');

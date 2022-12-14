@@ -1,7 +1,7 @@
-export function camelCase(value: string): string {
-    if (value === '')
+export function camelCase(str: string): string {
+    if (str === '')
         return '';
-    return value
+    return str
         .split(' ')
         .map((word, index) => index > 0
             // eslint-disable-next-line max-len

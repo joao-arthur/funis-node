@@ -8,20 +8,20 @@ type parseOptions = {
 };
 
 export function parse(
-    value: string,
+    num: string,
     options: parseOptions,
 ): number | undefined {
-    if ('prefix' in options && value.indexOf(options.prefix) === -1)
+    if ('prefix' in options && num.indexOf(options.prefix) === -1)
         return undefined;
-    if ('suffix' in options && value.indexOf(options.suffix) === -1)
+    if ('suffix' in options && num.indexOf(options.suffix) === -1)
         return undefined;
     const startIndex = 'prefix' in options
-        ? value.indexOf(options.prefix) + options.prefix.length
+        ? num.indexOf(options.prefix) + options.prefix.length
         : 0;
     const endIndex = 'suffix' in options
-        ? value.indexOf(options.suffix)
-        : value.length;
-    const parsed = Number(value.slice(startIndex, endIndex));
+        ? num.indexOf(options.suffix)
+        : num.length;
+    const parsed = Number(num.slice(startIndex, endIndex));
 
     return !Number.isNaN(parsed) ? parsed : undefined;
 }
