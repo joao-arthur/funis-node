@@ -10,5 +10,7 @@ describe('unique', () => {
         )).toEqual(
             [1, 'john', true, false, symbolValue],
         );
+        expect(unique([1])).toEqual([1]);
+        expect(unique([])).toEqual([]);
     });
 });
