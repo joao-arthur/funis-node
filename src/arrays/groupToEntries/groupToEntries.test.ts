@@ -1,39 +1,48 @@
 import { describe, it, expect } from 'vitest';
-import { groupToMap } from './groupToMap.js';
+import { groupToEntries } from './groupToEntries.js';
 
-describe('groupToMap', () => {
+describe('groupToEntries', () => {
     it('should return empty for empty array', () => {
-        expect(groupToMap([], item => item)).toEqual(new Map());
+        expect(groupToEntries([], item => item)).toEqual([]);
     });
 
     it('should return the items not present more than once', () => {
         expect(
-            groupToMap([1, 2, 3], item => item),
+            groupToEntries([1, 2, 3], item => item),
         ).toEqual(
-            new Map([[1, [1]], [2, [2]], [3, [3]]]),
+            [[1, [1]], [2, [2]], [3, [3]]],
         );
         expect(
-            groupToMap([1, 2, 3], item => item % 2),
+            groupToEntries([1, 2, 3], item => item % 2),
         ).toEqual(
-            new Map([[1, [1, 3]], [0, [2]]]),
+            [[1, [1, 3]], [0, [2]]],
         );
         expect(
-            groupToMap([1, 1, 2, 2, 3, 3], item => item),
+            groupToEntries([1, 1, 2, 2, 3, 3], item => item),
         ).toEqual(
-            new Map([[1, [1, 1]], [2, [2, 2]], [3, [3, 3]]]),
+            [[1, [1, 1]], [2, [2, 2]], [3, [3, 3]]],
         );
         expect(
-            groupToMap(['George', 'Paul', 'John', 'Ringo'], item => item === 'Ringo'),
+            groupToEntries(
+                ['George', 'Paul', 'John', 'Ringo'],
+                item => item === 'Ringo',
+            ),
         ).toEqual(
-            new Map([[false, ['George', 'Paul', 'John']], [true, ['Ringo']]]),
+            [[false, ['George', 'Paul', 'John']], [true, ['Ringo']]],
         );
         expect(
-            groupToMap([false, true, false, true, false, true], Boolean),
+            groupToEntries(
+                [false, true, false, true, false, true],
+                Boolean,
+            ),
         ).toEqual(
-            new Map([[false, [false, false, false]], [true, [true, true, true]]]),
+            [
+                [false, [false, false, false]],
+                [true, [true, true, true]],
+            ],
         );
         expect(
-            groupToMap(
+            groupToEntries(
                 [
                     { type: 'grass', name: 'bulbasaur' },
                     { type: 'fire', name: 'charmander' },
@@ -44,7 +53,7 @@ describe('groupToMap', () => {
                 item => item.type,
             ),
         ).toEqual(
-            new Map([
+            ([
                 ['grass', [{ type: 'grass', name: 'bulbasaur' }]],
                 ['fire', [{ type: 'fire', name: 'charmander' }]],
                 ['water', [

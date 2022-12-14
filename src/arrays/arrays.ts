@@ -1,4 +1,5 @@
 import { first } from './first/first.js';
+import { groupToEntries } from './groupToEntries/groupToEntries.js';
 import { groupToArray } from './groupToArray/groupToArray.js';
 import { groupToMap } from './groupToMap/groupToMap.js';
 import { groupToObject } from './groupToObject/groupToObject.js';
@@ -9,6 +10,7 @@ import { disjoint } from './disjoint/disjoint.js';
 import { intersect } from './intersect/intersect.js';
 
 export const arrays = {
+    groupToEntries,
     groupToArray,
     groupToMap,
     groupToObject,
