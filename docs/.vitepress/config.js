@@ -39,7 +39,54 @@ export default {
                     { text: 'isValid', link: '/numbers/is-valid' },
                     { text: 'parse', link: '/numbers/parse' },
                     { text: 'range', link: '/numbers/range' },
-                    { text: 'lazyRange', link: '/numbers/lazy-range' },
+                ]
+            },
+            {
+                text: 'objects',
+                collapsible: true,
+                items: [
+                    { text: 'mapEntries', link: '/objects/map-entries' },
+                    { text: 'mapKeys', link: '/objects/map-keys' },
+                    { text: 'mapValues', link: '/objects/map-values' },
+                    { text: 'serialize', link: '/objects/serialize' },
+                    { text: 'serializesToSame', link: '/objects/serializes-to-same' },
+                ]
+            },
+            {
+                text: 'promises',
+                collapsible: true,
+                items: [
+                    { text: 'first', link: '/promises/first' },
+                    { text: 'last', link: '/promises/last' },
+                    { text: 'resolveTimeout', link: '/promises/resolve-timeout' },
+                    { text: 'rejectTimeout', link: '/promises/reject-timeout' },
+                ]
+            },
+            {
+                text: 'standard',
+                collapsible: true,
+                items: [
+                    { text: 'compose', link: '/standard/compose' },
+                    { text: 'pipe', link: '/standard/pipe' },
+                    { text: 'self', link: '/standard/self' },
+                ]
+            },
+            {
+                text: 'strings',
+                collapsible: true,
+                items: [
+                    { text: 'camelCase', link: '/strings/camel-case' },
+                    { text: 'pascalCase', link: '/strings/pascal-case' },
+                    { text: 'kebabCase', link: '/strings/kebab-case' },
+                    { text: 'snakeCase', link: '/strings/snake-case' },
+                    { text: 'replaceAccentuation', link: '/strings/replace-accentuation' },
+                ]
+            },
+            {
+                text: 'types',
+                collapsible: true,
+                items: [
+                    { text: 'plainObject', link: '/types/plain-object' },
                 ]
             },
         ]

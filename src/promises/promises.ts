@@ -6,6 +6,6 @@ import { resolveTimeout } from './resolveTimeout/resolveTimeout.js';
 export const promises = {
     first,
     last,
-    rejectTimeout,
     resolveTimeout,
+    rejectTimeout,
 } as const;
