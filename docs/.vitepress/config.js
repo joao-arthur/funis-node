@@ -1,5 +1,6 @@
 export default {
     title: 'funis',
+    base: '/funis/',
     description: 'Optionated type-safe utility library',
     themeConfig: {
         sidebar: [
