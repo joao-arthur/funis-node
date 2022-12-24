@@ -10,7 +10,7 @@ _funis_ provides a set of modularized basic operations that are common in a wide
 
   - Modularized functions
   - Fully typed
-  - No side effects (only exception are promises, but these are highlighted in the docs)
+  - No side effects (only exception are promises, but these are highlighted in the [docs](https://joao-arthur.github.io/funis/))
 
 ## What it can't offer
 
