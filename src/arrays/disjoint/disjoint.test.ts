@@ -10,7 +10,7 @@ describe('disjoint', () => {
         expect(disjoint([[1]])).toEqual([1]);
         expect(disjoint([[4, 5, 6], [5, 6, 7]])).toEqual([4, 7]);
         expect(disjoint([
-            ['George', 'Paul', 'John', 'Ringo'],
+            ['George', 'Paul', 'John', 'Ringo', 'George'],
             ['Ringo'],
             ['John'],
         ])).toEqual(['George', 'Paul']);

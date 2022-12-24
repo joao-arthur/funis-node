@@ -12,7 +12,7 @@ describe('intersect', () => {
         expect(intersect([[1]])).toEqual([1]);
         expect(intersect([[4, 5, 6], [5, 6, 7]])).toEqual([5, 6]);
         expect(intersect([
-            ['George', 'Paul', 'John', 'Ringo'],
+            ['George', 'Paul', 'John', 'Ringo', 'Ringo'],
             ['Ringo'],
             ['Ringo', 'John'],
         ])).toEqual(['Ringo']);
