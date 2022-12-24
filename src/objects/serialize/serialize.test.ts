@@ -4,16 +4,14 @@ import { serialize } from './serialize.js';
 
 describe('serialize', () => {
     it('should serialize the plain entries', () => {
-        const object = {
+        expect(serialize({
             name: 'Paul',
             numberOfBands: 4,
             bigNumberOfBands: 4n,
             alive: true,
             birthday: new Date(1942, 5, 18),
             unique: Symbol('Paul'),
-        };
-
-        expect(serialize(object)).toEqual(
+        })).toEqual(
             '{ name: Paul, numberOfBands: 4, bigNumberOfBands: 4, alive: true, birthday: 1942-06-18T03:00:00.000Z, unique: Symbol(Paul) }',
         );
     });
@@ -28,13 +26,11 @@ describe('serialize', () => {
     });
 
     it('should serialize the array entries', () => {
-        const object = {
+        expect(serialize({
             empty: [],
             oneValue: [1],
             multiValue: [true, false, 'zaphod', 42n],
-        };
-
-        expect(serialize(object)).toEqual(
+        })).toEqual(
             '{ empty: , oneValue: 1, multiValue: true, false, zaphod, 42 }',
         );
     });

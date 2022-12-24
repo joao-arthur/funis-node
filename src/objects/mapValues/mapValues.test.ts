@@ -8,21 +8,24 @@ describe('mapValues', () => {
                 {
                     a: 1,
                     b: 'two',
-                    c: true, 4: 'nada',
+                    c: true,
+                    4: 'nada',
                 },
                 value => value,
             ),
         ).toEqual({
             a: 1,
             b: 'two',
-            c: true, 4: 'nada',
+            c: true,
+            4: 'nada',
         });
         expect(
             mapValues(
                 {
                     a: 1,
                     b: 'two',
-                    c: true, 4: 'nada',
+                    c: true,
+                    4: 'nada',
                 },
                 value => value === true,
             ),
@@ -53,7 +56,8 @@ describe('mapValues', () => {
                 {
                     a: 1,
                     b: 'two',
-                    c: true, 4: 'nada',
+                    c: true,
+                    4: 'nada',
                 },
                 () => 'value',
             ),
