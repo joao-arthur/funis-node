@@ -1,10 +1,13 @@
 # sort
 
 ```ts
-function sort<T>(arr: readonly T[]): readonly T[];
+function sort<T>(
+    arr: readonly T[],
+    compareFn?: (a: T, b: T) => number
+): readonly T[];
 ```
 
-Returns a new array with the items sorted.
+Wrapper of the sort function. Returns a new sorted array without mutating the original one.
 
 ## Example
 
