@@ -8,3 +8,15 @@ type returnType<K, V> = {
 
 function last<K, V>(map: Map<K, V>): returnType<K, V> | undefined;
 ```
+
+Returns the last entry of the map.
+
+## Example
+
+```ts
+maps.last(new Map()) // => undefined
+maps.last(new Map([
+    [1, { name: 'Paul McCartney' }],
+    [2, { name: 'John Lennon' }],
+])) // => { key: 2, value: { name: 'John Lennon' } }
+```
