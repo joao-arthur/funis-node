@@ -6,6 +6,7 @@ export function serialize<T>(obj: plainObject<T>): string {
             return value.toISOString();
         if (value instanceof Array)
             return value.join(', ');
+
         return String(value);
     }
 

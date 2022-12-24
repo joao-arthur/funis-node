@@ -92,6 +92,7 @@ export function replaceAccentuation(str: string): string {
             return 'z';
         if ('ŹẐ'.includes(letter))
             return 'Z';
+
         return letter;
     }).join('');
 }

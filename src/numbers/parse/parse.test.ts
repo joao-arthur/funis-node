@@ -32,7 +32,6 @@ describe('parse', () => {
         ).toBe(-1.53);
     });
 
-
     it('should return undefined for wrong prexif', () => {
         expect(parse('US$4', { prefix: 'R$' })).toBe(undefined);
         expect(parse('R$-6', { prefix: 'rem' })).toBe(undefined);

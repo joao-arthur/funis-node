@@ -29,6 +29,7 @@ module.exports = {
         ],
         '@typescript-eslint/indent': ['error', 4],
         '@typescript-eslint/explicit-function-return-type': 'error',
+        '@typescript-eslint/no-extra-parens': 'error',
         'arrow-parens': ['error', 'as-needed'],
         'operator-linebreak': [
             'error',
@@ -74,5 +75,11 @@ module.exports = {
             comments: 70,
             ignoreStrings: true,
         }],
+        'no-multiple-empty-lines': ['error', { max: 1, maxEOF: 1 }],
+        'padding-line-between-statements': [
+            'error',
+            { blankLine: 'always', prev: '*', next: 'return' },
+        ],
+        'max-statements-per-line': ['error', { max: 1 }],
     },
 };
