@@ -24,10 +24,14 @@ Returns the passed value otherwise.
 ```ts
 numbers.clamp(77, { min: 99 }) // => 99
 numbers.clamp(10, { min: 8 }) // => 10
+```
 
+```ts
 numbers.clamp(-10, { max: 5 }) // => -10
 numbers.clamp(846, { max: -1 }) // => -1
+```
 
+```ts
 numbers.clamp(10, { min: 8, max: 12 }) // => 10
 numbers.clamp(10, { min: 0, max: 9 }) // => 9
 ```

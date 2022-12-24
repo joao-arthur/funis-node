@@ -24,7 +24,9 @@ numbers.parse(
 ) // => undefined
 numbers.parse('US$4', { prefix: 'R$' }) // => undefined
 numbers.parse('4px', { suffix: 'rem' }) // => undefined
+```
 
+```ts
 numbers.parse('$100.00', { prefix: '$' }) // => 100.00
 numbers.parse(
     'width: 100px',

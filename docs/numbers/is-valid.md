@@ -12,7 +12,9 @@ Returns false for *null*, *undefined* and *NaN*. Returns true otherwise.
 numbers.isValid(null) // => false
 numbers.isValid(undefined) // => false
 numbers.isValid(NaN) // => false
+```
 
+```ts
 numbers.isValid(0) // => true
 numbers.isValid(1) // => true
 numbers.isValid(Infinity) // => true
