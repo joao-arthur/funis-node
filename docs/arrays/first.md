@@ -4,7 +4,7 @@
 function first<T>(arr: readonly T[]): T | undefined;
 ```
 
-Returns the first item of the array. If the array is empty, returns undefined.
+Returns the first item of the array. If the array is empty, returns *undefined*.
 
 ## Example
 

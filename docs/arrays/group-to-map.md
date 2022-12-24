@@ -7,7 +7,7 @@ function groupToMap<K, V>(
 ): Map<K, readonly V[]>;
 ```
 
-Group the items by the return of the callback. Then return the groups in an Map object.
+Group the items by the returned value of the callback. Then return the groups in an Map object.
 
 ## Example
 

@@ -7,7 +7,7 @@ function groupToObject<K, V>(
 ): plainObject<V>;
 ```
 
-Group the items by the return of the callback. Then return the groups in an plain object.
+Group the items by the returned value of the callback. Then return the groups in an plain object.
 
 ## Example
 

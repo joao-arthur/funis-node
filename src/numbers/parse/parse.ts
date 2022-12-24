@@ -21,7 +21,10 @@ export function parse(
     const endIndex = 'suffix' in options
         ? num.indexOf(options.suffix)
         : num.length;
-    const parsed = Number(num.slice(startIndex, endIndex));
+    const slice = num.slice(startIndex, endIndex);
+    if (slice === '')
+        return undefined;
+    const parsed = Number(slice);
 
     return !Number.isNaN(parsed) ? parsed : undefined;
 }

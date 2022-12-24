@@ -79,4 +79,16 @@ describe('parse', () => {
         ).toBe(undefined);
         expect(parse(':2em', { suffix: 'em' })).toBe(undefined);
     });
+
+    it('should return undefined if there is no number between prefix and suffix', () => {
+        expect(
+            parse('I see', { prefix: 'I see' }),
+        ).toBe(undefined);
+        expect(
+            parse('penguins', { suffix: 'penguins' }),
+        ).toBe(undefined);
+        expect(
+            parse('I see penguins', { prefix: 'I see ', suffix: 'penguins' }),
+        ).toBe(undefined);
+    });
 });
