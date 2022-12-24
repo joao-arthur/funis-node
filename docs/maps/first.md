@@ -18,5 +18,5 @@ maps.first(new Map()) // => undefined
 maps.first(new Map([
     [1, { name: 'Paul McCartney' }],
     [2, { name: 'John Lennon' }],
-])) // => { key: 1, value: { name: 'Paul McCartney' } }
+])) // => [1, { name: 'Paul McCartney' }]
 ```

@@ -18,5 +18,5 @@ maps.last(new Map()) // => undefined
 maps.last(new Map([
     [1, { name: 'Paul McCartney' }],
     [2, { name: 'John Lennon' }],
-])) // => { key: 2, value: { name: 'John Lennon' } }
+])) // => [2, { name: 'John Lennon' }]
 ```
