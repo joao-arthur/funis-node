@@ -1,7 +1,11 @@
 # range
 
 ```ts
-function range(from: number, to: number, step?: number): readonly number[];
+function range(
+    from: number,
+    to: number,
+    step?: number = 1
+): readonly number[];
 ```
 
 Returns a range from a number to another, respecting the step between each value.

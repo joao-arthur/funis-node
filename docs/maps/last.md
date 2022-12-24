@@ -1,12 +1,7 @@
 # last
 
 ```ts
-type returnType<K, V> = {
-    readonly key: K;
-    readonly value: V;
-};
-
-function last<K, V>(map: Map<K, V>): returnType<K, V> | undefined;
+function last<K, V>(map: Map<K, V>): readonly [K, V] | undefined;
 ```
 
 Returns the last entry of the map.

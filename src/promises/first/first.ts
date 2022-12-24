@@ -6,14 +6,14 @@ export function first<T>(promises: Promise<T>[]): Promise<T> {
             promise
                 .then(value => {
                     if (!resulted) {
-                        resolve(value);
                         resulted = true;
+                        resolve(value);
                     }
                 })
                 .catch(error => {
                     if (!resulted) {
-                        reject(error);
                         resulted = true;
+                        reject(error);
                     }
                 });
         });
