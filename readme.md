@@ -1,6 +1,8 @@
 # funis
 
-> Latin word for **rope**. Because **fun**ction **is** the way to go.  
+> Latin word for **rope**. Because **fun**ction **is** the way to go.
+
+[![npm module](https://badge.fury.io/js/ramda.svg)](https://www.npmjs.org/package/funis)
 
 Optionated type-safe utility library. Partially inspired by [radash](https://www.npmjs.com/package/radash).
 
