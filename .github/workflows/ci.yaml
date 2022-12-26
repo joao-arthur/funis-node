@@ -13,7 +13,6 @@ on:
 
 jobs:
   install:
-    needs: [install]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
