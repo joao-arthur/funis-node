@@ -5,5 +5,59 @@ on:
     branches: [main]
 
 jobs:
-  ci:
-    uses: ./.github/workflows/ci.yaml
+  install:
+    needs: [install]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 6.32.9
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 19.2.0
+          cache: 'pnpm'
+          cache-dependency-path: '**/pnpm-lock.yaml'
+      - run: pnpm install --frozen-lockfile
+
+  lint:
+    needs: [install]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 19.2.0
+          cache: 'pnpm'
+          cache-dependency-path: '**/pnpm-lock.yaml'
+      - run: npm run lint
+
+  test:
+    needs: [install]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 19.2.0
+          cache: 'pnpm'
+          cache-dependency-path: '**/pnpm-lock.yaml'
+      - run: npm run test:cov
+
+  build:
+    needs: ['lint', 'test']
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 19.2.0
+          cache: 'pnpm'
+          cache-dependency-path: '**/pnpm-lock.yaml'
+      - run: npm run build
+      - run: tar -cvf dist.tar ./dist
+      - uses: actions/upload-artifact@v3
+        with:
+          name: dist-${{ github.sha }}
+          path: dist.tar
+          retention-days: 30
