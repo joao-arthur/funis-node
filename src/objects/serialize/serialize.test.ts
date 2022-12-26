@@ -9,7 +9,7 @@ describe('serialize', () => {
             numberOfBands: 4,
             bigNumberOfBands: 4n,
             alive: true,
-            birthday: new Date(1942, 5, 18),
+            birthday: new Date('1942-06-18T03:00:00.000Z'),
             unique: Symbol('Paul'),
         })).toEqual(
             '{ name: Paul, numberOfBands: 4, bigNumberOfBands: 4, alive: true, birthday: 1942-06-18T03:00:00.000Z, unique: Symbol(Paul) }',
