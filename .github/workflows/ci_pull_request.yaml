@@ -1,8 +1,15 @@
-name: CI
+name: CI Pull Request
 
 on:
-  push:
-    branches: [main]
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+      - edited
+      - synchronize
+      - reopened
+  workflow_call:
 
 jobs:
   test:
@@ -32,5 +39,5 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - run: pnpm install --frozen-lockfile --no-optional
+      - run: pnpm lint:nofix
       - run: pnpm test:cov
-      - uses: codecov/codecov-action@v3

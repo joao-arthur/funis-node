@@ -1,7 +1,7 @@
 {
     "name": "funis",
     "description": "optionated type-safe utility library",
-    "version": "0.2.1",
+    "version": "0.3.0",
     "license": "MIT",
     "author": "João Arthur <joao.lothamer@gmail.com>",
     "repository": "https://github.com/Joao-Arthur/funis",
@@ -24,6 +24,7 @@
         "test:dev": "vitest watch",
         "test:cov": "vitest run --coverage",
         "lint": "eslint \"./src/**/*.ts\" --fix",
+        "lint:nofix": "eslint \"./src/**/*.ts\"",
         "build": "tsc",
         "docs:dev": "vitepress dev docs",
         "docs:build": "vitepress build docs",
@@ -37,9 +38,10 @@
         "eslint": "^8.28.0",
         "eslint-plugin-import": "^2.26.0",
         "typescript": "^4.9.3",
-        "vite": "^3.2.4",
+        "vite": "^3.2.4"
+    },
+    "optionalDependencies": {
         "vitepress": "1.0.0-alpha.31",
-        "vitest": "^0.25.3",
         "vue": "^3.2.45"
     }
 }
