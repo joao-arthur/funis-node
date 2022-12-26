@@ -8,6 +8,7 @@ _funis_ provides a set of modularized basic operations that are common in a wide
 
 [![npm module](https://badge.fury.io/js/ramda.svg)](https://www.npmjs.org/package/funis)
 [![Code Climate](https://codeclimate.com/github/Joao-Arthur/funis/badges/gpa.svg)](https://codeclimate.com/github/Joao-Arthur/funis)
+[![CD](https://github.com/Joao-Arthur/funis/actions/workflows/cd.yaml/badge.svg)](https://github.com/Joao-Arthur/funis/actions/workflows/cd.yaml)
 
 ## What it can offer
 
