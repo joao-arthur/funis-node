@@ -34,7 +34,7 @@ jobs:
 
       - run: pnpm install --frozen-lockfile --no-optional
       - run: pnpm build
-      - run: cd ./node_modules && npm publish
+      - run: npm publish
 
   deploy_docs:
     runs-on: ubuntu-latest
