@@ -23,8 +23,6 @@
         "test": "vitest run",
         "test:dev": "vitest watch",
         "test:cov": "vitest run --coverage",
-        "test:cd": "vitest run --reporter=verbose --no-color",
-        "test:cov-cd": "vitest run --coverage --no-color",
         "lint": "eslint \"./src/**/*.ts\" --fix",
         "build": "tsc",
         "docs:dev": "vitepress dev docs",

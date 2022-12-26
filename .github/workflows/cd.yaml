@@ -32,8 +32,8 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - run: pnpm install --frozen-lockfile
-      - run: pnpm test:cd
-      - run: pnpm test:cov-cd
+      - run: pnpm test:cov
+      - uses: codecov/codecov-action@v3
 
 
 #  lint:
