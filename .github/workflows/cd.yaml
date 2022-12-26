@@ -5,19 +5,35 @@ on:
     branches: [main]
 
 jobs:
-  install:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: 18.12.1
-          cache: 'pnpm'
-          cache-dependency-path: '**/pnpm-lock.yaml'
       - uses: pnpm/action-setup@v2
+        id: pnpm-install
         with:
           version: 7.18.2
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+      - uses: actions/cache@v3
+        with:
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
       - run: pnpm install --frozen-lockfile
+      - run: pnpm test:cov
+
 
 #  lint:
 #    needs: [install]
@@ -31,20 +47,20 @@ jobs:
 #          cache-dependency-path: '**/pnpm-lock.yaml'
 #      - run: pnpm run lint
 
-  test:
-    needs: [install]
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18.12.1
-          cache: 'pnpm'
-          cache-dependency-path: '**/pnpm-lock.yaml'
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 7.18.2
-      - run: pnpm run test:cov
+#  test:
+#    needs: [install]
+#    runs-on: ubuntu-latest
+#    steps:
+#      - uses: actions/checkout@v3
+#      - uses: actions/setup-node@v3
+#        with:
+#          node-version: 18.12.1
+#          cache: 'pnpm'
+#          cache-dependency-path: '**/pnpm-lock.yaml'
+#      - uses: pnpm/action-setup@v2
+#        with:
+#          version: 7.18.2
+#      - run: pnpm run test:cov
 
 #  build:
 #    needs: ['lint', 'test']
