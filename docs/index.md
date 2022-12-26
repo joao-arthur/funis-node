@@ -11,6 +11,7 @@ _funis_ provides a set of modularized basic operations that are common in a wide
 [![CI](https://github.com/Joao-Arthur/funis/actions/workflows/ci.yaml/badge.svg)](https://github.com/Joao-Arthur/funis/actions/workflows/ci.yaml)
 [![CD](https://github.com/Joao-Arthur/funis/actions/workflows/cd.yaml/badge.svg)](https://github.com/Joao-Arthur/funis/actions/workflows/cd.yaml)
 [![Deploy](https://github.com/Joao-Arthur/funis/actions/workflows/deploy.yaml/badge.svg)](https://github.com/Joao-Arthur/funis/actions/workflows/deploy.yaml)
+[![codecov](https://codecov.io/gh/Joao-Arthur/funis/branch/main/graph/badge.svg?token=9FI5PDDFB3)](https://codecov.io/gh/Joao-Arthur/funis)
 
 ## What it can offer
 
