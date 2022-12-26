@@ -6,7 +6,7 @@ Optionated type-safe utility library. Partially inspired by [radash](https://www
 
 _funis_ provides a set of modularized basic operations that are common in a wide range of applications. It is a helper for `modern day js`.
 
-[![npm module](https://badge.fury.io/js/ramda.svg)](https://www.npmjs.org/package/funis)
+[![npm module](https://badge.fury.io/js/funis.svg)](https://www.npmjs.org/package/funis)
 [![Code Climate](https://codeclimate.com/github/Joao-Arthur/funis/badges/gpa.svg)](https://codeclimate.com/github/Joao-Arthur/funis)
 [![CD](https://github.com/Joao-Arthur/funis/actions/workflows/cd.yaml/badge.svg)](https://github.com/Joao-Arthur/funis/actions/workflows/cd.yaml)
 
