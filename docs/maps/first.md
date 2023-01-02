@@ -10,6 +10,9 @@ Returns the first entry of the map.
 
 ```ts
 maps.first(new Map()) // => undefined
+```
+
+```ts
 maps.first(new Map([
     [1, { name: 'Paul McCartney' }],
     [2, { name: 'John Lennon' }],

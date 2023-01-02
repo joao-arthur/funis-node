@@ -10,5 +10,8 @@ Returns the first item of the array.
 
 ```ts
 arrays.first([]) // => undefined
+```
+
+```ts
 arrays.first([4, 5, 6]) // => 4
 ```

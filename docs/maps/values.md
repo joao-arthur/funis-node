@@ -10,6 +10,9 @@ Returns the values of the Map object entries.
 
 ```ts
 maps.values(new Map()) // => []
+```
+
+```ts
 maps.values(new Map([
     [1, { name: 'Paul McCartney' }],
     [2, { name: 'George Harrison' }],

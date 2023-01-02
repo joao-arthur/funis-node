@@ -10,6 +10,9 @@ Returns the last entry of the map.
 
 ```ts
 maps.last(new Map()) // => undefined
+```
+
+```ts
 maps.last(new Map([
     [1, { name: 'Paul McCartney' }],
     [2, { name: 'John Lennon' }],

@@ -30,6 +30,7 @@ export default {
                     { text: 'entries', link: '/maps/entries' },
                     { text: 'keys', link: '/maps/keys' },
                     { text: 'values', link: '/maps/values' },
+                    { text: 'fromObject', link: '/maps/from-object' },
                 ]
             },
             {
