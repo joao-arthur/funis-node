@@ -52,6 +52,7 @@ export default {
                     { text: 'mapValues', link: '/objects/map-values' },
                     { text: 'serialize', link: '/objects/serialize' },
                     { text: 'serializesToSame', link: '/objects/serializes-to-same' },
+                    { text: 'fromMap', link: '/objects/from-map' },
                 ]
             },
             {

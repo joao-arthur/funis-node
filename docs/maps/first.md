@@ -13,8 +13,10 @@ maps.first(new Map()) // => undefined
 ```
 
 ```ts
-maps.first(new Map([
-    [1, { name: 'Paul McCartney' }],
-    [2, { name: 'John Lennon' }],
-])) // => [1, { name: 'Paul McCartney' }]
+maps.first(
+    new Map([
+        [1, { name: 'Paul McCartney' }],
+        [2, { name: 'John Lennon' }],
+    ])
+) // => [1, { name: 'Paul McCartney' }]
 ```

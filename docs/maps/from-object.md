@@ -23,5 +23,5 @@ maps.fromObject({
     John -> 'Guitar',
     George -> 'Guitar',
     Ringo -> 'Drums',
-}*/
+} */
 ```
