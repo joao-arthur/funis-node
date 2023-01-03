@@ -75,6 +75,8 @@ export default {
                     { text: 'compose', link: '/standard/compose' },
                     { text: 'pipe', link: '/standard/pipe' },
                     { text: 'self', link: '/standard/self' },
+                    { text: 'debounce', link: '/standard/debounce' },
+                    { text: 'throttle', link: '/standard/throttle' },
                 ]
             },
             {
