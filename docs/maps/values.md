@@ -4,7 +4,7 @@
 function values<K, V>(map: Map<K, V>): readonly V[];
 ```
 
-Returns the values of the Map object entries.
+Returns the values of the Map instance entries.
 
 ## Example
 

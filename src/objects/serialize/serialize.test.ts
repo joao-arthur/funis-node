@@ -40,7 +40,7 @@ describe('serialize', () => {
             constructor(private readonly name: string) { }
 
             bark(): string {
-                return 'wolf! wolf!';
+                return `wolf! wolf! I'm ${this.name}!`;
             }
         }
 

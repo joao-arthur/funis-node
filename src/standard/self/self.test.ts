@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { self } from './self';
+import { self } from './self.js';
 
 describe('self', () => {
     it('should return the passed value', () => {

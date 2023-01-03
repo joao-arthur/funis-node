@@ -6,7 +6,7 @@ describe('groupToMap', () => {
         expect(groupToMap([], item => item)).toEqual(new Map());
     });
 
-    it('should group the items by the callback return value in a map', () => {
+    it('should group the items by the callback return value in a Map instance', () => {
         expect(
             groupToMap([1, 2, 3], item => item),
         ).toEqual(

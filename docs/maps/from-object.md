@@ -4,7 +4,7 @@
 function fromObject<T>(obj: plainObject<T>): Map<string | number, T>;
 ```
 
-Returns a new Map object with the same key-value pairs of the passed object.
+Returns a new Map instance with the same key-value pairs of the passed object.
 
 ## Example
 

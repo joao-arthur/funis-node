@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { last } from './last.js';
 
 describe('last', () => {
-    it('should return the last item of the map', () => {
+    it('should return the last item of the Map instance', () => {
         expect(last(new Map([
             [1, { name: 'Paul McCartney' }],
             [2, { name: 'John Lennon' }],

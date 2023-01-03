@@ -12,7 +12,7 @@ Map the object keys into a new object.
 ## Example
 
 ```ts
-objects..mapKeys(
+objects.mapKeys(
     {
         a: 1,
         b: 'two',

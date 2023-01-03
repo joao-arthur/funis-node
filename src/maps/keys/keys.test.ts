@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { keys } from './keys.js';
 
 describe('keys', () => {
-    it('should return the keys of the map', () => {
+    it('should return the keys of the Map instance', () => {
         expect(keys(new Map())).toEqual([]);
         expect(keys(new Map([
             [1, { name: 'Paul McCartney' }],

@@ -20,6 +20,10 @@ describe('serializesToSame', () => {
                 private readonly x: number,
                 private readonly y: number,
             ) { }
+
+            public serialize(): string {
+                return `(${this.x}, ${this.y})`;
+            }
         }
 
         expect(serializesToSame(

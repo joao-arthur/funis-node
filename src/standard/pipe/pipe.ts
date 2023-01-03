@@ -590,6 +590,6 @@ export function pipe<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14
     fn31: (arg31: T31) => T32,
 ): (initialValue: T1) => T32;
 
-export function pipe(...fns: unknownFn[]): unknownFn {
+export function pipe(...fns: readonly unknownFn[]): unknownFn {
     return initialParam => fns.reduce((curr, fn) => fn(curr), initialParam);
 }

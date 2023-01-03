@@ -1,4 +1,4 @@
-export function first<T>(promises: Promise<T>[]): Promise<T> {
+export function first<T>(promises: readonly Promise<T>[]): Promise<T> {
     return new Promise((resolve, reject) => {
         let resulted = false;
 

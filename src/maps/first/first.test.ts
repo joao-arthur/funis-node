@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { first } from './first.js';
 
 describe('first', () => {
-    it('should return the first item of the map', () => {
+    it('should return the first item of the Map instance', () => {
         expect(first(new Map([
             [1, { name: 'Paul McCartney' }],
             [2, { name: 'John Lennon' }],

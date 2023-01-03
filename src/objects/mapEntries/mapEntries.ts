@@ -3,7 +3,7 @@ import { plainObject } from '../../types/plainObject.js';
 
 export function mapEntries<T>(
     obj: plainObject<T>,
-    cb: (entry: [string | number, T]) => [string | number, T],
+    cb: (entry: readonly [string | number, T]) => readonly [string | number, T],
 ): plainObject<T> {
     return pipe(
         (obj: plainObject<T>) => Object.entries(obj),

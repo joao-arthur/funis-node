@@ -4,7 +4,7 @@
 function entries<K, V>(map: Map<K, V>): readonly (readonly [K, V])[];
 ```
 
-Returns the entries of the Map object.
+Returns the entries of the Map instance.
 
 ## Example
 

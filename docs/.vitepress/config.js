@@ -25,6 +25,9 @@ export default {
                 text: 'maps',
                 collapsible: true,
                 items: [
+                    { text: 'mapEntries', link: '/maps/map-entries' },
+                    { text: 'mapKeys', link: '/maps/map-keys' },
+                    { text: 'mapValues', link: '/maps/map-values' },
                     { text: 'first', link: '/maps/first' },
                     { text: 'last', link: '/maps/last' },
                     { text: 'entries', link: '/maps/entries' },
