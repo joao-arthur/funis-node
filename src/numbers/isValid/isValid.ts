@@ -1,3 +1,3 @@
 export function isValid(num: number | undefined | null): boolean {
-    return !!num || num === 0;
+    return typeof num === 'number' && (!!num || num === 0);
 }
