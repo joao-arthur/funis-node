@@ -1,7 +1,10 @@
 # throttle
 
 ```ts
-function throttle(cb: () => void, timeout: number): () => void
+function throttle(
+    cb: () => void,
+    timeout: number
+): () => void
 ```
 
 Returns a function that executes the callback after the timeout.

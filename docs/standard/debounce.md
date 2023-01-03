@@ -1,7 +1,10 @@
 # debounce
 
 ```ts
-function debounce(cb: () => void, timeout: number): () => void
+function debounce(
+    cb: () => void,
+    timeout: number
+): () => void
 ```
 
 Returns a function that executes the callback after the timeout.

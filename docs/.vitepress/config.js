@@ -56,6 +56,8 @@ export default {
                     { text: 'serialize', link: '/objects/serialize' },
                     { text: 'serializesToSame', link: '/objects/serializes-to-same' },
                     { text: 'fromMap', link: '/objects/from-map' },
+                    { text: 'pick', link: '/objects/pick' },
+                    { text: 'omit', link: '/objects/omit' },
                 ]
             },
             {
