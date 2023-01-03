@@ -41,9 +41,9 @@ export default {
                 collapsible: true,
                 items: [
                     { text: 'clamp', link: '/numbers/clamp' },
-                    { text: 'isValid', link: '/numbers/is-valid' },
                     { text: 'parse', link: '/numbers/parse' },
                     { text: 'range', link: '/numbers/range' },
+                    { text: 'isValid', link: '/numbers/is-valid' },
                 ]
             },
             {
@@ -86,6 +86,7 @@ export default {
                     { text: 'kebabCase', link: '/strings/kebab-case' },
                     { text: 'snakeCase', link: '/strings/snake-case' },
                     { text: 'replaceAccentuation', link: '/strings/replace-accentuation' },
+                    { text: 'isValid', link: '/strings/is-valid' },
                 ]
             },
             {

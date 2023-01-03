@@ -1,7 +1,7 @@
 # fromObject
 
 ```ts
-function fromObject<T>(obj: plainObject<T>): Map<string | number, T>;
+function fromObject<T>(obj: plainObject<T>): Map<string | number, T>
 ```
 
 Returns a new Map instance with the same key-value pairs of the passed object.

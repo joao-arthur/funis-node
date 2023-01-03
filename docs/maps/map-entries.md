@@ -1,10 +1,10 @@
 # mapEntries
 
 ```ts
-function mapEntries<T>(
-    obj: plainObject<T>,
-    cb: (entry: [string | number, T]) => [string | number, T]
-): plainObject<T>;
+function mapEntries<K, V>(
+    map: Map<K, V>,
+    cb: (entry: readonly [K, V]) => readonly [K, V]
+): Map<K, V>
 ```
 
 Map the _Map instance_ entries into a new _Map instance_.

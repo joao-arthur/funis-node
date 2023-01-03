@@ -1,11 +1,11 @@
 import { clamp } from './clamp/clamp.js';
-import { isValid } from './isValid/isValid.js';
 import { parse } from './parse/parse.js';
 import { range } from './range/range.js';
+import { isValid } from './isValid/isValid.js';
 
 export const numbers = {
     clamp,
-    isValid,
     parse,
     range,
+    isValid,
 } as const;

@@ -1,10 +1,10 @@
 # mapKeys
 
 ```ts
-function mapKeys<T>(
-    obj: plainObject<T>,
-    cb: (key: string | number) => string | number
-): plainObject<T>;
+function mapKeys<K, V>(
+    map: Map<K, V>,
+    cb: (key: K) => K
+): Map<K, V>
 ```
 
 Map the _Map instance_ keys into a new _Map instance_.

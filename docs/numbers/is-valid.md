@@ -4,13 +4,13 @@
 function isValid(num: number | undefined | null): boolean;
 ```
 
-Returns false for *null*, *undefined* and *NaN*. Returns true otherwise.
+Returns false for *undefined*, *null* and *NaN*. Returns true otherwise.
 
 ## Example
 
 ```ts
-numbers.isValid(null) // => false
 numbers.isValid(undefined) // => false
+numbers.isValid(null) // => false
 numbers.isValid(NaN) // => false
 ```
 
