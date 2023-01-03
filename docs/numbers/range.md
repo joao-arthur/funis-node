@@ -5,7 +5,7 @@ function range(
     from: number,
     to: number,
     step?: number = 1
-): readonly number[];
+): readonly number[]
 ```
 
 Returns a range from a number to another, respecting the step between each value.

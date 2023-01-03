@@ -1,7 +1,7 @@
 # unique
 
 ```ts
-function unique<T>(arr: readonly T[]): readonly T[];
+function unique<T>(arr: readonly T[]): readonly T[]
 ```
 
 Returns a new array with the unique values.

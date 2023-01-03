@@ -4,7 +4,7 @@
 function mapValues<T>(
     obj: plainObject<T>,
     cb: (value: T) => T
-): plainObject<T>;
+): plainObject<T>
 ```
 
 Map the object values into a new object.

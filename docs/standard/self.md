@@ -1,7 +1,7 @@
 # self
 
 ```ts
-function self<T>(value: T): T;
+function self<T>(value: T): T
 ```
 
 Returns the passed value.

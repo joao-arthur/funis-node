@@ -1,7 +1,7 @@
 # first
 
 ```ts
-function first<T>(arr: readonly T[]): T | undefined;
+function first<T>(arr: readonly T[]): T | undefined
 ```
 
 Returns the first item of the array.

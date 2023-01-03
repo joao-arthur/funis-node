@@ -1,7 +1,7 @@
 # replaceAccentuation
 
 ```ts
-function replaceAccentuation(str: string): string;
+function replaceAccentuation(str: string): string
 ```
 
 Replace accentuated characters by unaccentuated ones.

@@ -4,7 +4,7 @@
 function groupToEntries<K, V>(
     arr: readonly V[],
     cb: (item: V) => K
-): readonly (readonly [K, readonly V[]])[];
+): readonly (readonly [K, readonly V[]])[]
 ```
 
 Group the items by the returned value of the callback. Then return the groups in entries.

@@ -3,8 +3,10 @@
 ```ts
 function mapEntries<T>(
     obj: plainObject<T>,
-    cb: (entry: [string | number, T]) => [string | number, T]
-): plainObject<T>;
+    cb: (
+        entry: readonly [string | number, T]
+    ) => readonly [string | number, T],
+): plainObject<T>
 ```
 
 Map the object entries into a new object.

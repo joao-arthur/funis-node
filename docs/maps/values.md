@@ -1,7 +1,7 @@
 # values
 
 ```ts
-function values<K, V>(map: Map<K, V>): readonly V[];
+function values<K, V>(map: Map<K, V>): readonly V[]
 ```
 
 Returns the values of the Map instance entries.

@@ -4,7 +4,7 @@
 function groupToMap<K, V>(
     arr: readonly V[],
     cb: (item: V) => K
-): Map<K, readonly V[]>;
+): Map<K, readonly V[]>
 ```
 
 Group the items by the returned value of the callback. Then return the groups in an Map instance.

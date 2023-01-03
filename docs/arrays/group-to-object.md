@@ -4,7 +4,7 @@
 function groupToObject<K, V>(
     arr: readonly V[],
     cb: (item: V) => K
-): plainObject<V>;
+): plainObject<V>
 ```
 
 Group the items by the returned value of the callback. Then return the groups in an plain object.

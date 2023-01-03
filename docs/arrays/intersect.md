@@ -1,7 +1,7 @@
 # intersect
 
 ```ts
-function intersect<T>(arrs: readonly (readonly T[])[]): readonly T[];
+function intersect<T>(arrs: readonly (readonly T[])[]): readonly T[]
 ```
 
 Returns a new array with the items that appear in every array.

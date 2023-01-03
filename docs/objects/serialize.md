@@ -1,7 +1,7 @@
 # serialize
 
 ```ts
-function serialize<T>(obj: plainObject<T>): string;
+function serialize<T>(obj: plainObject<T>): string
 ```
 
 Serializes the plain properties to a json-like format that is friendly to read. 
@@ -29,7 +29,7 @@ class Dog {
     constructor(private readonly name: string) { }
 
     bark(): string {
-        return 'wolf! wolf!';
+        return `wolf! wolf! I'm ${this.name}!`;
     }
 }
 

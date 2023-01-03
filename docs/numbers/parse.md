@@ -8,9 +8,9 @@ type parseOptions = {
 } | {
     readonly prefix: string;
     readonly suffix: string;
-};
+}
 
-function parse(num: string, options: parseOptions): number | undefined;
+function parse(num: string, options: parseOptions): number | undefined
 ```
 
 Try to parse a number by the given prefix and suffix. If the prefix or suffix doesn't match the passed value, returns *undefined*.

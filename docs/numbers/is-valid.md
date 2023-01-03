@@ -1,7 +1,7 @@
 # isValid
 
 ```ts
-function isValid(num: number | undefined | null): boolean;
+function isValid(num: number | undefined | null): boolean
 ```
 
 Returns false for *undefined*, *null* and *NaN*. Returns true otherwise.

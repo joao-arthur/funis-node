@@ -1,7 +1,7 @@
 # last
 
 ```ts
-function last<T>(promises: Promise<T>[]): Promise<T>;
+function last<T>(promises: readonly Promise<T>[]): Promise<T>
 ```
 
 Returns the last promise to resolve/reject.

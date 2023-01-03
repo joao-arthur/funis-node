@@ -4,7 +4,7 @@
 function mapKeys<T>(
     obj: plainObject<T>,
     cb: (key: string | number) => string | number
-): plainObject<T>;
+): plainObject<T>
 ```
 
 Map the object keys into a new object.

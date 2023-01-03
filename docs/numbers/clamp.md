@@ -10,7 +10,7 @@ type clampOptions = {
     readonly max: number;
 };
 
-function clamp(num: number, options: clampOptions): number;
+function clamp(num: number, options: clampOptions): number
 ```
 
 If min is passed and the number is smaller than min, returns min.

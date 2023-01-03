@@ -1,7 +1,7 @@
 # isValid
 
 ```ts
-function isValid(str: string | undefined | null): boolean;
+function isValid(str: string | undefined | null): boolean
 ```
 
 Returns false for *undefined* and *null*. Returns true otherwise.

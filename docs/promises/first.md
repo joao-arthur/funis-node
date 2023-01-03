@@ -1,7 +1,7 @@
 # first
 
 ```ts
-function first<T>(promises: Promise<T>[]): Promise<T>;
+function first<T>(promises: readonly Promise<T>[]): Promise<T>
 ```
 
 Returns the first promise to resolve/reject.

@@ -1,7 +1,7 @@
 # serializesToSame
 
 ```ts
-function serializesToSame(objA: plainObject, objB: plainObject): boolean;
+function serializesToSame(objA: plainObject, objB: plainObject): boolean
 ```
 
 Returns wheater the [serialized](./serialize.md) version of both are equal or not.

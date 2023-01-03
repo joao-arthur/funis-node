@@ -1,7 +1,7 @@
 # last
 
 ```ts
-function last<K, V>(map: Map<K, V>): readonly [K, V] | undefined;
+function last<K, V>(map: Map<K, V>): readonly [K, V] | undefined
 ```
 
 Returns the last entry of the map.

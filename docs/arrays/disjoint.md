@@ -1,7 +1,7 @@
 # disjoint
 
 ```ts
-function disjoint<T>(arrs: readonly (readonly T[])[]): readonly T[];
+function disjoint<T>(arrs: readonly (readonly T[])[]): readonly T[]
 ```
 
 Returns a new array with the items that appear in only one array.

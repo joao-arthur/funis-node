@@ -1,7 +1,7 @@
 # first
 
 ```ts
-function first<K, V>(map: Map<K, V>): readonly [K, V] | undefined;
+function first<K, V>(map: Map<K, V>): readonly [K, V] | undefined
 ```
 
 Returns the first entry of the map.
