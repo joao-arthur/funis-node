@@ -1,6 +1,6 @@
 export function snakeCase(str: string): string {
     return str
-        .split(' ')
+        .split(/ |_|-/g)
         .map(word => word.toLocaleLowerCase())
         .join('_');
 }

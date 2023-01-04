@@ -2,13 +2,26 @@ import { describe, it, expect } from 'vitest';
 import { kebabCase } from './kebabCase.js';
 
 describe('kebabCase', () => {
-    it('should tranform the passed value to pascal case', () => {
+    it('should transform empty string to kebab case', () => {
         expect(kebabCase('')).toBe('');
-        expect(kebabCase('j S o N')).toBe('j-s-o-n');
+    });
+
+    it('should transform single word to kebab case', () => {
         expect(kebabCase('hey')).toBe('hey');
-        expect(kebabCase('hey Joe')).toBe('hey-joe');
-        expect(
-            kebabCase('hey Jude dont m4ke it b4d'),
-        ).toBe('hey-jude-dont-m4ke-it-b4d');
+    });
+
+    it('should transform the value separated by space to kebab case', () => {
+        expect(kebabCase('j S o N')).toBe('j-s-o-n');
+        expect(kebabCase('hey Jo3')).toBe('hey-jo3');
+    });
+
+    it('should transform the value separated by underscore to kebab case', () => {
+        expect(kebabCase('j_S_o_N')).toBe('j-s-o-n');
+        expect(kebabCase('hey_Jo3')).toBe('hey-jo3');
+    });
+
+    it('should transform the value separated by minus sign to kebab case', () => {
+        expect(kebabCase('j-S-o-N')).toBe('j-s-o-n');
+        expect(kebabCase('hey-Jo3')).toBe('hey-jo3');
     });
 });
