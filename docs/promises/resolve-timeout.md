@@ -1,7 +1,10 @@
 # resolveTimeout
 
 ```ts
-function resolveTimeout<T>(valueToResolve: T, timeout: number): Promise<T>
+function resolveTimeout<T>(
+    valueToResolve: T,
+    timeout: number
+): Promise<T>
 ```
 
 Returns a promise that resolves after the timeout.

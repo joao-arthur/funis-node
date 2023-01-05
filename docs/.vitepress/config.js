@@ -58,6 +58,8 @@ export default {
                     { text: 'fromMap', link: '/objects/from-map' },
                     { text: 'pick', link: '/objects/pick' },
                     { text: 'omit', link: '/objects/omit' },
+                    { text: 'disjoint', link: '/objects/disjoint' },
+                    { text: 'intersect', link: '/objects/intersect' },
                 ]
             },
             {

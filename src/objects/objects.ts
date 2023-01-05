@@ -6,6 +6,8 @@ import { serializesToSame } from './serializesToSame/serializesToSame.js';
 import { fromMap } from './fromMap/fromMap.js';
 import { pick } from './pick/pick.js';
 import { omit } from './omit/omit.js';
+import { disjoint } from './disjoint/disjoint.js';
+import { intersect } from './intersect/intersect.js';
 
 export const objects = {
     mapEntries,
@@ -16,4 +18,6 @@ export const objects = {
     fromMap,
     pick,
     omit,
+    disjoint,
+    intersect,
 } as const;

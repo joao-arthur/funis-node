@@ -1,7 +1,10 @@
 # rejectTimeout
 
 ```ts
-function rejectTimeout<T>(valueToReject: T, timeout: number): Promise<T>
+function rejectTimeout<T>(
+    valueToReject: T,
+    timeout: number
+): Promise<T>
 ```
 
 Returns a promise that rejects after the timeout.

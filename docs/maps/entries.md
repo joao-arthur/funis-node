@@ -1,7 +1,9 @@
 # entries
 
 ```ts
-function entries<K, V>(map: Map<K, V>): readonly (readonly [K, V])[]
+function entries<K, V>(
+    map: Map<K, V>
+): readonly (readonly [K, V])[]
 ```
 
 Returns the entries of the Map instance.
