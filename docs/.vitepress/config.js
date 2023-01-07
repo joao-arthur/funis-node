@@ -45,6 +45,7 @@ export default {
                     { text: 'parse', link: '/numbers/parse' },
                     { text: 'range', link: '/numbers/range' },
                     { text: 'isValid', link: '/numbers/is-valid' },
+                    { text: 'random', link: '/numbers/random' },
                 ]
             },
             {

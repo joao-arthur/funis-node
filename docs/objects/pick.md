@@ -12,14 +12,14 @@ Creates an object with only the passed keys.
 ## Example
 
 ```ts   
-pick(
+objects.pick(
     { animal: 'dog', species: 'Canis lupus', age: 5 },
     [],
 ) // => { }
 ```
 
 ```ts   
-pick(
+objects.pick(
     { animal: 'dog', species: 'Canis lupus', age: 5 },
     ['animal'],
 ) // => { animal: 'dog' }

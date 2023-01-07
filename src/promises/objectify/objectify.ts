@@ -1,7 +1,11 @@
 type returnType<V, E> = {
-    readonly value: V | undefined;
-    readonly error: E | undefined;
-    readonly type: 'resolved' | 'rejected';
+    readonly value: V;
+    readonly error: undefined;
+    readonly type: 'resolved';
+} | {
+    readonly value: undefined;
+    readonly error: E;
+    readonly type: 'rejected';
 };
 
 export async function objectify<V, E>(

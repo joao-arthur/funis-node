@@ -11,12 +11,12 @@ Returns an array with the non-repeating combination of the items.
 ## Example
 
 ```ts
-combinations([]) // => []
-combinations([10]) // => []
+arrays.combinations([]) // => []
+arrays.combinations([10]) // => []
 ```
 
 ```ts
-combinations([10, 20, 30, 40, 50]) /* => [
+arrays.combinations([10, 20, 30, 40, 50]) /* => [
     [10, 20],
     [10, 30],
     [10, 40],

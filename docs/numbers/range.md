@@ -13,8 +13,8 @@ Returns a range from a number to another, respecting the step between each value
 ## Example
 
 ```ts
-range(2, -1) // => []
-range(-1, 2, -1) // => []
+numbers.range(2, -1) // => []
+numbers.range(-1, 2, -1) // => []
 ```
 
 ```ts
