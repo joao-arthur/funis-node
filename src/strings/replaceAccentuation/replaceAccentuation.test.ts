@@ -58,7 +58,7 @@ describe('replaceAccentuation', () => {
         expect(replaceAccentuation('Ŧ')).toBe('T');
     });
 
-    it('should return the non accent characters', () => {
+    it('should return the non accentuated characters', () => {
         expect(
             replaceAccentuation('abcdefghijklmnopqrstuvwyxz0123456789'),
         ).toBe(

@@ -93,6 +93,7 @@ export default {
                     { text: 'kebabCase', link: '/strings/kebab-case' },
                     { text: 'snakeCase', link: '/strings/snake-case' },
                     { text: 'replaceAccentuation', link: '/strings/replace-accentuation' },
+                    { text: 'removeAccentuation', link: '/strings/remove-accentuation' },
                     { text: 'isValid', link: '/strings/is-valid' },
                 ]
             },
