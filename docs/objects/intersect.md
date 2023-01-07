@@ -6,6 +6,8 @@ function intersect(
 ): plainObject
 ```
 
+Returns a new object with the entries that appear in all of them.
+
 ## Example
 
 ```ts

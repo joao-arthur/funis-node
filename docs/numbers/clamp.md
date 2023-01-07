@@ -8,7 +8,7 @@ type clampOptions = {
 } | {
     readonly min: number;
     readonly max: number;
-};
+}
 
 function clamp(num: number, options: clampOptions): number
 ```

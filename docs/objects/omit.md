@@ -14,6 +14,13 @@ Creates a new object without the passed keys.
 ```ts
 omit(
     { animal: 'dog', species: 'Canis lupus', age: 5 },
+    [],
+) // => { animal: 'dog', species: 'Canis lupus', age: 5 }
+```
+
+```ts
+omit(
+    { animal: 'dog', species: 'Canis lupus', age: 5 },
     ['animal'],
 ) // => { species: 'Canis lupus', age: 5 }
 ```

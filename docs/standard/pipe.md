@@ -1,6 +1,15 @@
 # pipe
 
 ```ts
+function pipe<T1, T2>(
+    fn1: (arg1: T1) => T2,
+): (initialValue: T1) => T2;
+
+function pipe<T1, T2, T3>(
+    fn1: (arg1: T1) => T2,
+    fn2: (arg2: T2) => T3,
+): (initialValue: T1) => T3;
+
 ...
 ```
 

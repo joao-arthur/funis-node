@@ -7,7 +7,7 @@ type clampOptions = {
 } | {
     readonly min: number;
     readonly max: number;
-}
+};
 
 export function clamp(num: number, options: clampOptions): number {
     return pipe(

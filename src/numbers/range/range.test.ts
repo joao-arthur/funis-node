@@ -12,8 +12,11 @@ describe('range', () => {
 
     it('should return empty array when min is greater than max', () => {
         expect(range(2, -1)).toEqual([]);
+        expect(range(-1, 2, -1)).toEqual([]);
         expect(range(10.2, 0)).toEqual([]);
+        expect(range(0, 10.2, -1)).toEqual([]);
         expect(range(5, 4.2)).toEqual([]);
+        expect(range(4.2, 5, -1)).toEqual([]);
     });
 
     it('should return a range of numbers respecting the step', () => {

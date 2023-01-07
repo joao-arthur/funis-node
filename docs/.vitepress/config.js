@@ -70,6 +70,7 @@ export default {
                     { text: 'last', link: '/promises/last' },
                     { text: 'resolveTimeout', link: '/promises/resolve-timeout' },
                     { text: 'rejectTimeout', link: '/promises/reject-timeout' },
+                    { text: 'objectify', link: '/promises/objectify' },
                 ]
             },
             {
