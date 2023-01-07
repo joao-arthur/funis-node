@@ -9,6 +9,13 @@ describe('removeAccentuation', () => {
         expect(removeAccentuation('äëïöü')).toBe('');
         expect(removeAccentuation('âêîôû')).toBe('');
         expect(removeAccentuation('ȁȅȉȍȕ')).toBe('');
+        expect(removeAccentuation('āēīōū')).toBe('');
+        expect(removeAccentuation('ăĕ')).toBe('');
+        expect(removeAccentuation('ęį')).toBe('');
+        expect(removeAccentuation('őű')).toBe('');
+        expect(removeAccentuation('åů')).toBe('');
+        expect(removeAccentuation('ė')).toBe('');
+        expect(removeAccentuation('ě')).toBe('');
         expect(removeAccentuation('ø')).toBe('');
         expect(removeAccentuation('ǘ')).toBe('');
         expect(removeAccentuation('ǜ')).toBe('');
@@ -21,6 +28,13 @@ describe('removeAccentuation', () => {
         expect(removeAccentuation('ÄËÏÖÜ')).toBe('');
         expect(removeAccentuation('ÂÊÎÔÛ')).toBe('');
         expect(removeAccentuation('ȀȄȈȌȔ')).toBe('');
+        expect(removeAccentuation('ĀĒĪŌŪ')).toBe('');
+        expect(removeAccentuation('ĂĔ')).toBe('');
+        expect(removeAccentuation('ĘĮ')).toBe('');
+        expect(removeAccentuation('ŐŰ')).toBe('');
+        expect(removeAccentuation('ÅŮ')).toBe('');
+        expect(removeAccentuation('Ė')).toBe('');
+        expect(removeAccentuation('Ě')).toBe('');
         expect(removeAccentuation('Ø')).toBe('');
         expect(removeAccentuation('Ǘ')).toBe('');
         expect(removeAccentuation('Ǜ')).toBe('');
@@ -28,30 +42,36 @@ describe('removeAccentuation', () => {
 
     it('should remove the lower case consonant accentuation', () => {
         expect(removeAccentuation('ćǵḱĺḿńṕŕśẃýź')).toBe('');
+        expect(removeAccentuation('ĉĝĥĵŝŵŷẑ')).toBe('');
+        expect(removeAccentuation('čňřšž')).toBe('');
+        expect(removeAccentuation('ḧẗẅẍÿ')).toBe('');
+        expect(removeAccentuation('ķļņț')).toBe('');
+        expect(removeAccentuation('çḉşţ')).toBe('');
+        expect(removeAccentuation('đħłŧ')).toBe('');
         expect(removeAccentuation('ǹẁỳ')).toBe('');
         expect(removeAccentuation('ñṽỹ')).toBe('');
-        expect(removeAccentuation('ḧẗẅẍÿ')).toBe('');
-        expect(removeAccentuation('ĉĝĥĵŝŵŷẑ')).toBe('');
+        expect(removeAccentuation('ďľť')).toBe('');
         expect(removeAccentuation('ȑ')).toBe('');
-        expect(removeAccentuation('çḉ')).toBe('');
-        expect(removeAccentuation('đ')).toBe('');
-        expect(removeAccentuation('ħ')).toBe('');
-        expect(removeAccentuation('ł')).toBe('');
-        expect(removeAccentuation('ŧ')).toBe('');
+        expect(removeAccentuation('ģ')).toBe('');
+        expect(removeAccentuation('ğ')).toBe('');
+        expect(removeAccentuation('ż')).toBe('');
     });
 
     it('should remove the upper case consonant accentuation', () => {
         expect(removeAccentuation('ĆǴḰĹḾŃṔŔŚẂÝŹ')).toBe('');
+        expect(removeAccentuation('ĈĜĤĴŜŴŶẐ')).toBe('');
+        expect(removeAccentuation('ČĎŇŘŠŤŽ')).toBe('');
+        expect(removeAccentuation('ḦẄẌŸ')).toBe('');
+        expect(removeAccentuation('ÇḈŞŢ')).toBe('');
+        expect(removeAccentuation('ĐĦŁŦ')).toBe('');
         expect(removeAccentuation('ǸẀỲ')).toBe('');
         expect(removeAccentuation('ÑṼỸ')).toBe('');
-        expect(removeAccentuation('ḦẄẌŸ')).toBe('');
-        expect(removeAccentuation('ĈĜĤĴŜŴŶẐ')).toBe('');
+        expect(removeAccentuation('ĻŅȚ')).toBe('');
+        expect(removeAccentuation('ĢĶ')).toBe('');
         expect(removeAccentuation('Ȑ')).toBe('');
-        expect(removeAccentuation('ÇḈ')).toBe('');
-        expect(removeAccentuation('Đ')).toBe('');
-        expect(removeAccentuation('Ħ')).toBe('');
-        expect(removeAccentuation('Ł')).toBe('');
-        expect(removeAccentuation('Ŧ')).toBe('');
+        expect(removeAccentuation('Ğ')).toBe('');
+        expect(removeAccentuation('Ľ')).toBe('');
+        expect(removeAccentuation('Ż')).toBe('');
     });
 
     it('should return the non accentuated characters', () => {
