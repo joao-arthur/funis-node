@@ -19,7 +19,7 @@ describe('mapEntries', () => {
                 ['b', 'two'],
                 ['c', true],
                 [4, 'nada'],
-            ])
+            ]),
         );
         expect(
             mapEntries(
@@ -37,7 +37,7 @@ describe('mapEntries', () => {
                 ['key_b', 'value_two'],
                 ['key_c', 'value_true'],
                 ['key_4', 'value_nada'],
-            ])
+            ]),
         );
         expect(
             mapEntries(
@@ -49,10 +49,6 @@ describe('mapEntries', () => {
                 ]),
                 () => ['key', 'value'],
             ),
-        ).toEqual(
-            new Map([
-                ['key', 'value']
-            ])
-        );
+        ).toEqual(new Map([['key', 'value']]));
     });
 });

@@ -19,7 +19,7 @@ describe('mapValues', () => {
                 ['b', 'two'],
                 ['c', true],
                 [4, 'nada'],
-            ])
+            ]),
         );
         expect(
             mapValues(
@@ -37,7 +37,7 @@ describe('mapValues', () => {
                 ['b', false],
                 ['c', true],
                 [4, false],
-            ])
+            ]),
         );
         expect(
             mapValues(

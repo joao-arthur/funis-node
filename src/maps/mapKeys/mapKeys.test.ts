@@ -19,7 +19,7 @@ describe('mapKeys', () => {
                 ['b', 'two'],
                 ['c', true],
                 [4, 'nada'],
-            ])
+            ]),
         );
         expect(
             mapKeys(
@@ -37,7 +37,7 @@ describe('mapKeys', () => {
                 ['v2_b_test', 'two'],
                 ['v2_c_test', true],
                 ['v2_4_test', 'nada'],
-            ])
+            ]),
         );
         expect(
             mapKeys(
@@ -49,10 +49,6 @@ describe('mapKeys', () => {
                 ]),
                 () => 'key',
             ),
-        ).toEqual(
-            new Map([
-                ['key', 'nada']
-            ])
-        );
+        ).toEqual(new Map([['key', 'nada']]));
     });
 });

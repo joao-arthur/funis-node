@@ -8,6 +8,6 @@ export function mapValues<T>(
     return pipe(
         (obj: plainObject<T>) => Object.entries(obj),
         entries => entries.map(([key, value]) => [key, cb(value)]),
-        entries => Object.fromEntries(entries),
+        Object.fromEntries,
     )(obj);
 }
