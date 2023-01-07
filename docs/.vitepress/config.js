@@ -20,6 +20,7 @@ export default {
                     { text: 'groupToMap', link: '/arrays/group-to-map' },
                     { text: 'groupToObject', link: '/arrays/group-to-object' },
                     { text: 'combinations', link: '/arrays/combinations' },
+                    { text: 'random', link: '/arrays/random' },
                 ]
             },
             {

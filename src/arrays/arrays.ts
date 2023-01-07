@@ -10,6 +10,7 @@ import { disjoint } from './disjoint/disjoint.js';
 import { intersect } from './intersect/intersect.js';
 import { once } from './once/once.js';
 import { combinations } from './combinations/combinations.js';
+import { random } from './random/random.js';
 
 export const arrays = {
     groupToEntries,
@@ -24,4 +25,5 @@ export const arrays = {
     intersect,
     once,
     combinations,
+    random,
 } as const;
