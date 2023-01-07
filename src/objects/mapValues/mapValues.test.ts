@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { mapValues } from './mapValues.js';
 
 describe('mapValues', () => {
-    it('should map the values into a new object', () => {
+    it('should map the values into an object', () => {
         expect(
             mapValues(
                 {

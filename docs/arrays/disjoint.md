@@ -6,7 +6,7 @@ function disjoint<T>(
 ): readonly T[]
 ```
 
-Returns a new array with the items that appear in only one array.
+Returns an array with the items that appear in only one array.
 
 ## Example
 

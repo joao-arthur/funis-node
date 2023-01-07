@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { mapKeys } from './mapKeys.js';
 
 describe('mapKeys', () => {
-    it('should map the keys into a new Map instance', () => {
+    it('should map the keys into a Map instance', () => {
         expect(
             mapKeys(
                 new Map<string | number, string | number | boolean>([

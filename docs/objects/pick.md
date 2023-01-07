@@ -7,7 +7,7 @@ function pick<T>(
 ): plainObject<T>
 ```
 
-Creates a new object with only the passed keys.
+Creates an object with only the passed keys.
 
 ## Example
 

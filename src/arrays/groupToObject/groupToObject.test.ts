@@ -6,7 +6,7 @@ describe('groupToObject', () => {
         expect(groupToObject([], item => item)).toEqual({});
     });
 
-    it('should group the items by the callback return value in a object', () => {
+    it('should group the items by the callback return value in an object', () => {
         expect(
             groupToObject([1, 2, 3], item => item),
         ).toEqual(

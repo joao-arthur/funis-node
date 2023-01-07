@@ -6,7 +6,7 @@ function intersect<T>(
 ): readonly T[]
 ```
 
-Returns a new array with the items that appear in every array.
+Returns an array with the items that appear in every array.
 
 ## Example
 

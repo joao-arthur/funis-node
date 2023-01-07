@@ -9,7 +9,7 @@ function mapEntries<T>(
 ): plainObject<T>
 ```
 
-Map the object entries into a new object.
+Map the object entries into an object.
 
 ## Example
 

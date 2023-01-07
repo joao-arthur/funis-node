@@ -4,7 +4,7 @@
 function unique<T>(arr: readonly T[]): readonly T[]
 ```
 
-Returns a new array with the unique values.
+Returns an array with the unique values.
 
 ## Example
 

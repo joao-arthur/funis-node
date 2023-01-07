@@ -19,6 +19,7 @@ export default {
                     { text: 'groupToArray', link: '/arrays/group-to-array' },
                     { text: 'groupToMap', link: '/arrays/group-to-map' },
                     { text: 'groupToObject', link: '/arrays/group-to-object' },
+                    { text: 'combinations', link: '/arrays/combinations' },
                 ]
             },
             {

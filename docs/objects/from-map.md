@@ -6,7 +6,7 @@ function fromMap<T>(
 ): plainObject<T>
 ```
 
-Returns a new object with the same key-value pairs of the passed Map instance.
+Returns an object with the same key-value pairs of the passed Map instance.
 
 ## Example
 

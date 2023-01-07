@@ -6,7 +6,7 @@ function disjoint(
 ): plainObject
 ```
 
-Returns a new object with the entries which the key appears in only one of them.
+Returns an object with the entries which the key appears in only one of them.
 
 ## Example
 

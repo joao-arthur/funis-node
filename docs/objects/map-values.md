@@ -7,7 +7,7 @@ function mapValues<T>(
 ): plainObject<T>
 ```
 
-Map the object values into a new object.
+Map the object values into an object.
 
 ## Example
 

@@ -7,7 +7,7 @@ function omit<T>(
 ): plainObject<T>
 ```
 
-Creates a new object without the passed keys.
+Creates an object without the passed keys.
 
 ## Example
 

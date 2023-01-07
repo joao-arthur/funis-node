@@ -7,7 +7,7 @@ function mapKeys<T>(
 ): plainObject<T>
 ```
 
-Map the object keys into a new object.
+Map the object keys into an object.
 
 ## Example
 
