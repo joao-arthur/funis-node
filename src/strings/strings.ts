@@ -5,6 +5,7 @@ import { snakeCase } from './snakeCase/snakeCase.js';
 import { replaceAccentuation } from './replaceAccentuation/replaceAccentuation.js';
 import { removeAccentuation } from './removeAccentuation/removeAccentuation.js';
 import { isValid } from './isValid/isValid.js';
+import { random } from './random/random.js';
 
 export const strings = {
     camelCase,
@@ -14,4 +15,5 @@ export const strings = {
     replaceAccentuation,
     removeAccentuation,
     isValid,
+    random,
 } as const;

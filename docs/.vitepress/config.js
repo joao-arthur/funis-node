@@ -97,6 +97,7 @@ export default {
                     { text: 'replaceAccentuation', link: '/strings/replace-accentuation' },
                     { text: 'removeAccentuation', link: '/strings/remove-accentuation' },
                     { text: 'isValid', link: '/strings/is-valid' },
+                    { text: 'random', link: '/strings/random' },
                 ]
             },
             {
