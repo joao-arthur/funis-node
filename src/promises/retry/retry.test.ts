@@ -5,7 +5,7 @@ describe('retry', () => {
     it('should resolves undefined if attempts are less than one', async () => {
         expect(
             retry(() => Promise.reject('Donatello'), 0),
-        ).toBe(undefined);
+        ).resolves.toBe(undefined);
     });
 
     it('should retry to solve the promise', async () => {

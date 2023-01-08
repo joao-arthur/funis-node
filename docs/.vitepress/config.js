@@ -45,6 +45,7 @@ export default {
                     { text: 'clamp', link: '/numbers/clamp' },
                     { text: 'parse', link: '/numbers/parse' },
                     { text: 'range', link: '/numbers/range' },
+                    { text: 'lazyRange', link: '/numbers/lazy-range' },
                     { text: 'isValid', link: '/numbers/is-valid' },
                     { text: 'random', link: '/numbers/random' },
                     { text: 'compareAsc', link: '/numbers/compare-asc' },
