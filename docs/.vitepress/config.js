@@ -72,7 +72,6 @@ export default {
                 text: 'promises',
                 collapsible: true,
                 items: [
-                    { text: 'first', link: '/promises/first' },
                     { text: 'last', link: '/promises/last' },
                     { text: 'resolveTimeout', link: '/promises/resolve-timeout' },
                     { text: 'rejectTimeout', link: '/promises/reject-timeout' },
