@@ -76,6 +76,7 @@ export default {
                     { text: 'resolveTimeout', link: '/promises/resolve-timeout' },
                     { text: 'rejectTimeout', link: '/promises/reject-timeout' },
                     { text: 'objectify', link: '/promises/objectify' },
+                    { text: 'retry', link: '/promises/retry' },
                 ]
             },
             {
