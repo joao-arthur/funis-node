@@ -47,6 +47,8 @@ export default {
                     { text: 'range', link: '/numbers/range' },
                     { text: 'isValid', link: '/numbers/is-valid' },
                     { text: 'random', link: '/numbers/random' },
+                    { text: 'compareAsc', link: '/numbers/compare-asc' },
+                    { text: 'compareDesc', link: '/numbers/compare-desc' },
                 ]
             },
             {
@@ -99,6 +101,8 @@ export default {
                     { text: 'removeAccentuation', link: '/strings/remove-accentuation' },
                     { text: 'isValid', link: '/strings/is-valid' },
                     { text: 'random', link: '/strings/random' },
+                    { text: 'compareAsc', link: '/strings/compare-asc' },
+                    { text: 'compareDesc', link: '/strings/compare-desc' },
                 ]
             },
             {
