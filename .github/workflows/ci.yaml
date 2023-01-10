@@ -31,6 +31,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
-      - run: pnpm install --frozen-lockfile --no-optional
+      - run: pnpm install --frozen-lockfile
       - run: pnpm test:cov
       - uses: codecov/codecov-action@v3
