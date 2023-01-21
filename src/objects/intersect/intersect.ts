@@ -3,6 +3,21 @@ import { unique } from '../../arrays/unique/unique.js';
 import { self } from '../../standard/self/self.js';
 import { plainObject } from '../../types/plainObject.js';
 
+/**
+ * # objects.intersect
+ *
+ * Returns an object with the entries that appear in all of them.
+ *
+ * ## Example
+ *
+ * ```ts
+ * objects.intersect([
+ *     { name: 'Cliff Burton', band: 'Metallica', country: 'US' },
+ *     { name: 'James Hetfield', band: 'Metallica', country: 'US' },
+ *     { name: 'Kirk Hammett', band: 'Metallica', country: 'US' },
+ * ]) // { band: 'Metallica', country: 'US' }
+ * ```
+ */
 export function intersect(
     objs: readonly plainObject[],
 ): plainObject {

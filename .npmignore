@@ -2,5 +2,4 @@
 .tool-versions
 .eslintrc.cjs
 src
-docs
 coverage

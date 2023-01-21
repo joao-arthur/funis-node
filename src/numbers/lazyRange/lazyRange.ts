@@ -1,3 +1,22 @@
+/**
+ * # numbers.lazyRange
+ *
+ * Returns an iterable range from a number to another, respecting the step between each value.
+ *
+ * ## Example
+ *
+ * ```ts
+ * numbers.lazyRange(2, -1) // []
+ * numbers.lazyRange(-1, 2, -1) // []
+ * ```
+ *
+ * ```ts
+ * numbers.lazyRange(-1, 2) // [-1, 0, 1, 2]
+ * numbers.lazyRange(4, 5.1) // [4, 5]
+ * numbers.lazyRange(2, -1, -1) // [2, 1, 0, -1]
+ * numbers.lazyRange(10.2, 9, -0.2) // [10.2, 10, 9.8, 9.6, 9.4, 9.2, 9]
+ * ```
+ */
 export function lazyRange(
     from: number,
     to: number,
@@ -11,19 +30,16 @@ export function lazyRange(
     let i = -1;
 
     return {
-        // eslint-disable-next-line max-len
-        // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-        next() {
+        next(): IteratorResult<number> {
             i++;
+            const done = i + 1 > treatedLength;
 
             return {
-                done: i + 1 >= treatedLength,
-                value: i * step + from,
+                done,
+                value: done ? undefined! : i * step + from,
             };
         },
-        // eslint-disable-next-line max-len
-        // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-        [Symbol.iterator]() {
+        [Symbol.iterator](): IterableIterator<number> {
             return this;
         },
     };

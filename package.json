@@ -25,10 +25,7 @@
         "test:cov": "vitest run --coverage",
         "lint": "eslint \"./src/**/*.ts\" --fix",
         "lint:nofix": "eslint \"./src/**/*.ts\"",
-        "build": "tsc",
-        "docs:dev": "vitepress dev docs",
-        "docs:build": "vitepress build docs",
-        "docs:preview": "vitepress preview docs"
+        "build": "tsc"
     },
     "devDependencies": {
         "@typescript-eslint/eslint-plugin": "^5.48.1",
@@ -39,8 +36,6 @@
         "eslint-plugin-import": "^2.26.0",
         "typescript": "^4.9.4",
         "vite": "^4.0.4",
-        "vitepress": "1.0.0-alpha.35",
-        "vitest": "^0.27.0",
-        "vue": "^3.2.45"
+        "vitest": "^0.27.0"
     }
 }
