@@ -72,7 +72,7 @@ module.exports = {
         'max-len': ['error', {
             code: 70,
             tabWidth: 4,
-            comments: 70,
+            ignoreComments: true,
             ignoreStrings: true,
         }],
         'no-multiple-empty-lines': ['error', { max: 1, maxEOF: 1 }],

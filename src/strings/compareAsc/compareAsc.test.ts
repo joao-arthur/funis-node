@@ -4,7 +4,7 @@ import { compareAsc } from './compareAsc.js';
 describe('compareAsc', () => {
     it('should compare the strings in ascending order', () => {
         expect(
-            ['q', 'p', 'Q', 'P'].sort(compareAsc),
-        ).toEqual(['P', 'Q', 'p', 'q']);
+            ['q', 'p', 'w', 'o', 'Q', 'P', 'W', 'O'].sort(compareAsc),
+        ).toEqual(['O', 'P', 'Q', 'W', 'o', 'p', 'q', 'w']);
     });
 });

@@ -45,7 +45,6 @@ export async function retry<V, E>(
             case 'rejected':
                 if (i === attempts) 
                     throw result.error;
-                
         }
     }
 
