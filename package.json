@@ -4,8 +4,7 @@
     "version": "1.0.1",
     "license": "MIT",
     "author": "João Arthur <joao.lothamer@gmail.com>",
-    "repository": "https://github.com/Joao-Arthur/funis",
-    "homepage": "https://joao-arthur.github.io/funis/",
+    "repository": "https://github.com/Joao-Arthur/funis-node",
     "private": false,
     "type": "module",
     "engines": {
