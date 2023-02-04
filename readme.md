@@ -10,8 +10,8 @@ range of applications. It is a helper for `modern day js`.
 
 [![npm module](https://badge.fury.io/js/funis.svg)](https://www.npmjs.org/package/funis)
 [![Code Climate](https://codeclimate.com/github/Joao-Arthur/funis/badges/gpa.svg)](https://codeclimate.com/github/Joao-Arthur/funis)
-[![CI](https://github.com/Joao-Arthur/node-funis/actions/workflows/ci.yaml/badge.svg)](https://github.com/Joao-Arthur/node-funis/actions/workflows/ci.yaml)
-[![Deploy](https://github.com/Joao-Arthur/node-funis/actions/workflows/deploy.yaml/badge.svg)](https://github.com/Joao-Arthur/node-funis/actions/workflows/deploy.yaml)
+[![CI](https://github.com/Joao-Arthur/funis-node/actions/workflows/ci.yaml/badge.svg)](https://github.com/Joao-Arthur/funis-node/actions/workflows/ci.yaml)
+[![Deploy](https://github.com/Joao-Arthur/funis-node/actions/workflows/deploy.yaml/badge.svg)](https://github.com/Joao-Arthur/funis-node/actions/workflows/deploy.yaml)
 [![codecov](https://codecov.io/gh/Joao-Arthur/funis/branch/main/graph/badge.svg?token=9FI5PDDFB3)](https://codecov.io/gh/Joao-Arthur/funis)
 
 ## What it can offer
