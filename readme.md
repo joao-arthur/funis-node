@@ -10,7 +10,7 @@ range of applications. It is a helper for `modern day js`.
 
 [![npm module](https://badge.fury.io/js/funis.svg)](https://www.npmjs.org/package/funis)
 [![CI](https://github.com/Joao-Arthur/funis-node/actions/workflows/ci.yaml/badge.svg)](https://github.com/Joao-Arthur/funis-node/actions/workflows/ci.yaml)
-[![codecov](https://codecov.io/gh/Joao-Arthur/funis/branch/main/graph/badge.svg?token=9FI5PDDFB3)](https://codecov.io/gh/Joao-Arthur/funis)
+[![codecov](https://codecov.io/github/Joao-Arthur/funis-node/branch/main/graph/badge.svg?token=9FI5PDDFB3)](https://codecov.io/github/Joao-Arthur/funis-node)
 
 ## What it can offer
 

@@ -5,6 +5,9 @@ on:
     tags:
       - '*'
 
+permissions:
+  contents: read
+
 jobs:
   deploy_npm:
     runs-on: ubuntu-latest
