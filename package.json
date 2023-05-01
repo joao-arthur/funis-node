@@ -21,15 +21,13 @@
     "main": "./dist/index.js",
     "scripts": {
         "test": "vitest run",
-        "test:dev": "vitest watch",
         "test:cov": "vitest run --coverage",
         "build": "tsc"
     },
     "devDependencies": {
-        "@vitest/coverage-c8": "^0.29.8",
+        "@vitest/coverage-c8": "^0.30.1",
         "c8": "^7.13.0",
-        "typescript": "^5.0.3",
-        "vite": "^4.2.1",
-        "vitest": "^0.29.8"
+        "typescript": "^5.0.4",
+        "vitest": "^0.30.1"
     }
 }
