@@ -1,27 +1,21 @@
 {
-    "fmt": {
-        "files": {
-            "include": [
-                "src/"
-            ]
-        },
-        "options": {
-            "lineWidth": 70,
-            "indentWidth": 4
-        }
-    },
-    "lint": {
-        "files": {
-            "include": [
-                "src/"
-            ]
-        },
-        "rules": {
-            "include": [
-                "explicit-function-return-type",
-                "eqeqeq",
-                "default-param-last"
-            ]
-        }
+  "fmt": {
+    "include": [
+      "src/"
+    ],
+    "lineWidth": 70,
+    "indentWidth": 4
+  },
+  "lint": {
+    "include": [
+      "src/"
+    ],
+    "rules": {
+      "include": [
+        "explicit-function-return-type",
+        "eqeqeq",
+        "default-param-last"
+      ]
     }
+  }
 }
