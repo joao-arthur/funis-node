@@ -31,8 +31,9 @@ export function mapEntries<K, V>(
     cb: (entry: readonly [K, V]) => readonly [K, V],
 ): Map<K, V> {
     return pipe(
-        (map: Map<K, V>) => entries(map),
+        () => map,
+        entries,
         (entries) => entries.map(cb),
         (entries) => new Map(entries),
-    )(map);
+    )(undefined);
 }

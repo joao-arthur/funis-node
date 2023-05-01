@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 type unknownFn = (arg: unknown) => unknown;
 
 export function compose<T1, T2>(

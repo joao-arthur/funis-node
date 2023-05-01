@@ -26,15 +26,16 @@ import { plainObject } from "../../types/plainObject.js";
  * // }
  * ```
  */
-export function mapEntries<const T>(
-    obj: plainObject<T>,
+export function mapEntries(
+    obj: plainObject,
     cb: (
-        entry: readonly [string | number, T],
-    ) => readonly [string | number, T],
+        entry: readonly [string | number, unknown],
+    ) => readonly [string | number, unknown],
 ): plainObject {
     return pipe(
-        (obj: plainObject<T>) => Object.entries(obj),
+        () => obj,
+        (obj: plainObject) => Object.entries(obj),
         (entries) => entries.map(cb),
         Object.fromEntries,
-    )(obj);
+    )(undefined);
 }

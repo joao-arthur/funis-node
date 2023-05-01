@@ -1,5 +1,4 @@
 .github
 .tool-versions
-.eslintrc.cjs
 src
 coverage

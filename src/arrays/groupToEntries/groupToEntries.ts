@@ -35,7 +35,8 @@ export function groupToEntries<K, V>(
     cb: (item: V) => K,
 ): readonly (readonly [K, readonly V[]])[] {
     return pipe(
-        (items: readonly V[]) => items.map(cb),
+        () => arr,
+        (items) => items.map(cb),
         unique,
         (keys) =>
             keys.map((key) =>
@@ -44,5 +45,5 @@ export function groupToEntries<K, V>(
                     arr.filter((item) => cb(item) === key),
                 ] as const
             ),
-    )(arr);
+    )(undefined);
 }

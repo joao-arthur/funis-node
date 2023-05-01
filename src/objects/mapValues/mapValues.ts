@@ -27,12 +27,13 @@ import { plainObject } from "../../types/plainObject.js";
  * ```
  */
 export function mapValues<const T>(
-    obj: plainObject<T>,
+    obj: plainObject,
     cb: (value: T) => T,
-): plainObject<T> {
+): plainObject {
     return pipe(
-        (obj: plainObject<T>) => Object.entries(obj),
+        () => obj,
+        Object.entries,
         (entries) => entries.map(([key, value]) => [key, cb(value)]),
         Object.fromEntries,
-    )(obj);
+    )(undefined);
 }
