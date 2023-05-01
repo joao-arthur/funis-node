@@ -41,7 +41,6 @@ export function debounce(
         if (timeoutId) {
             globalThis.clearTimeout(timeoutId);
         }
-
         timeoutId = globalThis.setTimeout(() => {
             timeoutId = 0;
             cb();

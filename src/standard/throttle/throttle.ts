@@ -34,7 +34,6 @@ export function throttle(
         if (inThrottleTimeout) {
             return;
         }
-
         inThrottleTimeout = true;
         globalThis.setTimeout(() => {
             inThrottleTimeout = false;

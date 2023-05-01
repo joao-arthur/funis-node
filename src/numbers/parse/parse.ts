@@ -38,11 +38,9 @@ export function parse(
     if ("prefix" in options && num.indexOf(options.prefix) === -1) {
         return undefined;
     }
-
     if ("suffix" in options && num.indexOf(options.suffix) === -1) {
         return undefined;
     }
-
     const startIndex = "prefix" in options
         ? num.indexOf(options.prefix) + options.prefix.length
         : 0;
@@ -53,7 +51,6 @@ export function parse(
     if (slice === "") {
         return undefined;
     }
-
     const parsed = Number(slice);
 
     return !Number.isNaN(parsed) ? parsed : undefined;

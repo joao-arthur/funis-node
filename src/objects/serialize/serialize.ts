@@ -42,7 +42,6 @@ export function serialize<const T>(obj: plainObject<T>): string {
         if (value instanceof Date) {
             return value.toISOString();
         }
-
         if (value instanceof Array) {
             return value.join(", ");
         }

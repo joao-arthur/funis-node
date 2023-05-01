@@ -37,7 +37,6 @@ export async function retry<V, E>(
     if (attempts < 1) {
         return undefined;
     }
-
     for (let i = 1; i <= attempts; i++) {
         const result = await objectify<V, E>(cb());
         switch (result.type) {
