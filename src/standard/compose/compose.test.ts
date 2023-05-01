@@ -9,7 +9,6 @@ it("compose", () => {
             (num: number) => num - 90,
         )(100),
     ).toBe("55.55");
-
     expect(
         compose(
             (num) => num + 10,

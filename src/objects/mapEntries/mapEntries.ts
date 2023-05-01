@@ -31,7 +31,7 @@ export function mapEntries<const T>(
     cb: (
         entry: readonly [string | number, T],
     ) => readonly [string | number, T],
-): plainObject<T> {
+): plainObject {
     return pipe(
         (obj: plainObject<T>) => Object.entries(obj),
         (entries) => entries.map(cb),

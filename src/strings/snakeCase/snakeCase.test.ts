@@ -11,15 +11,12 @@ it("snakeCase", () => {
 
 it("snakeCase", () => {
     expect(snakeCase("j S o N")).toBe("j_s_o_n");
-    expect(snakeCase("hey Jo3")).toBe("hey_jo3");
-});
-
-it("snakeCase", () => {
     expect(snakeCase("j_S_o_N")).toBe("j_s_o_n");
-    expect(snakeCase("hey_Jo3")).toBe("hey_jo3");
+    expect(snakeCase("j-S-o-N")).toBe("j_s_o_n");
 });
 
 it("snakeCase", () => {
-    expect(snakeCase("j-S-o-N")).toBe("j_s_o_n");
+    expect(snakeCase("hey Jo3")).toBe("hey_jo3");
+    expect(snakeCase("hey_Jo3")).toBe("hey_jo3");
     expect(snakeCase("hey-Jo3")).toBe("hey_jo3");
 });

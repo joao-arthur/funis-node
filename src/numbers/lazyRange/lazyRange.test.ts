@@ -7,10 +7,19 @@ it("lazyRange", () => {
     expect(itter.next()).toEqual({ done: false, value: 0 });
     expect(itter.next()).toEqual({ done: false, value: 1 });
     expect(itter.next()).toEqual({ done: false, value: 2 });
-    expect(itter.next()).toEqual({
-        done: true,
-        value: undefined,
-    });
+    expect(itter.next()).toEqual({ done: true, value: undefined });
+});
+
+it("lazyRange", () => {
+    const itter = lazyRange(2, 5.3, 0.5);
+    expect(itter.next()).toEqual({ done: false, value: 2 });
+    expect(itter.next()).toEqual({ done: false, value: 2.5 });
+    expect(itter.next()).toEqual({ done: false, value: 3 });
+    expect(itter.next()).toEqual({ done: false, value: 3.5 });
+    expect(itter.next()).toEqual({ done: false, value: 4 });
+    expect(itter.next()).toEqual({ done: false, value: 4.5 });
+    expect(itter.next()).toEqual({ done: false, value: 5 });
+    expect(itter.next()).toEqual({ done: true, value: undefined });
 });
 
 it("lazyRange", () => {
@@ -24,10 +33,7 @@ it("lazyRange", () => {
 
 it("lazyRange", () => {
     const itter = lazyRange(2, -1);
-    expect(itter.next()).toEqual({
-        done: true,
-        value: undefined,
-    });
+    expect(itter.next()).toEqual({ done: true, value: undefined });
 });
 
 it("lazyRange", () => {
@@ -37,21 +43,6 @@ it("lazyRange", () => {
         values.push(value);
     }
     expect(values).toEqual([]);
-});
-
-it("lazyRange", () => {
-    const itter = lazyRange(2, 5.3, 0.5);
-    expect(itter.next()).toEqual({ done: false, value: 2 });
-    expect(itter.next()).toEqual({ done: false, value: 2.5 });
-    expect(itter.next()).toEqual({ done: false, value: 3 });
-    expect(itter.next()).toEqual({ done: false, value: 3.5 });
-    expect(itter.next()).toEqual({ done: false, value: 4 });
-    expect(itter.next()).toEqual({ done: false, value: 4.5 });
-    expect(itter.next()).toEqual({ done: false, value: 5 });
-    expect(itter.next()).toEqual({
-        done: true,
-        value: undefined,
-    });
 });
 
 it("lazyRange", () => {

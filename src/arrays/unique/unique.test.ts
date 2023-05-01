@@ -2,8 +2,9 @@ import { expect, it } from "vitest";
 import { unique } from "./unique.js";
 
 it("unique", () => {
+    expect(unique([1])).toEqual([1]);
+    expect(unique([])).toEqual([]);
     const symbolValue = Symbol(1);
-
     expect(unique([
         1,
         1,
@@ -17,6 +18,4 @@ it("unique", () => {
     ])).toEqual(
         [1, "john", true, false, symbolValue],
     );
-    expect(unique([1])).toEqual([1]);
-    expect(unique([])).toEqual([]);
 });

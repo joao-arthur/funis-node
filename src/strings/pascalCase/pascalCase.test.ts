@@ -11,15 +11,12 @@ it("pascalCase", () => {
 
 it("pascalCase", () => {
     expect(pascalCase("j S o N")).toBe("JSON");
-    expect(pascalCase("hey Jo3")).toBe("HeyJo3");
-});
-
-it("pascalCase", () => {
     expect(pascalCase("j_S_o_N")).toBe("JSON");
-    expect(pascalCase("hey_Jo3")).toBe("HeyJo3");
+    expect(pascalCase("j-S-o-N")).toBe("JSON");
 });
 
 it("pascalCase", () => {
-    expect(pascalCase("j-S-o-N")).toBe("JSON");
+    expect(pascalCase("hey Jo3")).toBe("HeyJo3");
+    expect(pascalCase("hey_Jo3")).toBe("HeyJo3");
     expect(pascalCase("hey-Jo3")).toBe("HeyJo3");
 });

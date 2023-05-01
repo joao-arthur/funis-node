@@ -16,12 +16,10 @@ it("serialize", () => {
 });
 
 it("serialize", () => {
-    const object = {
+    expect(serialize({
         sayHi: (): string => "hi, my name is Eminem",
         sayGoodbye: (): string => "bye, bye, baby",
-    };
-
-    expect(serialize(object)).toEqual("{ }");
+    })).toEqual("{ }");
 });
 
 it("serialize", () => {
@@ -43,6 +41,7 @@ it("serialize", () => {
         }
     }
 
-    expect(serialize(new Dog("Rex") as unknown as plainObject))
-        .toEqual("{ name: Rex }");
+    expect(
+        serialize(new Dog("Rex") as unknown as plainObject),
+    ).toEqual("{ name: Rex }");
 });

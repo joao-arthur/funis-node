@@ -3,6 +3,9 @@ import { keys } from "./keys.js";
 
 it("keys", () => {
     expect(keys(new Map())).toEqual([]);
+});
+
+it("keys", () => {
     expect(keys(
         new Map([
             [1, { name: "Paul McCartney" }],

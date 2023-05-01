@@ -9,7 +9,6 @@ it("pipe", () => {
             (num) => `${num}${num}.${num}${num}`,
         )(100),
     ).toBe("55.55");
-
     expect(
         pipe(
             (num: number) => num - 90,

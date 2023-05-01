@@ -11,15 +11,12 @@ it("camelCase", () => {
 
 it("camelCase", () => {
     expect(camelCase("j S o N")).toBe("jSON");
-    expect(camelCase("hey Jo3")).toBe("heyJo3");
-});
-
-it("camelCase", () => {
     expect(camelCase("j_S_o_N")).toBe("jSON");
-    expect(camelCase("hey_Jo3")).toBe("heyJo3");
+    expect(camelCase("j-S-o-N")).toBe("jSON");
 });
 
 it("camelCase", () => {
-    expect(camelCase("j-S-o-N")).toBe("jSON");
+    expect(camelCase("hey Jo3")).toBe("heyJo3");
+    expect(camelCase("hey_Jo3")).toBe("heyJo3");
     expect(camelCase("hey-Jo3")).toBe("heyJo3");
 });

@@ -12,8 +12,8 @@ it("random", () => {
 });
 
 it("random", () => {
-    expect(random([true, false, 0, 1, "y", "n"])).toSatisfy(
-        (value: string | number | boolean) =>
-            [true, false, 0, 1, "y", "n"].includes(value),
-    );
+    const result = random([true, false, 0, 1, "y", "n"]);
+    expect(
+        [true, false, 0, 1, "y", "n"].includes(result!),
+    ).toBe(true);
 });

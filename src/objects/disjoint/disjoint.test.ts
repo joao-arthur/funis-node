@@ -9,9 +9,6 @@ it("disjoint", () => {
     expect(
         disjoint([{ name: "Steve Harris", country: "UK" }]),
     ).toEqual({ name: "Steve Harris", country: "UK" });
-});
-
-it("disjoint", () => {
     expect(
         disjoint(
             [

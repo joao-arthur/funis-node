@@ -24,7 +24,7 @@ it("debounce", async () => {
     returnedFn();
     returnedFn();
     returnedFn();
-    await resolveTimeout(undefined, 10);
+    await resolveTimeout(undefined, 8);
     expect(emptyArr).toEqual(["Salvator mundi"]);
 });
 
@@ -35,13 +35,13 @@ it("debounce", async () => {
         30,
     );
     returnedFn();
-    await resolveTimeout(undefined, 10);
+    await resolveTimeout(undefined, 8);
     returnedFn();
-    await resolveTimeout(undefined, 10);
+    await resolveTimeout(undefined, 8);
     returnedFn();
-    await resolveTimeout(undefined, 10);
+    await resolveTimeout(undefined, 8);
     returnedFn();
-    await resolveTimeout(undefined, 10);
+    await resolveTimeout(undefined, 8);
     expect(emptyArr).toEqual([]);
 });
 

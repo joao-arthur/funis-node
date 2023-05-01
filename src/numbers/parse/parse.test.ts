@@ -2,6 +2,15 @@ import { expect, it } from "vitest";
 import { parse } from "./parse.js";
 
 it("parse", () => {
+    expect(parse("US$4", { prefix: "R$" })).toBe(undefined);
+    expect(parse("R$-6", { prefix: "rem" })).toBe(undefined);
+    expect(parse("@-1", { prefix: "km/h" })).toBe(undefined);
+    expect(parse("4px", { suffix: "rem" })).toBe(undefined);
+    expect(parse("-6em", { suffix: "rem" })).toBe(undefined);
+    expect(parse("-1m/s", { suffix: "km/h" })).toBe(undefined);
+});
+
+it("parse", () => {
     expect(parse("$100.00", { prefix: "$" })).toBe(100.00);
     expect(parse("US$0", { prefix: "US$" })).toBe(0);
     expect(parse("R$-1.53", { prefix: "R$" })).toBe(-1.53);
@@ -32,18 +41,6 @@ it("parse", () => {
 });
 
 it("parse", () => {
-    expect(parse("US$4", { prefix: "R$" })).toBe(undefined);
-    expect(parse("R$-6", { prefix: "rem" })).toBe(undefined);
-    expect(parse("@-1", { prefix: "km/h" })).toBe(undefined);
-});
-
-it("parse", () => {
-    expect(parse("4px", { suffix: "rem" })).toBe(undefined);
-    expect(parse("-6em", { suffix: "rem" })).toBe(undefined);
-    expect(parse("-1m/s", { suffix: "km/h" })).toBe(undefined);
-});
-
-it("parse", () => {
     expect(
         parse(
             "US$4 donnut",
@@ -65,16 +62,13 @@ it("parse", () => {
             { prefix: "speed: " },
         ),
     ).toBe(undefined);
-    expect(parse(":2em", { prefix: ":" })).toBe(undefined);
-});
-
-it("parse", () => {
     expect(
         parse(
             "speed: -4px",
             { suffix: "px" },
         ),
     ).toBe(undefined);
+    expect(parse(":2em", { prefix: ":" })).toBe(undefined);
     expect(parse(":2em", { suffix: "em" })).toBe(undefined);
 });
 

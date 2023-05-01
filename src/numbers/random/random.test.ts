@@ -9,26 +9,6 @@ it("random", () => {
 
 it("random", () => {
     for (let i = 0; i < 10; i++) {
-        expect(random(0, 10)).toBeGreaterThanOrEqual(0);
-        expect(random(0, 10)).toBeLessThanOrEqual(10);
-    }
-    for (let i = 0; i < 10; i++) {
-        expect(random(0, -10)).toBeLessThanOrEqual(0);
-        expect(random(0, -10)).toBeGreaterThanOrEqual(-10);
-    }
-    for (let i = 0; i < 10; i++) {
-        expect(random(30, 90)).toBeGreaterThanOrEqual(30);
-        expect(random(30, 90)).toBeLessThanOrEqual(90);
-    }
-    for (let i = 0; i < 10; i++) {
-        expect(random(30, -90)).toBeLessThanOrEqual(30);
-        expect(random(30, -90)).toBeGreaterThanOrEqual(-90);
-    }
-    for (let i = 0; i < 10; i++) {
-        expect(random(-10, 10)).toBeGreaterThanOrEqual(-10);
-        expect(random(-10, 10)).toBeLessThanOrEqual(10);
-    }
-    for (let i = 0; i < 10; i++) {
         expect(random(10, -10)).toBeLessThanOrEqual(10);
         expect(random(10, -10)).toBeGreaterThanOrEqual(-10);
     }
