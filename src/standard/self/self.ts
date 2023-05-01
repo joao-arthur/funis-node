@@ -10,6 +10,6 @@
  * self('goodbye') // 'goodbye'
  * ```
  */
-export function self<T>(value: T): T {
+export function self<const T>(value: T): T {
     return value;
 }

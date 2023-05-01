@@ -26,7 +26,7 @@
  * // ]
  * ```
  */
-export function combinations<T>(
+export function combinations<const T>(
     arr: readonly T[],
 ): readonly (readonly [T, T])[] {
     const result: [T, T][] = [];

@@ -26,7 +26,7 @@ import { plainObject } from "../../types/plainObject.js";
  * // }
  * ```
  */
-export function mapValues<T>(
+export function mapValues<const T>(
     obj: plainObject<T>,
     cb: (value: T) => T,
 ): plainObject<T> {

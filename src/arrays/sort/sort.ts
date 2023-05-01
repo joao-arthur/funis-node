@@ -15,7 +15,7 @@
  * arrays.sort([5,4,3], (a, b) => a - b) // [3, 4, 5]
  * ```
  */
-export function sort<T>(
+export function sort<const T>(
     arr: readonly T[],
     compareFn?: (a: T, b: T) => number,
 ): readonly T[] {

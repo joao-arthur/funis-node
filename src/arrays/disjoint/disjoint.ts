@@ -23,7 +23,7 @@ import { unique } from "../unique/unique.js";
  * ]) // ['George', 'Paul']
  * ```
  */
-export function disjoint<T>(
+export function disjoint<const T>(
     arrs: readonly (readonly T[])[],
 ): readonly T[] {
     return unique(arrs.flat())

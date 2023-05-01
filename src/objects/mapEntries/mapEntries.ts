@@ -26,7 +26,7 @@ import { plainObject } from "../../types/plainObject.js";
  * // }
  * ```
  */
-export function mapEntries<T>(
+export function mapEntries<const T>(
     obj: plainObject<T>,
     cb: (
         entry: readonly [string | number, T],

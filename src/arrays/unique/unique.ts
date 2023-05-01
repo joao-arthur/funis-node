@@ -10,6 +10,6 @@
  * arrays.unique([42]) // [42]
  * ```
  */
-export function unique<T>(arr: readonly T[]): readonly T[] {
+export function unique<const T>(arr: readonly T[]): readonly T[] {
     return Array.from(new Set(arr));
 }

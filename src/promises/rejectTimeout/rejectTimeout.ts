@@ -16,7 +16,7 @@
  * }
  * ```
  */
-export function rejectTimeout<T>(
+export function rejectTimeout<const T>(
     valueToReject: T,
     timeout: number,
 ): Promise<T> {

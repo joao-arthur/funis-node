@@ -12,7 +12,7 @@
  * ) // 'Hello, promise!'
  * ```
  */
-export function resolveTimeout<T>(
+export function resolveTimeout<const T>(
     valueToResolve: T,
     timeout: number,
 ): Promise<T> {

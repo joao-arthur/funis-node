@@ -13,6 +13,6 @@
  * arrays.first([4, 5, 6]) // 4
  * ```
  */
-export function first<T>(arr: readonly T[]): T {
+export function first<const T>(arr: readonly T[]): T {
     return arr[0];
 }

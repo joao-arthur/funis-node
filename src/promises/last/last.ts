@@ -16,7 +16,9 @@
  * ]) // 'Aristotle'
  * ```
  */
-export function last<T>(promises: readonly Promise<T>[]): Promise<T> {
+export function last<const T>(
+    promises: readonly Promise<T>[],
+): Promise<T> {
     return new Promise((resolve, reject) => {
         let resulted = 0;
 

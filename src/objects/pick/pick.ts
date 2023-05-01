@@ -21,7 +21,7 @@ import { plainObject } from "../../types/plainObject.js";
  * ) // { animal: 'dog' }
  * ```
  */
-export function pick<T>(
+export function pick<const T>(
     obj: plainObject<T>,
     keys: readonly string[],
 ): plainObject<T> {

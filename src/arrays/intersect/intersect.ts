@@ -22,7 +22,7 @@ import { unique } from "../unique/unique.js";
  * ]) // ['Ringo']
  * ```
  */
-export function intersect<T>(
+export function intersect<const T>(
     arrs: readonly (readonly T[])[],
 ): readonly T[] {
     return unique(arrs.flat())

@@ -16,6 +16,6 @@ import { random as randomNum } from "../../numbers/random/random.js";
  * arrays.random(false, 0, 'n') // false | 0 | 'n'
  * ```
  */
-export function random<T>(arr: readonly T[]): T | undefined {
+export function random<const T>(arr: readonly T[]): T | undefined {
     return arr[randomNum(0, arr.length - 1)];
 }

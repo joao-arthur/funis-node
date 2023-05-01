@@ -29,7 +29,7 @@ import { plainObject } from "../../types/plainObject.js";
  * // }
  * ```
  */
-export function fromMap<T>(
+export function fromMap<const T>(
     map: Map<string | number, T>,
 ): plainObject<T> {
     return Object.fromEntries(entries(map));

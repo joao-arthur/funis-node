@@ -37,7 +37,7 @@ import { plainObject } from "../../types/plainObject.js";
  * ) // '{ name: Rex }'
  * ```
  */
-export function serialize<T>(obj: plainObject<T>): string {
+export function serialize<const T>(obj: plainObject<T>): string {
     function valueToString(value: T): string {
         if (value instanceof Date) {
             return value.toISOString();

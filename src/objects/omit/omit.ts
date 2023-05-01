@@ -21,7 +21,7 @@ import { plainObject } from "../../types/plainObject.js";
  * ) // { species: 'Canis lupus', age: 5 }
  * ```
  */
-export function omit<T>(
+export function omit<const T>(
     obj: plainObject<T>,
     keys: readonly string[],
 ): plainObject<T> {
