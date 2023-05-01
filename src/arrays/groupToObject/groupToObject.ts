@@ -1,5 +1,5 @@
-import { plainObject } from '../../types/plainObject.js';
-import { groupToEntries } from '../groupToEntries/groupToEntries.js';
+import { plainObject } from "../../types/plainObject.js";
+import { groupToEntries } from "../groupToEntries/groupToEntries.js";
 
 /**
  * # arrays.groupToObject

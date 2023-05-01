@@ -1,5 +1,5 @@
-import { pipe } from '../../standard/pipe/pipe.js';
-import { entries } from '../entries/entries.js';
+import { pipe } from "../../standard/pipe/pipe.js";
+import { entries } from "../entries/entries.js";
 
 /**
  * # maps.mapEntries
@@ -32,7 +32,7 @@ export function mapEntries<K, V>(
 ): Map<K, V> {
     return pipe(
         (map: Map<K, V>) => entries(map),
-        entries => entries.map(cb),
-        entries => new Map(entries),
+        (entries) => entries.map(cb),
+        (entries) => new Map(entries),
     )(map);
 }

@@ -1,4 +1,4 @@
-import { groupToEntries } from '../groupToEntries/groupToEntries.js';
+import { groupToEntries } from "../groupToEntries/groupToEntries.js";
 
 /**
  * # arrays.groupToMap

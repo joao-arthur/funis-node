@@ -1,5 +1,5 @@
-import { pipe } from '../../standard/pipe/pipe.js';
-import { entries } from '../entries/entries.js';
+import { pipe } from "../../standard/pipe/pipe.js";
+import { entries } from "../entries/entries.js";
 
 /**
  * # maps.mapKeys
@@ -32,10 +32,10 @@ export function mapKeys<K, V>(
 ): Map<K, V> {
     return pipe(
         (map: Map<K, V>) => entries(map),
-        entries =>
+        (entries) =>
             entries.map(
                 ([key, value]) => [cb(key), value] as const,
             ),
-        entries => new Map(entries),
+        (entries) => new Map(entries),
     )(map);
 }

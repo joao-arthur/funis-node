@@ -1,5 +1,5 @@
-import { pipe } from '../../standard/pipe/pipe.js';
-import { plainObject } from '../../types/plainObject.js';
+import { pipe } from "../../standard/pipe/pipe.js";
+import { plainObject } from "../../types/plainObject.js";
 
 /**
  * # objects.mapEntries
@@ -34,7 +34,7 @@ export function mapEntries<T>(
 ): plainObject<T> {
     return pipe(
         (obj: plainObject<T>) => Object.entries(obj),
-        entries => entries.map(cb),
+        (entries) => entries.map(cb),
         Object.fromEntries,
     )(obj);
 }

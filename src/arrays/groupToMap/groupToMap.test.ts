@@ -1,36 +1,36 @@
-import { describe, it, expect } from 'vitest';
-import { groupToMap } from './groupToMap.js';
+import { describe, expect, it } from "vitest";
+import { groupToMap } from "./groupToMap.js";
 
-describe('groupToMap', () => {
-    it('should return empty for empty array', () => {
-        expect(groupToMap([], item => item)).toEqual(new Map());
+describe("groupToMap", () => {
+    it("should return empty for empty array", () => {
+        expect(groupToMap([], (item) => item)).toEqual(new Map());
     });
 
-    it('should group the items by the callback return value in a Map instance', () => {
+    it("should group the items by the callback return value in a Map instance", () => {
         expect(
-            groupToMap([1, 2, 3], item => item),
+            groupToMap([1, 2, 3], (item) => item),
         ).toEqual(
             new Map([[1, [1]], [2, [2]], [3, [3]]]),
         );
         expect(
-            groupToMap([1, 2, 3], item => item % 2),
+            groupToMap([1, 2, 3], (item) => item % 2),
         ).toEqual(
             new Map([[1, [1, 3]], [0, [2]]]),
         );
         expect(
-            groupToMap([1, 1, 2, 2, 3, 3], item => item),
+            groupToMap([1, 1, 2, 2, 3, 3], (item) => item),
         ).toEqual(
             new Map([[1, [1, 1]], [2, [2, 2]], [3, [3, 3]]]),
         );
         expect(
             groupToMap(
-                ['George', 'Paul', 'John', 'Ringo'],
-                item => item === 'Ringo',
+                ["George", "Paul", "John", "Ringo"],
+                (item) => item === "Ringo",
             ),
         ).toEqual(
             new Map([
-                [false, ['George', 'Paul', 'John']],
-                [true, ['Ringo']],
+                [false, ["George", "Paul", "John"]],
+                [true, ["Ringo"]],
             ]),
         );
         expect(
@@ -47,23 +47,23 @@ describe('groupToMap', () => {
         expect(
             groupToMap(
                 [
-                    { type: 'grass', name: 'bulbasaur' },
-                    { type: 'fire', name: 'charmander' },
-                    { type: 'water', name: 'squirtle' },
-                    { type: 'bug', name: 'caterpie' },
-                    { type: 'water', name: 'psyduck' },
+                    { type: "grass", name: "bulbasaur" },
+                    { type: "fire", name: "charmander" },
+                    { type: "water", name: "squirtle" },
+                    { type: "bug", name: "caterpie" },
+                    { type: "water", name: "psyduck" },
                 ],
-                item => item.type,
+                (item) => item.type,
             ),
         ).toEqual(
             new Map([
-                ['grass', [{ type: 'grass', name: 'bulbasaur' }]],
-                ['fire', [{ type: 'fire', name: 'charmander' }]],
-                ['water', [
-                    { type: 'water', name: 'squirtle' },
-                    { type: 'water', name: 'psyduck' },
+                ["grass", [{ type: "grass", name: "bulbasaur" }]],
+                ["fire", [{ type: "fire", name: "charmander" }]],
+                ["water", [
+                    { type: "water", name: "squirtle" },
+                    { type: "water", name: "psyduck" },
                 ]],
-                ['bug', [{ type: 'bug', name: 'caterpie' }]],
+                ["bug", [{ type: "bug", name: "caterpie" }]],
             ]),
         );
     });

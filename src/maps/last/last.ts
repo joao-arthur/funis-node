@@ -1,5 +1,5 @@
-import { last as arrayLast } from '../../arrays/last/last.js';
-import { entries } from '../entries/entries.js';
+import { last as arrayLast } from "../../arrays/last/last.js";
+import { entries } from "../entries/entries.js";
 
 /**
  * # maps.last

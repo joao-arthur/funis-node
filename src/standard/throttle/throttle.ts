@@ -31,9 +31,10 @@ export function throttle(
     let inThrottleTimeout = false;
 
     function closure(): void {
-        if (inThrottleTimeout) 
+        if (inThrottleTimeout) {
             return;
-        
+        }
+
         inThrottleTimeout = true;
         globalThis.setTimeout(() => {
             inThrottleTimeout = false;

@@ -1,7 +1,7 @@
-import { groupToArray } from '../../arrays/groupToArray/groupToArray.js';
-import { unique } from '../../arrays/unique/unique.js';
-import { self } from '../../standard/self/self.js';
-import { plainObject } from '../../types/plainObject.js';
+import { groupToArray } from "../../arrays/groupToArray/groupToArray.js";
+import { unique } from "../../arrays/unique/unique.js";
+import { self } from "../../standard/self/self.js";
+import { plainObject } from "../../types/plainObject.js";
 
 /**
  * # objects.disjoint
@@ -21,7 +21,7 @@ export function disjoint(
     objs: readonly plainObject[],
 ): plainObject {
     const allEntries = objs
-        .map(obj => Object.entries(obj))
+        .map((obj) => Object.entries(obj))
         .flat();
     const allEntriesObject = Object.fromEntries(allEntries);
     const uniqueKeys = unique(
@@ -29,11 +29,11 @@ export function disjoint(
             allEntries.map(([key]) => key),
             self,
         )
-            .filter(group => group.length === 1)
+            .filter((group) => group.length === 1)
             .flat(),
     );
 
     return Object.fromEntries(
-        uniqueKeys.map(key => [key, allEntriesObject[key]]),
+        uniqueKeys.map((key) => [key, allEntriesObject[key]]),
     );
 }

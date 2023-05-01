@@ -1,4 +1,4 @@
-import { accents } from '../internal/accents.js';
+import { accents } from "../internal/accents.js";
 
 /**
  * # strings.removeAccentuation
@@ -17,5 +17,5 @@ import { accents } from '../internal/accents.js';
  */
 export function removeAccentuation(str: string): string {
     return Array.from(str)
-        .map(letter => accents.has(letter) ? '' : letter).join('');
+        .map((letter) => accents.has(letter) ? "" : letter).join("");
 }

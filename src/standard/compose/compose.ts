@@ -1093,6 +1093,6 @@ export function compose<
  * ```
  */
 export function compose(...fns: readonly unknownFn[]): unknownFn {
-    return initialParam =>
+    return (initialParam) =>
         fns.reduceRight((curr, fn) => fn(curr), initialParam);
 }

@@ -1,4 +1,4 @@
-import { plainObject } from '../../types/plainObject.js';
+import { plainObject } from "../../types/plainObject.js";
 
 /**
  * # maps.fromObject

@@ -1,5 +1,5 @@
-import { pipe } from '../../standard/pipe/pipe.js';
-import { unique } from '../unique/unique.js';
+import { pipe } from "../../standard/pipe/pipe.js";
+import { unique } from "../unique/unique.js";
 
 /**
  * # arrays.groupToEntries
@@ -37,12 +37,12 @@ export function groupToEntries<K, V>(
     return pipe(
         (items: readonly V[]) => items.map(cb),
         unique,
-        keys =>
-            keys.map(key =>
+        (keys) =>
+            keys.map((key) =>
                 [
                     key,
-                    arr.filter(item => cb(item) === key),
-                ] as const,
+                    arr.filter((item) => cb(item) === key),
+                ] as const
             ),
     )(arr);
 }

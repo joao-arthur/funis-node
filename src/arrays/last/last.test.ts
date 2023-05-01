@@ -1,16 +1,16 @@
-import { describe, it, expect } from 'vitest';
-import { last } from './last.js';
+import { describe, expect, it } from "vitest";
+import { last } from "./last.js";
 
-describe('last', () => {
-    it('should return the last item of the array', () => {
+describe("last", () => {
+    it("should return the last item of the array", () => {
         expect(last([4, 5, 6])).toBe(6);
         expect(
-            last(['George', 'Paul', 'John', 'Ringo']),
-        ).toBe('Ringo');
+            last(["George", "Paul", "John", "Ringo"]),
+        ).toBe("Ringo");
         expect(last([false, true])).toBe(true);
     });
 
-    it('should return undefined for empty arrays', () => {
+    it("should return undefined for empty arrays", () => {
         expect(last([])).toBe(undefined);
     });
 });

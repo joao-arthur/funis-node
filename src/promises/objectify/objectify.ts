@@ -1,11 +1,11 @@
 type returnType<V, E> = {
     readonly value: V;
     readonly error: undefined;
-    readonly type: 'resolved';
+    readonly type: "resolved";
 } | {
     readonly value: undefined;
     readonly error: E;
-    readonly type: 'rejected';
+    readonly type: "rejected";
 };
 
 /**
@@ -40,13 +40,13 @@ export async function objectify<V, E>(
         return {
             value: await promise,
             error: undefined,
-            type: 'resolved',
+            type: "resolved",
         };
     } catch (err) {
         return {
             value: undefined,
             error: err as E,
-            type: 'rejected',
+            type: "rejected",
         };
     }
 }

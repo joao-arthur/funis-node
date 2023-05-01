@@ -1,5 +1,5 @@
-import { once } from '../once/once.js';
-import { unique } from '../unique/unique.js';
+import { once } from "../once/once.js";
+import { unique } from "../unique/unique.js";
 
 /**
  * # arrays.disjoint
@@ -28,6 +28,6 @@ export function disjoint<T>(
 ): readonly T[] {
     return unique(arrs.flat())
         .filter(
-            item => once(arrs, arr => arr.includes(item)),
+            (item) => once(arrs, (arr) => arr.includes(item)),
         );
 }

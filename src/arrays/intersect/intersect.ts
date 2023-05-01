@@ -1,4 +1,4 @@
-import { unique } from '../unique/unique.js';
+import { unique } from "../unique/unique.js";
 
 /**
  * # arrays.intersect
@@ -27,6 +27,6 @@ export function intersect<T>(
 ): readonly T[] {
     return unique(arrs.flat())
         .filter(
-            item => arrs.every(arr => arr.includes(item)),
+            (item) => arrs.every((arr) => arr.includes(item)),
         );
 }

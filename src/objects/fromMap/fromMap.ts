@@ -1,5 +1,5 @@
-import { entries } from '../../maps/entries/entries.js';
-import { plainObject } from '../../types/plainObject.js';
+import { entries } from "../../maps/entries/entries.js";
+import { plainObject } from "../../types/plainObject.js";
 
 /**
  * # objects.fromMap

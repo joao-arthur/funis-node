@@ -1093,6 +1093,6 @@ export function pipe<
  * ```
  */
 export function pipe(...fns: readonly unknownFn[]): unknownFn {
-    return initialParam =>
+    return (initialParam) =>
         fns.reduce((curr, fn) => fn(curr), initialParam);
 }

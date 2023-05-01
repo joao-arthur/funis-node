@@ -30,5 +30,5 @@ export function range(
     return Array(treatedLength)
         .fill(undefined)
         .map((_, i) => i * step + from)
-        .map(value => Number(value.toFixed(10)));
+        .map((value) => Number(value.toFixed(10)));
 }

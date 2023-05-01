@@ -20,21 +20,21 @@ export function last<T>(promises: readonly Promise<T>[]): Promise<T> {
     return new Promise((resolve, reject) => {
         let resulted = 0;
 
-        promises.forEach(promise => {
+        promises.forEach((promise) => {
             promise
-                .then(value => {
-                    if (resulted === promises.length - 1) 
+                .then((value) => {
+                    if (resulted === promises.length - 1) {
                         resolve(value);
-                    else 
+                    } else {
                         resulted++;
-                    
+                    }
                 })
-                .catch(error => {
-                    if (resulted === promises.length - 1) 
+                .catch((error) => {
+                    if (resulted === promises.length - 1) {
                         reject(error);
-                    else 
+                    } else {
                         resulted++;
-                    
+                    }
                 });
         });
     });

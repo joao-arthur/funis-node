@@ -13,15 +13,16 @@
  * ```
  */
 export function pascalCase(str: string): string {
-    if (str === '') 
-        return '';
+    if (str === "") {
+        return "";
+    }
 
     return str
         .split(/ |_|-/g)
-        .map(word =>
+        .map((word) =>
             // eslint-disable-next-line max-len
             word[0].toLocaleUpperCase() +
-            word.slice(1).toLocaleLowerCase(),
+            word.slice(1).toLocaleLowerCase()
         )
-        .join('');
+        .join("");
 }

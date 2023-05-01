@@ -1,5 +1,5 @@
-import { first as arrayFirst } from '../../arrays/first/first.js';
-import { entries } from '../entries/entries.js';
+import { first as arrayFirst } from "../../arrays/first/first.js";
+import { entries } from "../entries/entries.js";
 
 /**
  * # maps.first

@@ -1,4 +1,4 @@
-import { pipe } from '../../standard/pipe/pipe.js';
+import { pipe } from "../../standard/pipe/pipe.js";
 
 type clampOptions = {
     readonly min: number;
@@ -38,11 +38,11 @@ type clampOptions = {
 export function clamp(num: number, options: clampOptions): number {
     return pipe(
         (current: number) =>
-            'min' in options
+            "min" in options
                 ? Math.max(current, options.min)
                 : current,
         (current: number) =>
-            'max' in options
+            "max" in options
                 ? Math.min(current, options.max)
                 : current,
     )(num);

@@ -38,9 +38,10 @@ export function debounce(
     let timeoutId = 0;
 
     function closure(): void {
-        if (timeoutId) 
+        if (timeoutId) {
             globalThis.clearTimeout(timeoutId);
-        
+        }
+
         timeoutId = globalThis.setTimeout(() => {
             timeoutId = 0;
             cb();

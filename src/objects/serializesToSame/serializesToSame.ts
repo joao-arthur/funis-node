@@ -1,6 +1,6 @@
-import { combinations } from '../../arrays/combinations/combinations.js';
-import { plainObject } from '../../types/plainObject.js';
-import { serialize } from '../serialize/serialize.js';
+import { combinations } from "../../arrays/combinations/combinations.js";
+import { plainObject } from "../../types/plainObject.js";
+import { serialize } from "../serialize/serialize.js";
 
 /**
  * # objects.serializesToSame

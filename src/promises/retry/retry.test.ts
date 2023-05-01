@@ -1,30 +1,31 @@
-import { describe, it, expect } from 'vitest';
-import { retry } from './retry.js';
+import { describe, expect, it } from "vitest";
+import { retry } from "./retry.js";
 
-describe('retry', () => {
-    it('should resolves undefined if attempts are less than one', async () => {
+describe("retry", () => {
+    it("should resolves undefined if attempts are less than one", () => {
         expect(
-            retry(() => Promise.reject('Donatello'), 0),
+            retry(() => Promise.reject("Donatello"), 0),
         ).resolves.toBe(undefined);
     });
 
-    it('should retry to solve the promise', async () => {
+    it("should retry to solve the promise", async () => {
         let i = 1;
 
         await expect(
             retry(() => {
                 i++;
-                if (i === 5)
-                    return Promise.resolve('Ludwig van Beethoven');
-                else
-                    return Promise.reject('Johann Sebastian Bach');
+                if (i === 5) {
+                    return Promise.resolve("Ludwig van Beethoven");
+                } else {
+                    return Promise.reject("Johann Sebastian Bach");
+                }
             }, 10),
-        ).resolves.toBe('Ludwig van Beethoven');
+        ).resolves.toBe("Ludwig van Beethoven");
     });
 
-    it('should return rejected value if retry rejects', async () => {
+    it("should return rejected value if retry rejects", async () => {
         await expect(
-            retry(() => Promise.reject('Donatello'), 5),
-        ).rejects.toBe('Donatello');
+            retry(() => Promise.reject("Donatello"), 5),
+        ).rejects.toBe("Donatello");
     });
 });

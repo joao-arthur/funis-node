@@ -1,4 +1,4 @@
-import { random as randomNum } from '../../numbers/random/random.js';
+import { random as randomNum } from "../../numbers/random/random.js";
 
 /**
  * # arrays.random
