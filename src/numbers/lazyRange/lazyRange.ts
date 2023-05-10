@@ -1,3 +1,6 @@
+import { pipe } from "../../standard/pipe/pipe.js";
+import { toFixed } from "../toFixed/toFixed.js";
+
 /**
  * # numbers.lazyRange
  *
@@ -22,17 +25,19 @@ export function lazyRange(
     to: number,
     step = 1,
 ): IterableIterator<number> {
-    const delta = Number((to - from).toFixed(10));
-    const deltaByStep = Number((delta / step).toFixed(10));
-    const length = Math.floor(deltaByStep) + 1;
-    const treatedLength = Math.max(length, 0);
+    const length = pipe(
+        () => toFixed(to - from, 10),
+        (delta) => toFixed(delta / step, 10),
+        (deltaByStep) => Math.floor(deltaByStep) + 1,
+        (length) => Math.max(length, 0),
+    )(undefined);
 
     let i = -1;
 
     return {
         next(): IteratorResult<number> {
             i++;
-            const done = i + 1 > treatedLength;
+            const done = i + 1 > length;
 
             return {
                 done,

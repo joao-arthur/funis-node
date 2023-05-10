@@ -1,3 +1,6 @@
+import { pipe } from "../../standard/pipe/pipe.js";
+import { toFixed } from "../toFixed/toFixed.js";
+
 /**
  * # numbers.range
  *
@@ -22,12 +25,14 @@ export function range(
     to: number,
     step = 1,
 ): readonly number[] {
-    const delta = Number((to - from).toFixed(10));
-    const deltaByStep = Number((delta / step).toFixed(10));
-    const length = Math.floor(deltaByStep) + 1;
-    const treatedLength = Math.max(length, 0);
+    const length = pipe(
+        () => toFixed(to - from, 10),
+        (delta) => toFixed(delta / step, 10),
+        (deltaByStep) => Math.floor(deltaByStep) + 1,
+        (length) => Math.max(length, 0),
+    )(undefined);
 
-    return Array(treatedLength)
+    return Array(length)
         .fill(undefined)
         .map((_, i) => i * step + from)
         .map((value) => Number(value.toFixed(10)));
