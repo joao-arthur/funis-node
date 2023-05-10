@@ -1,5 +1,6 @@
 export { arr } from "./arr/mod.js";
 export { cb } from "./cb/mod.js";
+export { chr } from "./chr/mod.js";
 export { map } from "./map/mod.js";
 export { num } from "./num/mod.js";
 export { obj } from "./obj/mod.js";
