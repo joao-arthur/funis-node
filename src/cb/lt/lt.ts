@@ -1,7 +1,7 @@
 /**
  * # lt
  *
- * Returns a function that compares the two passed values with the "<" operator.
+ * Returns a function that compares val1 < val2.
  *
  * ## Example
  *
@@ -13,6 +13,6 @@
  * callbacks.gt(1)(1) // false
  * ```
  */
-export const lt = <T>(val1: T) => (val2: T) => {
+export const lt = <T>(val2: T) => (val1: T) => {
     return val1 < val2;
 };

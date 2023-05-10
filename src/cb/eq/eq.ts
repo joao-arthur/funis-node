@@ -1,7 +1,7 @@
 /**
  * # eq
  *
- * Returns a function that compares the two passed values with the "===" operator.
+ * Returns a function that compares val1 === val2.
  *
  * ## Example
  *
@@ -13,6 +13,6 @@
  * callbacks.gt(2)(2) // true
  * ```
  */
-export const eq = <T>(val1: T) => (val2: T) => {
+export const eq = <T>(val2: T) => (val1: T) => {
     return val1 === val2;
 };
