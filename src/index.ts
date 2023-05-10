@@ -1,8 +1,8 @@
-export { arrays } from "./arrays/mod.js";
-export { callbacks } from "./callbacks/mod.js";
-export { maps } from "./maps/mod.js";
-export { numbers } from "./numbers/mod.js";
-export { objects } from "./objects/mod.js";
-export { promises } from "./promises/mod.js";
-export { standard } from "./standard/mod.js";
-export { strings } from "./strings/mod.js";
+export { arr } from "./arr/mod.js";
+export { cb } from "./cb/mod.js";
+export { map } from "./map/mod.js";
+export { num } from "./num/mod.js";
+export { obj } from "./obj/mod.js";
+export { prm } from "./prm/mod.js";
+export { std } from "./std/mod.js";
+export { str } from "./str/mod.js";
