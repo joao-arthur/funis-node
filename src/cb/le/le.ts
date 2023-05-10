@@ -6,11 +6,11 @@
  * ## Example
  *
  * ```ts
- * callbacks.le(1)(2) // true
+ * callbacks.le(2)(1) // true
  * ```
  *
  * ```ts
- * callbacks.gt(1)(1) // true
+ * callbacks.le(1)(1) // true
  * ```
  */
 export const le = <T>(val2: T) => (val1: T) => {

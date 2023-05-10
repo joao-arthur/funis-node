@@ -10,7 +10,7 @@
  * ```
  *
  * ```ts
- * callbacks.gt(2)(2) // true
+ * callbacks.eq(2)(2) // true
  * ```
  */
 export const eq = <T>(val2: T) => (val1: T) => {

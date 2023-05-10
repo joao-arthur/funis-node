@@ -6,7 +6,7 @@
  * ## Example
  *
  * ```ts
- * callbacks.gt(2)(1) // true
+ * callbacks.gt(1)(2) // true
  * ```
  *
  * ```ts
