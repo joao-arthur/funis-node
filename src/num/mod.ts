@@ -6,6 +6,7 @@ import { random } from "./random/random.js";
 import { compareAsc } from "./compareAsc/compareAsc.js";
 import { compareDesc } from "./compareDesc/compareDesc.js";
 import { toFixed } from "./toFixed/toFixed.js";
+import { normalizeZero } from "./normalizeZero/normalizeZero.js";
 
 export const num = {
     clamp,
@@ -16,4 +17,5 @@ export const num = {
     compareAsc,
     compareDesc,
     toFixed,
+    normalizeZero,
 } as const;
