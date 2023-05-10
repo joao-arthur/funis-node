@@ -1,5 +1,5 @@
 /**
- * # promises.last
+ * # last
  *
  * Returns the last promise to resolve/reject.
  *

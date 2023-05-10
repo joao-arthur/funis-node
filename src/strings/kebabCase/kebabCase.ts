@@ -1,5 +1,5 @@
 /**
- * # strings.kebabCase
+ * # kebabCase
  *
  * Transforms a sequence of words into kebab case.
  *

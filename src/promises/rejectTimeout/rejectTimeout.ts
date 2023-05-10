@@ -1,5 +1,5 @@
 /**
- * # promises.rejectTimeout
+ * # rejectTimeout
  *
  * Returns a promise that rejects after the timeout.
  *

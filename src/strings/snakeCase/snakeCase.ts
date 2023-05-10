@@ -1,5 +1,5 @@
 /**
- * # strings.snakeCase
+ * # snakeCase
  *
  * Transforms a sequence of words into snake case.
  *

@@ -1,5 +1,5 @@
 /**
- * # promises.resolveTimeout
+ * # resolveTimeout
  *
  * Returns a promise that resolves after the timeout.
  *

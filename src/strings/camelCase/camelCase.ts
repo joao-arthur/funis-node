@@ -1,5 +1,5 @@
 /**
- * # strings.camelCase
+ * # camelCase
  *
  * Transforms a sequence of words into camel case.
  *

@@ -4,7 +4,7 @@ import { self } from "../../standard/self/self.js";
 import { plainObject } from "../../types/plainObject.js";
 
 /**
- * # objects.intersect
+ * # intersect
  *
  * Returns an object with the entries that appear in all of them.
  *

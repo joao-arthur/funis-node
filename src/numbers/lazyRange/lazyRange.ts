@@ -2,7 +2,7 @@ import { pipe } from "../../standard/pipe/pipe.js";
 import { toFixed } from "../toFixed/toFixed.js";
 
 /**
- * # numbers.lazyRange
+ * # lazyRange
  *
  * Returns an iterable range from a number to another, respecting the step between each value.
  *

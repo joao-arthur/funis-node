@@ -2,7 +2,7 @@ import { pipe } from "../../standard/pipe/pipe.js";
 import { entries } from "../entries/entries.js";
 
 /**
- * # maps.mapKeys
+ * # mapKeys
  *
  * Map the _Map instance_ keys into a new _Map instance_.
  *

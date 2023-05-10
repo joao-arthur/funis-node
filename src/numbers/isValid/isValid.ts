@@ -1,5 +1,5 @@
 /**
- * # numbers.isValid
+ * # isValid
  *
  * Returns false for *undefined*, *null* and *NaN*. Returns true otherwise.
  *

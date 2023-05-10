@@ -3,7 +3,7 @@ import { plainObject } from "../../types/plainObject.js";
 import { serialize } from "../serialize/serialize.js";
 
 /**
- * # objects.serializesToSame
+ * # serializesToSame
  *
  * Returns whether the [serialized](./serialize.md) version of every object are equal or not.
  *

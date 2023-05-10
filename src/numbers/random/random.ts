@@ -1,5 +1,5 @@
 /**
- * # numbers.random
+ * # random
  *
  * Returns a random integer number between the range inclusively.
  *

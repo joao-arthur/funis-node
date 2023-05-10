@@ -1,7 +1,7 @@
 import { random as randomNum } from "../../numbers/random/random.js";
 
 /**
- * # arrays.random
+ * # random
  *
  * Returns a random character of the array.
  *

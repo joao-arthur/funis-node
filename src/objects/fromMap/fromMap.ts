@@ -2,7 +2,7 @@ import { entries } from "../../maps/entries/entries.js";
 import { plainObject } from "../../types/plainObject.js";
 
 /**
- * # objects.fromMap
+ * # fromMap
  *
  * Returns an object with the same key-value pairs of the passed Map instance.
  *

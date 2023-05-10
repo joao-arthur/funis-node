@@ -1,5 +1,5 @@
 /**
- * # maps.entries
+ * # entries
  *
  * Returns the entries of the Map instance.
  *

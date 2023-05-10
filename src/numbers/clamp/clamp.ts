@@ -10,7 +10,7 @@ type clampOptions = {
 };
 
 /**
- * # numbers.clamp
+ * # clamp
  *
  * If min is passed and the number is smaller than min, returns min.
  *

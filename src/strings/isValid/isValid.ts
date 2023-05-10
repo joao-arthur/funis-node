@@ -1,5 +1,5 @@
 /**
- * # strings.isValid
+ * # isValid
  *
  * Returns false for *undefined* and *null*. Returns true otherwise.
  *

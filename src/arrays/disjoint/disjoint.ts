@@ -2,7 +2,7 @@ import { once } from "../once/once.js";
 import { unique } from "../unique/unique.js";
 
 /**
- * # arrays.disjoint
+ * # disjoint
  *
  * Returns an array with the items that appear in only one array.
  *

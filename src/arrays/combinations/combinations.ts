@@ -1,5 +1,5 @@
 /**
- * # arrays.combinations
+ * # combinations
  *
  * Returns an array with the non-repeating combination of the items.
  *

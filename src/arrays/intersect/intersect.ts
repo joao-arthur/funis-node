@@ -1,7 +1,7 @@
 import { unique } from "../unique/unique.js";
 
 /**
- * # arrays.intersect
+ * # intersect
  *
  * Returns an array with the items that appear in every array.
  *

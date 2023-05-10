@@ -1,5 +1,5 @@
 /**
- * # arrays.unique
+ * # unique
  *
  * Returns an array with the unique values.
  *

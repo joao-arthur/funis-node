@@ -2,7 +2,7 @@ import { first as arrayFirst } from "../../arrays/first/first.js";
 import { entries } from "../entries/entries.js";
 
 /**
- * # maps.first
+ * # first
  *
  * Returns the first entry of the map.
  *

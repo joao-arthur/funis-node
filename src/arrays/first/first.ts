@@ -1,5 +1,5 @@
 /**
- * # arrays.first
+ * # first
  *
  * Returns the first item of the array.
  *

@@ -2,7 +2,7 @@ import { pipe } from "../../standard/pipe/pipe.js";
 import { unique } from "../unique/unique.js";
 
 /**
- * # arrays.groupToEntries
+ * # groupToEntries
  *
  * Group the items by the returned value of the callback. Then return the groups in entries.
  *

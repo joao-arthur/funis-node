@@ -1,5 +1,5 @@
 /**
- * # arrays.once
+ * # once
  *
  * Returns true if the callback returns true once. Returns false otherwise.
  *

@@ -2,7 +2,7 @@ import { pipe } from "../../standard/pipe/pipe.js";
 import { plainObject } from "../../types/plainObject.js";
 
 /**
- * # objects.mapValues
+ * # mapValues
  *
  * Map the object values into an object.
  *

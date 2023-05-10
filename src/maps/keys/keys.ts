@@ -1,5 +1,5 @@
 /**
- * # maps.keys
+ * # keys
  *
  * Returns the keys of the Map instance entries.
  *

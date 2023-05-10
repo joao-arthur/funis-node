@@ -8,7 +8,7 @@ type parseOptions = {
 };
 
 /**
- * # numbers.parse
+ * # parse
  *
  * Try to parse a number by the given prefix and suffix. If the prefix or suffix doesn't match the passed value, returns *undefined*.
  *

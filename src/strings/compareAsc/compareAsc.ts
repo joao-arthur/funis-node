@@ -1,5 +1,5 @@
 /**
- * # strings.compareAsc
+ * # compareAsc
  *
  * Compare the numbers in ascending order.
  *

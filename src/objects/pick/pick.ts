@@ -1,7 +1,7 @@
 import { plainObject } from "../../types/plainObject.js";
 
 /**
- * # objects.pick
+ * # pick
  *
  * Creates an object with only the passed keys.
  *

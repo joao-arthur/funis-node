@@ -4,7 +4,7 @@ import { self } from "../../standard/self/self.js";
 import { plainObject } from "../../types/plainObject.js";
 
 /**
- * # objects.disjoint
+ * # disjoint
  *
  * Returns an object with the entries which the key appears in only one of them.
  *

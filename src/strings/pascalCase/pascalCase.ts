@@ -1,5 +1,5 @@
 /**
- * # strings.pascalCase
+ * # pascalCase
  *
  * Transforms a sequence of words into pascal case.
  *

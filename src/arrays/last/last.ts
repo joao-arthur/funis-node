@@ -1,5 +1,5 @@
 /**
- * # arrays.last
+ * # last
  *
  * Returns the last item of the array. If the array is empty, returns *undefined*.
  *

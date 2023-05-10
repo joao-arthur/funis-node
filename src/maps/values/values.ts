@@ -1,5 +1,5 @@
 /**
- * # maps.values
+ * # values
  *
  * Returns the values of the Map instance entries.
  *

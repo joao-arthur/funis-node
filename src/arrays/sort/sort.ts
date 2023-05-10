@@ -1,5 +1,5 @@
 /**
- * # arrays.sort
+ * # sort
  *
  * Wrapper of the sort function. Returns a new sorted array without mutating the original one.
  *

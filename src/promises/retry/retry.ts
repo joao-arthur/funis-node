@@ -1,7 +1,7 @@
 import { objectify } from "../objectify/objectify.js";
 
 /**
- * # promises.retry
+ * # retry
  *
  * Tries to resolve the promise for the number of especified attempts.
  *

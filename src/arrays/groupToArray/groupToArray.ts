@@ -1,7 +1,7 @@
 import { groupToEntries } from "../groupToEntries/groupToEntries.js";
 
 /**
- * # arrays.groupToArray
+ * # groupToArray
  *
  * Group the items by the returned value of the callback. Then return the groups in an array.
  *

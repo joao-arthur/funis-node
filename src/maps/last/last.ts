@@ -2,7 +2,7 @@ import { last as arrayLast } from "../../arrays/last/last.js";
 import { entries } from "../entries/entries.js";
 
 /**
- * # maps.last
+ * # last
  *
  * Returns the last entry of the map.
  *

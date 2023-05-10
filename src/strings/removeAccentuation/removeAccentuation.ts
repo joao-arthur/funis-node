@@ -1,7 +1,7 @@
 import { accents } from "../internal/accents.js";
 
 /**
- * # strings.removeAccentuation
+ * # removeAccentuation
  *
  * Remove accentuated characters.
  *

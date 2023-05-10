@@ -9,7 +9,7 @@ type returnType<V, E> = {
 };
 
 /**
- * # promises.objectify
+ * # objectify
  *
  * Returns an object with value and error entries corrensponding to resolved or rejected value of the promise.
  *
