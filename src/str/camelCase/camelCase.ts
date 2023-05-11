@@ -6,10 +6,10 @@
  * ## Example
  *
  * ```ts
- * strings.camelCase('hey') // 'hey'
- * strings.camelCase('j S o N') // 'jSON'
- * strings.camelCase('j_S_o_N') // 'jSON'
- * strings.camelCase('j-S-o-N') // 'jSON'
+ * str.camelCase('hey') // 'hey'
+ * str.camelCase('j S o N') // 'jSON'
+ * str.camelCase('j_S_o_N') // 'jSON'
+ * str.camelCase('j-S-o-N') // 'jSON'
  * ```
  */
 export function camelCase(str: string): string {

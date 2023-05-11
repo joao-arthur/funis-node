@@ -6,8 +6,8 @@
  * ## Example
  *
  * ```ts
- * numbers.normalizeZero(-0) // 0
- * numbers.normalizeZero(0) // 0
+ * num.normalizeZero(-0) // 0
+ * num.normalizeZero(0) // 0
  * ```
  */
 export function normalizeZero(num: number): number {

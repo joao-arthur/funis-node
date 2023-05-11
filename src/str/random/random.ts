@@ -8,9 +8,9 @@ import { random as randomNum } from "../../num/random/random.js";
  * ## Example
  *
  * ```ts
- * strings.random('') // ''
- * strings.random('a') // 'a'
- * strings.random('Rafael') // 'R' | 'a' | 'f' | 'a' | 'e' | 'l'
+ * str.random('') // ''
+ * str.random('a') // 'a'
+ * str.random('Rafael') // 'R' | 'a' | 'f' | 'a' | 'e' | 'l'
  * ```
  */
 export function random(str: string): string {

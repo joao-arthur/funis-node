@@ -15,17 +15,17 @@ type parseOptions = {
  * ## Example
  *
  * ```ts
- * numbers.parse(
+ * num.parse(
  *     'I see penguins',
  *     { prefix: 'I see ', suffix: 'penguins' }
  * ) // undefined
- * numbers.parse('US$4', { prefix: 'R$' }) // undefined
- * numbers.parse('4px', { suffix: 'rem' }) // undefined
+ * num.parse('US$4', { prefix: 'R$' }) // undefined
+ * num.parse('4px', { suffix: 'rem' }) // undefined
  * ```
  *
  * ```ts
- * numbers.parse('$100.00', { prefix: '$' }) // 100.00
- * numbers.parse(
+ * num.parse('$100.00', { prefix: '$' }) // 100.00
+ * num.parse(
  *     'width: 100px',
  *     { prefix: 'width: ', suffix: 'px' }
  * ) // 100

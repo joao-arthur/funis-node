@@ -6,12 +6,12 @@
  * ## Example
  *
  * ```ts
- * arrays.combinations([]) // []
- * arrays.combinations([10]) // []
+ * arr.combinations([]) // []
+ * arr.combinations([10]) // []
  * ```
  *
  * ```ts
- * arrays.combinations([10, 20, 30, 40, 50])
+ * arr.combinations([10, 20, 30, 40, 50])
  * // [
  * //     [10, 20],
  * //     [10, 30],

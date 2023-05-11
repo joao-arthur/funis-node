@@ -8,14 +8,14 @@ import { plainObject } from "../../types/plainObject.js";
  * ## Example
  *
  * ```ts
- * objects.omit(
+ * obj.omit(
  *     { animal: 'dog', species: 'Canis lupus', age: 5 },
  *     [],
  * ) // { animal: 'dog', species: 'Canis lupus', age: 5 }
  * ```
  *
  * ```ts
- * objects.omit(
+ * obj.omit(
  *     { animal: 'dog', species: 'Canis lupus', age: 5 },
  *     ['animal'],
  * ) // { species: 'Canis lupus', age: 5 }

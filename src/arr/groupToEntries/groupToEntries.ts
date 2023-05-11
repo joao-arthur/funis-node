@@ -9,7 +9,7 @@ import { unique } from "../unique/unique.js";
  * ## Example
  *
  * ```ts
- * arrays.groupToEntries(
+ * arr.groupToEntries(
  *     [
  *         { type: 'grass', name: 'bulbasaur' },
  *         { type: 'fire', name: 'charmander' },

@@ -6,7 +6,7 @@
  * ## Example
  *
  * ```ts
- * await promises.resolveTimeout(
+ * await prm.resolveTimeout(
  *     'Hello, promise!',
  *     500
  * ) // 'Hello, promise!'

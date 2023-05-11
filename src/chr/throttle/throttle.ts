@@ -9,14 +9,14 @@
  *
  * ```ts
  * const strArr: string[] = [];
- * throttle(() => strArr.push('Salvator mundi'), 0)();
+ * chr.throttle(() => strArr.push('Salvator mundi'), 0)();
  * // after 5 ms
  * strArr // ['Salvator mundi']
  * ```
  *
  * ```ts
  * const strArr: string[] = [];
- * const returnedFn = throttle(() => strArr.push('Salvator mundi'), 5);
+ * const returnedFn = chr.throttle(() => strArr.push('Salvator mundi'), 5);
  * returnedFn();
  * returnedFn();
  * returnedFn();

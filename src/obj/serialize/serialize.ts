@@ -8,7 +8,7 @@ import { plainObject } from "../../types/plainObject.js";
  * ## Example
  *
  * ```ts
- * objects.serialize({
+ * obj.serialize({
  *     name: 'Paul',
  *     numberOfBands: 4,
  *     alive: true,
@@ -16,7 +16,7 @@ import { plainObject } from "../../types/plainObject.js";
  * ```
  *
  * ```ts
- * objects.serialize({
+ * obj.serialize({
  *     empty: [],
  *     oneValue: [1],
  *     multiValue: [true, false, 'zaphod', 42n],
@@ -32,7 +32,7 @@ import { plainObject } from "../../types/plainObject.js";
  *     }
  * }
  *
- * objects.serialize(
+ * obj.serialize(
  *     new Dog('Rex') as unknown as plainObject
  * ) // '{ name: Rex }'
  * ```

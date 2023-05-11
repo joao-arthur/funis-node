@@ -8,14 +8,14 @@ import { plainObject } from "../../types/plainObject.js";
  * ## Example
  *
  * ```ts
- * objects.pick(
+ * obj.pick(
  *     { animal: 'dog', species: 'Canis lupus', age: 5 },
  *     [],
  * ) // { }
  * ```
  *
  * ```ts
- * objects.pick(
+ * obj.pick(
  *     { animal: 'dog', species: 'Canis lupus', age: 5 },
  *     ['animal'],
  * ) // { animal: 'dog' }

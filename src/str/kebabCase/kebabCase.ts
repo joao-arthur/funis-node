@@ -6,10 +6,10 @@
  * ## Example
  *
  * ```ts
- * strings.kebabCase('hey') // 'hey'
- * strings.kebabCase('j S o N') // 'j-s-o-n'
- * strings.kebabCase('j_S_o_N') // 'j-s-o-n'
- * strings.kebabCase('j-S-o-N') // 'j-s-o-n'
+ * str.kebabCase('hey') // 'hey'
+ * str.kebabCase('j S o N') // 'j-s-o-n'
+ * str.kebabCase('j_S_o_N') // 'j-s-o-n'
+ * str.kebabCase('j-S-o-N') // 'j-s-o-n'
  * ```
  */
 export function kebabCase(str: string): string {

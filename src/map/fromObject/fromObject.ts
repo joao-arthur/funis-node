@@ -8,11 +8,11 @@ import { plainObject } from "../../types/plainObject.js";
  * ## Example
  *
  * ```ts
- * maps.fromObject({}) // Map { }
+ * map.fromObject({}) // Map { }
  * ```
  *
  * ```ts
- * maps.fromObject({
+ * map.fromObject({
  *     Paul: 'Bass',
  *     John: 'Guitar',
  *     George: 'Guitar',

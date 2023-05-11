@@ -10,7 +10,7 @@ import { serialize } from "../serialize/serialize.js";
  * ## Example
  *
  * ```ts
- * objects.serializesToSame([
+ * obj.serializesToSame([
  *     { x: 10.12, y: -1.53 },
  *     { x: 10.12, y: -1.53 },
  *     { x: 10.12, y: -1.53 },
@@ -25,7 +25,7 @@ import { serialize } from "../serialize/serialize.js";
  *     ) { }
  * }
  *
- * objects.serializesToSame([
+ * obj.serializesToSame([
  *     new CartesianPoint(5.25, 7.77) as unknown as plainObject,
  *     { x: 5.25, y: 7.77 },
  * ]) // true

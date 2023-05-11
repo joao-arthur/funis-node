@@ -6,11 +6,11 @@
  * ## Example
  *
  * ```ts
- * maps.entries(new Map()) // []
+ * map.entries(new Map()) // []
  * ```
  *
  * ```ts
- * maps.entries(
+ * map.entries(
  *     new Map([
  *         [1, { name: 'Paul McCartney' }],
  *         [2, { name: 'George Harrison' }],

@@ -9,14 +9,14 @@ import { unique } from "../unique/unique.js";
  * ## Example
  *
  * ```ts
- * arrays.disjoint([[1, 2, 3], [1, 2, 3]]) // []
+ * arr.disjoint([[1, 2, 3], [1, 2, 3]]) // []
  * ```
  *
  * ```ts
- * arrays.disjoint([[1]]) // [1]
- * arrays.disjoint([[false, true], []]) // [false, true]
- * arrays.disjoint([[4, 5, 6], [5, 6, 7]]) // [4, 7]
- * arrays.disjoint([
+ * arr.disjoint([[1]]) // [1]
+ * arr.disjoint([[false, true], []]) // [false, true]
+ * arr.disjoint([[4, 5, 6], [5, 6, 7]]) // [4, 7]
+ * arr.disjoint([
  *     ['George', 'Paul', 'John', 'Ringo', 'George'],
  *     ['Ringo'],
  *     ['John'],

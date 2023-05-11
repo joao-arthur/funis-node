@@ -9,11 +9,11 @@ import { plainObject } from "../../types/plainObject.js";
  * ## Example
  *
  * ```ts
- * objects.fromMap(new Map([])) // { }
+ * obj.fromMap(new Map([])) // { }
  * ```
  *
  * ```ts
- * objects.fromMap(
+ * obj.fromMap(
  *     new Map([
  *         ['Paul', 'Bass'],
  *         ['John', 'Guitar'],

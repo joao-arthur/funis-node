@@ -6,9 +6,9 @@
  * ## Example
  *
  * ```ts
- * numbers.random(2, -1) // 2 | 1 | 0 | -1
- * numbers.random(-1, 2) // -1 | 0 | 1 | 2
- * numbers.random(5, 5) // 5
+ * num.random(2, -1) // 2 | 1 | 0 | -1
+ * num.random(-1, 2) // -1 | 0 | 1 | 2
+ * num.random(5, 5) // 5
  * ```
  */
 export function random(

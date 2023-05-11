@@ -9,7 +9,7 @@ import { entries } from "../entries/entries.js";
  * ## Example
  *
  * ```ts
- * maps.mapEntries(
+ * map.mapEntries(
  *     new Map([
  *         ['a', 1],
  *         ['b', 'two'],

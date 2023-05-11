@@ -8,14 +8,14 @@ import { unique } from "../unique/unique.js";
  * ## Example
  *
  * ```ts
- * arrays.intersect([[false, true], []]) // []
- * arrays.intersect([[1, 2, 3], [4, 5, 6]]) // []
+ * arr.intersect([[false, true], []]) // []
+ * arr.intersect([[1, 2, 3], [4, 5, 6]]) // []
  * ```
  *
  * ```ts
- * arrays.intersect([['']]) // ['']
- * arrays.intersect([[4, 5, 6], [5, 6, 7]]) // [5, 6]
- * arrays.intersect([
+ * arr.intersect([['']]) // ['']
+ * arr.intersect([[4, 5, 6], [5, 6, 7]]) // [5, 6]
+ * arr.intersect([
  *     ['George', 'Paul', 'John', 'Ringo', 'Ringo'],
  *     ['Ringo'],
  *     ['Ringo', 'John'],

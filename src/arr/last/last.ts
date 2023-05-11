@@ -6,11 +6,11 @@
  * ## Example
  *
  * ```ts
- * arrays.last([]) // undefined
+ * arr.last([]) // undefined
  * ```
  *
  * ```ts
- * arrays.last([4, 5, 6]) // 6
+ * arr.last([4, 5, 6]) // 6
  * ```
  */
 export function last<const T>(arr: readonly T[]): T | undefined {

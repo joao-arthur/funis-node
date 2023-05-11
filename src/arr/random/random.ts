@@ -8,12 +8,12 @@ import { random as randomNum } from "../../num/random/random.js";
  * ## Example
  *
  * ```ts
- * arrays.random([]) // undefined
+ * arr.random([]) // undefined
  * ```
  *
  * ```ts
- * arrays.random([true]) // [true]
- * arrays.random(false, 0, 'n') // false | 0 | 'n'
+ * arr.random([true]) // [true]
+ * arr.random(false, 0, 'n') // false | 0 | 'n'
  * ```
  */
 export function random<const T>(arr: readonly T[]): T | undefined {

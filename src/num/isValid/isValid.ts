@@ -6,15 +6,15 @@
  * ## Example
  *
  * ```ts
- * numbers.isValid(undefined) // false
- * numbers.isValid(null) // false
- * numbers.isValid(NaN) // false
+ * num.isValid(undefined) // false
+ * num.isValid(null) // false
+ * num.isValid(NaN) // false
  * ```
  *
  * ```ts
- * numbers.isValid(0) // true
- * numbers.isValid(1) // true
- * numbers.isValid(Infinity) // true
+ * num.isValid(0) // true
+ * num.isValid(1) // true
+ * num.isValid(Infinity) // true
  * ```
  */
 export function isValid(num: number | undefined | null): boolean {

@@ -6,7 +6,7 @@
  * ## Example
  *
  * ```ts
- * ['q', 'p', 'Q', 'P'].sort(compareAsc) // ['P', 'Q', 'p', 'q']
+ * ['q', 'p', 'Q', 'P'].sort(str.compareAsc) // ['P', 'Q', 'p', 'q']
  * ```
  */
 export function compareAsc(a: string, b: string): number {

@@ -9,7 +9,7 @@ import { plainObject } from "../../types/plainObject.js";
  * ## Example
  *
  * ```ts
- * objects.mapKeys(
+ * obj.mapKeys(
  *     {
  *         a: 1,
  *         b: 'two',

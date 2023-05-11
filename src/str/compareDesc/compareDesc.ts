@@ -6,7 +6,7 @@
  * ## Example
  *
  * ```ts
- * ['q', 'p', 'Q', 'P'].sort(compareDesc) // ['Q', 'P', 'q', 'p']
+ * ['q', 'p', 'Q', 'P'].sort(str.compareDesc) // ['Q', 'P', 'q', 'p']
  * ```
  */
 export function compareDesc(a: string, b: string): number {

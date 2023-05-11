@@ -6,10 +6,10 @@
  * ## Example
  *
  * ```ts
- * strings.pascalCase('hey') // 'Hey'
- * strings.pascalCase('j S o N') // 'JSON'
- * strings.pascalCase('j_S_o_N') // 'JSON'
- * strings.pascalCase('j-S-o-N') // 'JSON'
+ * str.pascalCase('hey') // 'Hey'
+ * str.pascalCase('j S o N') // 'JSON'
+ * str.pascalCase('j_S_o_N') // 'JSON'
+ * str.pascalCase('j-S-o-N') // 'JSON'
  * ```
  */
 export function pascalCase(str: string): string {

@@ -9,15 +9,15 @@ import { toFixed } from "../toFixed/toFixed.js";
  * ## Example
  *
  * ```ts
- * numbers.range(2, -1) // []
- * numbers.range(-1, 2, -1) // []
+ * num.range(2, -1) // []
+ * num.range(-1, 2, -1) // []
  * ```
  *
  * ```ts
- * numbers.range(-1, 2) // [-1, 0, 1, 2]
- * numbers.range(4, 5.1) // [4, 5]
- * numbers.range(2, -1, -1) // [2, 1, 0, -1]
- * numbers.range(10.2, 9, -0.2) // [10.2, 10, 9.8, 9.6, 9.4, 9.2, 9]
+ * num.range(-1, 2) // [-1, 0, 1, 2]
+ * num.range(4, 5.1) // [4, 5]
+ * num.range(2, -1, -1) // [2, 1, 0, -1]
+ * num.range(10.2, 9, -0.2) // [10.2, 10, 9.8, 9.6, 9.4, 9.2, 9]
  * ```
  */
 export function range(

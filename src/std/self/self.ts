@@ -6,8 +6,8 @@
  * ## Example
  *
  * ```ts
- * self(1) // 1
- * self('goodbye') // 'goodbye'
+ * std.self(1) // 1
+ * std.self('goodbye') // 'goodbye'
  * ```
  */
 export function self<const T>(value: T): T {

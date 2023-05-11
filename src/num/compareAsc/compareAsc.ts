@@ -6,7 +6,7 @@
  * ## Example
  *
  * ```ts
- * [1, 9, 2, 8, 3, 7, 4].sort(compareAsc) // [1, 2, 3, 4, 7, 8, 9]
+ * [1, 9, 2, 8, 3, 7, 4].sort(num.compareAsc) // [1, 2, 3, 4, 7, 8, 9]
  * ```
  */
 export function compareAsc(a: number, b: number): number {

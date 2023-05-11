@@ -8,11 +8,11 @@ import { accents } from "../internal/accents.js";
  * ## Example
  *
  * ```ts
- * strings.removeAccentuation('loção') // loo
- * strings.removeAccentuation('fianceé') // fiance
- * strings.removeAccentuation('Äpfel') // pfel
- * strings.removeAccentuation('këndon') // kndon
- * strings.removeAccentuation('pálmafák') // plmafk
+ * str.removeAccentuation('loção') // loo
+ * str.removeAccentuation('fianceé') // fiance
+ * str.removeAccentuation('Äpfel') // pfel
+ * str.removeAccentuation('këndon') // kndon
+ * str.removeAccentuation('pálmafák') // plmafk
  * ```
  */
 export function removeAccentuation(str: string): string {

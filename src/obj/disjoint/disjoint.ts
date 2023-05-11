@@ -11,7 +11,7 @@ import { plainObject } from "../../types/plainObject.js";
  * ## Example
  *
  * ```ts
- * objects.disjoint([
+ * obj.disjoint([
  *     { name: 'Steve Harris', country: 'UK' },
  *     { name: 'Megadeth', foundation: 1983 },
  * ]) // { country: 'UK', foundation: 1983 }

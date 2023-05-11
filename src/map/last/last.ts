@@ -9,11 +9,11 @@ import { entries } from "../entries/entries.js";
  * ## Example
  *
  * ```ts
- * maps.last(new Map()) // undefined
+ * map.last(new Map()) // undefined
  * ```
  *
  * ```ts
- * maps.last(
+ * map.last(
  *     new Map([
  *         [1, { name: 'Paul McCartney' }],
  *         [2, { name: 'John Lennon' }],

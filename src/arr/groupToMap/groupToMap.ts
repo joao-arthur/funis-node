@@ -8,7 +8,7 @@ import { groupToEntries } from "../groupToEntries/groupToEntries.js";
  * ## Example
  *
  * ```ts
- * arrays.groupToMap(
+ * arr.groupToMap(
  *     [
  *         { type: 'grass', name: 'bulbasaur' },
  *         { type: 'fire', name: 'charmander' },

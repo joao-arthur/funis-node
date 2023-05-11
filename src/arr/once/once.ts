@@ -6,15 +6,15 @@
  * ## Example
  *
  * ```ts
- * arrays.once(
+ * arr.once(
  *     ['Axl', 'Slash', 'Duff', 'Buckethead'],
  *     item => item === 'Roses'
  * ) // false
- * arrays.once(
+ * arr.once(
  *     ['Axl', 'Slash', 'Duff', 'Buckethead'],
  *     item => item === 'Buckethead'
  * ) // true
- * arrays.once(
+ * arr.once(
  *     ['Axl', 'Slash', 'Duff', 'Buckethead'],
  *     item => item.length > 2
  * ) // false

@@ -6,11 +6,11 @@
  * ## Example
  *
  * ```ts
- * callbacks.eq(1)(1) // true
+ * cb.eq(1)(1) // true
  * ```
  *
  * ```ts
- * callbacks.eq(2)(2) // true
+ * cb.eq(2)(2) // true
  * ```
  */
 export const eq = <T>(val2: T) => (val1: T) => {

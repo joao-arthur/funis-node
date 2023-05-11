@@ -8,7 +8,7 @@ import { groupToEntries } from "../groupToEntries/groupToEntries.js";
  * ## Example
  *
  * ```ts
- * arrays.groupToArray(
+ * arr.groupToArray(
  *     [
  *         { type: 'grass', name: 'bulbasaur' },
  *         { type: 'fire', name: 'charmander' },
