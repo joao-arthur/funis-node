@@ -31,7 +31,6 @@ export function range(
         (deltaByStep) => Math.floor(deltaByStep) + 1,
         (length) => Math.max(length, 0),
     )(undefined);
-
     return Array(length)
         .fill(undefined)
         .map((_, i) => i * step + from)

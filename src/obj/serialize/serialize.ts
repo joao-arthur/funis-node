@@ -56,6 +56,5 @@ export function serialize<const T>(obj: plainObject<T>): string {
             ([key, value]) => `${key}: ${valueToString(value)}`,
         )
         .join(", ");
-
     return entries.length ? `{ ${entries} }` : "{ }";
 }

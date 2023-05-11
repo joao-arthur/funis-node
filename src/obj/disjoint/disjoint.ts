@@ -32,7 +32,6 @@ export function disjoint(
             .filter((group) => group.length === 1)
             .flat(),
     );
-
     return Object.fromEntries(
         uniqueKeys.map((key) => [key, allEntriesObject[key]]),
     );

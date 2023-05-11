@@ -16,7 +16,6 @@ export function camelCase(str: string): string {
     if (str === "") {
         return "";
     }
-
     return str
         .split(/ |_|-/g)
         .map((word, index) =>

@@ -33,7 +33,6 @@ export function lazyRange(
     )(undefined);
 
     let i = -1;
-
     return {
         next(): IteratorResult<number> {
             i++;

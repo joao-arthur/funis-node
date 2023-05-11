@@ -23,6 +23,5 @@ export function isValid(str: string | undefined | null): boolean {
     if (str === "") {
         return true;
     }
-
     return !!str;
 }

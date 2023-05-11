@@ -35,6 +35,5 @@ export function combinations<const T>(
             result.push([arr[i], arr[j]]);
         }
     }
-
     return result;
 }

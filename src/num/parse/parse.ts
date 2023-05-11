@@ -52,6 +52,5 @@ export function parse(
         return undefined;
     }
     const parsed = Number(slice);
-
     return !Number.isNaN(parsed) ? parsed : undefined;
 }

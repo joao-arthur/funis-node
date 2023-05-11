@@ -33,7 +33,6 @@ export function intersect(
             .filter((group) => group.length === objs.length)
             .flat(),
     );
-
     return Object.fromEntries(
         uniqueKeys
             .filter((key) =>

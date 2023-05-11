@@ -46,6 +46,5 @@ export function debounce(
             cb();
         }, timeout);
     }
-
     return closure;
 }

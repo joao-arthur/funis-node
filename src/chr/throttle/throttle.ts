@@ -40,6 +40,5 @@ export function throttle(
             cb();
         }, timeout);
     }
-
     return closure;
 }

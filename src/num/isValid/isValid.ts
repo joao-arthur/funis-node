@@ -24,6 +24,5 @@ export function isValid(num: number | undefined | null): boolean {
     if (num === 0) {
         return true;
     }
-
     return !!num;
 }
