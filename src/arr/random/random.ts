@@ -1,4 +1,4 @@
-import { random as randomNum } from "../../num/random/random.js";
+import { num } from "../../num/mod.js";
 
 /**
  * # random
@@ -17,5 +17,5 @@ import { random as randomNum } from "../../num/random/random.js";
  * ```
  */
 export function random<const T>(arr: readonly T[]): T | undefined {
-    return arr[randomNum(0, arr.length - 1)];
+    return arr[num.random(0, arr.length - 1)];
 }

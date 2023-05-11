@@ -1,4 +1,4 @@
-import { combinations } from "../../arr/combinations/combinations.js";
+import { arr } from "../../arr/mod.js";
 import { plainObject } from "../../types/plainObject.js";
 import { serialize } from "../serialize/serialize.js";
 
@@ -34,6 +34,6 @@ import { serialize } from "../serialize/serialize.js";
 export function serializesToSame(
     objs: plainObject[],
 ): boolean {
-    return combinations(objs)
+    return arr.combinations(objs)
         .every(([a, b]) => serialize(a) === serialize(b));
 }

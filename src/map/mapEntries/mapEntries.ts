@@ -1,4 +1,4 @@
-import { pipe } from "../../std/pipe/pipe.js";
+import { std } from "../../std/mod.js";
 import { entries } from "../entries/entries.js";
 
 /**
@@ -30,7 +30,7 @@ export function mapEntries<K, V>(
     map: Map<K, V>,
     cb: (entry: readonly [K, V]) => readonly [K, V],
 ): Map<K, V> {
-    return pipe(
+    return std.pipe(
         () => map,
         entries,
         (entries) => entries.map(cb),

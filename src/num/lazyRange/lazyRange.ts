@@ -1,4 +1,4 @@
-import { pipe } from "../../std/pipe/pipe.js";
+import { std } from "../../std/mod.js";
 import { toFixed } from "../toFixed/toFixed.js";
 
 /**
@@ -25,7 +25,7 @@ export function lazyRange(
     to: number,
     step = 1,
 ): IterableIterator<number> {
-    const length = pipe(
+    const length = std.pipe(
         () => toFixed(to - from, 10),
         (delta) => toFixed(delta / step, 10),
         (deltaByStep) => Math.floor(deltaByStep) + 1,

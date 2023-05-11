@@ -1,4 +1,4 @@
-import { pipe } from "../../std/pipe/pipe.js";
+import { std } from "../../std/mod.js";
 
 type clampOptions = {
     readonly min: number;
@@ -36,7 +36,7 @@ type clampOptions = {
  * ```
  */
 export function clamp(num: number, options: clampOptions): number {
-    return pipe(
+    return std.pipe(
         (current: number) =>
             "min" in options
                 ? Math.max(current, options.min)

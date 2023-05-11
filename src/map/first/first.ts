@@ -1,4 +1,4 @@
-import { first as arrayFirst } from "../../arr/first/first.js";
+import { arr } from "../../arr/mod.js";
 import { entries } from "../entries/entries.js";
 
 /**
@@ -24,5 +24,5 @@ import { entries } from "../entries/entries.js";
 export function first<K, V>(
     map: Map<K, V>,
 ): readonly [K, V] | undefined {
-    return arrayFirst(entries(map));
+    return arr.first(entries(map));
 }

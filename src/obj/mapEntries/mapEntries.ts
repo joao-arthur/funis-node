@@ -1,4 +1,4 @@
-import { pipe } from "../../std/pipe/pipe.js";
+import { std } from "../../std/mod.js";
 import { plainObject } from "../../types/plainObject.js";
 
 /**
@@ -32,7 +32,7 @@ export function mapEntries(
         entry: readonly [string | number, unknown],
     ) => readonly [string | number, unknown],
 ): plainObject {
-    return pipe(
+    return std.pipe(
         () => obj,
         (obj: plainObject) => Object.entries(obj),
         (entries) => entries.map(cb),

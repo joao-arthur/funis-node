@@ -1,4 +1,4 @@
-import { pipe } from "../../std/pipe/pipe.js";
+import { std } from "../../std/mod.js";
 import { unique } from "../unique/unique.js";
 
 /**
@@ -34,7 +34,7 @@ export function groupToEntries<K, V>(
     arr: readonly V[],
     cb: (item: V) => K,
 ): readonly (readonly [K, readonly V[]])[] {
-    return pipe(
+    return std.pipe(
         () => arr,
         (items) => items.map(cb),
         unique,

@@ -34,11 +34,11 @@ type returnType<V, E> = {
  * ```
  */
 export async function objectify<V, E>(
-    promise: Promise<V>,
+    prm: Promise<V>,
 ): Promise<returnType<V, E>> {
     try {
         return {
-            value: await promise,
+            value: await prm,
             error: undefined,
             type: "resolved",
         };

@@ -17,22 +17,22 @@
  * ```
  */
 export function last<const T>(
-    promises: readonly Promise<T>[],
+    prms: readonly Promise<T>[],
 ): Promise<T> {
     return new Promise((resolve, reject) => {
         let resulted = 0;
 
-        prm.forEach((promise) => {
+        prms.forEach((promise) => {
             promise
                 .then((value) => {
-                    if (resulted === prm.length - 1) {
+                    if (resulted === prms.length - 1) {
                         resolve(value);
                     } else {
                         resulted++;
                     }
                 })
                 .catch((error) => {
-                    if (resulted === prm.length - 1) {
+                    if (resulted === prms.length - 1) {
                         reject(error);
                     } else {
                         resulted++;

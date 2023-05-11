@@ -1,5 +1,4 @@
-import { groupToArray } from "../../arr/groupToArray/groupToArray.js";
-import { unique } from "../../arr/unique/unique.js";
+import { arr } from "../../arr/mod.js";
 import { self } from "../../std/self/self.js";
 import { plainObject } from "../../types/plainObject.js";
 
@@ -24,8 +23,8 @@ export function disjoint(
         .map((obj) => Object.entries(obj))
         .flat();
     const allEntriesObject = Object.fromEntries(allEntries);
-    const uniqueKeys = unique(
-        groupToArray(
+    const uniqueKeys = arr.unique(
+        arr.groupToArray(
             allEntries.map(([key]) => key),
             self,
         )
