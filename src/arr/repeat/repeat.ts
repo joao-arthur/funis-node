@@ -1,4 +1,4 @@
-import { num } from "../../num/mod.ts";
+import { num } from "../../num/mod.js";
 
 /**
  * # repeat
