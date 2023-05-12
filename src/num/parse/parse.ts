@@ -10,7 +10,7 @@ type parseOptions = {
 /**
  * # parse
  *
- * Try to parse a number by the given prefix and suffix. If the prefix or suffix doesn't match the passed value, returns *undefined*.
+ * Try to parse a number by the given prefix and suffix. If the prefix or suffix doesn't match the passed value, returns _undefined_.
  *
  * ## Example
  *

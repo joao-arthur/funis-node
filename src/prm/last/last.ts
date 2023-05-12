@@ -3,8 +3,8 @@
  *
  * Returns the last promise to resolve/reject.
  *
- * > This function sets a *then* and *catch* callback for every passed promise.
- * > This way, the only promise you can *then* or *catch* is the one returned by this function.
+ * > This function sets a _then_ and _catch_ callback for every passed promise.
+ * > This way, the only promise you can _then_ or _catch_ is the one returned by this function.
  *
  * ## Example
  *

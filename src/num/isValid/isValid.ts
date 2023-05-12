@@ -1,7 +1,7 @@
 /**
  * # isValid
  *
- * Returns false for *undefined*, *null* and *NaN*. Returns true otherwise.
+ * Returns false for _undefined_, _null_ and _NaN_. Returns true otherwise.
  *
  * ## Example
  *

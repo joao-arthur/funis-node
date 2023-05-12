@@ -12,7 +12,7 @@
  * ```
  *
  * ```ts
- * arr.sort([5,4,3], (a, b) => a - b) // [3, 4, 5]
+ * arr.sort([5, 4, 3], (a, b) => a - b) // [3, 4, 5]
  * ```
  */
 export function sort<const T>(

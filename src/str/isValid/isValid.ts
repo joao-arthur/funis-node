@@ -1,7 +1,7 @@
 /**
  * # isValid
  *
- * Returns false for *undefined* and *null*. Returns true otherwise.
+ * Returns false for _undefined_ and _null_. Returns true otherwise.
  *
  * ## Example
  *

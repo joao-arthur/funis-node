@@ -1,7 +1,7 @@
 /**
  * # last
  *
- * Returns the last item of the array. If the array is empty, returns *undefined*.
+ * Returns the last item of the array. If the array is empty, returns _undefined_.
  *
  * ## Example
  *
