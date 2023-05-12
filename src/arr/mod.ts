@@ -11,6 +11,7 @@ import { intersect } from "./intersect/intersect.js";
 import { once } from "./once/once.js";
 import { combinations } from "./combinations/combinations.js";
 import { random } from "./random/random.js";
+import { repeat } from "./repeat/repeat.js";
 
 export const arr = {
     groupToEntries,
@@ -26,4 +27,5 @@ export const arr = {
     once,
     combinations,
     random,
+    repeat,
 } as const;
