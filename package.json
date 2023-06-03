@@ -25,9 +25,9 @@
         "build": "tsc"
     },
     "devDependencies": {
-        "@vitest/coverage-c8": "0.30.1",
-        "c8": "7.13.0",
-        "typescript": "5.0.4",
-        "vitest": "0.30.1"
+        "@vitest/coverage-c8": "0.31.4",
+        "c8": "7.14.0",
+        "typescript": "5.1.3",
+        "vitest": "0.31.4"
     }
 }
