@@ -85,20 +85,7 @@ export function pipe<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>(
     fn10: (arg10: T10) => T11,
 ): (initialValue: T1) => T11;
 
-export function pipe<
-    T1,
-    T2,
-    T3,
-    T4,
-    T5,
-    T6,
-    T7,
-    T8,
-    T9,
-    T10,
-    T11,
-    T12,
->(
+export function pipe<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>(
     fn1: (arg1: T1) => T2,
     fn2: (arg2: T2) => T3,
     fn3: (arg3: T3) => T4,
@@ -112,21 +99,7 @@ export function pipe<
     fn11: (arg11: T11) => T12,
 ): (initialValue: T1) => T12;
 
-export function pipe<
-    T1,
-    T2,
-    T3,
-    T4,
-    T5,
-    T6,
-    T7,
-    T8,
-    T9,
-    T10,
-    T11,
-    T12,
-    T13,
->(
+export function pipe<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(
     fn1: (arg1: T1) => T2,
     fn2: (arg2: T2) => T3,
     fn3: (arg3: T3) => T4,
@@ -141,22 +114,7 @@ export function pipe<
     fn12: (arg12: T12) => T13,
 ): (initialValue: T1) => T13;
 
-export function pipe<
-    T1,
-    T2,
-    T3,
-    T4,
-    T5,
-    T6,
-    T7,
-    T8,
-    T9,
-    T10,
-    T11,
-    T12,
-    T13,
-    T14,
->(
+export function pipe<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>(
     fn1: (arg1: T1) => T2,
     fn2: (arg2: T2) => T3,
     fn3: (arg3: T3) => T4,
@@ -172,23 +130,7 @@ export function pipe<
     fn13: (arg13: T13) => T14,
 ): (initialValue: T1) => T14;
 
-export function pipe<
-    T1,
-    T2,
-    T3,
-    T4,
-    T5,
-    T6,
-    T7,
-    T8,
-    T9,
-    T10,
-    T11,
-    T12,
-    T13,
-    T14,
-    T15,
->(
+export function pipe<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(
     fn1: (arg1: T1) => T2,
     fn2: (arg2: T2) => T3,
     fn3: (arg3: T3) => T4,
@@ -205,24 +147,7 @@ export function pipe<
     fn14: (arg14: T14) => T15,
 ): (initialValue: T1) => T15;
 
-export function pipe<
-    T1,
-    T2,
-    T3,
-    T4,
-    T5,
-    T6,
-    T7,
-    T8,
-    T9,
-    T10,
-    T11,
-    T12,
-    T13,
-    T14,
-    T15,
-    T16,
->(
+export function pipe<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>(
     fn1: (arg1: T1) => T2,
     fn2: (arg2: T2) => T3,
     fn3: (arg3: T3) => T4,
@@ -240,25 +165,7 @@ export function pipe<
     fn15: (arg15: T15) => T16,
 ): (initialValue: T1) => T16;
 
-export function pipe<
-    T1,
-    T2,
-    T3,
-    T4,
-    T5,
-    T6,
-    T7,
-    T8,
-    T9,
-    T10,
-    T11,
-    T12,
-    T13,
-    T14,
-    T15,
-    T16,
-    T17,
->(
+export function pipe<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17>(
     fn1: (arg1: T1) => T2,
     fn2: (arg2: T2) => T3,
     fn3: (arg3: T3) => T4,
@@ -1092,6 +999,5 @@ export function pipe<
  * ```
  */
 export function pipe(...fns: readonly unknownFn[]): unknownFn {
-    return (initialParam) =>
-        fns.reduce((curr, fn) => fn(curr), initialParam);
+    return (initialParam) => fns.reduce((curr, fn) => fn(curr), initialParam);
 }

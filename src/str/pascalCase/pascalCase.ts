@@ -18,9 +18,6 @@ export function pascalCase(str: string): string {
     }
     return str
         .split(/ |_|-/g)
-        .map((word) =>
-            word[0].toLocaleUpperCase() +
-            word.slice(1).toLocaleLowerCase()
-        )
+        .map((word) => word[0].toLocaleUpperCase() + word.slice(1).toLocaleLowerCase())
         .join("");
 }

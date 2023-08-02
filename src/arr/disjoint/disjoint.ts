@@ -23,11 +23,6 @@ import { unique } from "../unique/unique.js";
  * ]) // ['George', 'Paul']
  * ```
  */
-export function disjoint<const T>(
-    arrs: readonly (readonly T[])[],
-): readonly T[] {
-    return unique(arrs.flat())
-        .filter(
-            (item) => once(arrs, (arr) => arr.includes(item)),
-        );
+export function disjoint<const T>(arrs: readonly (readonly T[])[]): readonly T[] {
+    return unique(arrs.flat()).filter((item) => once(arrs, (arr) => arr.includes(item)));
 }

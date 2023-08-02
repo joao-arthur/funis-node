@@ -85,20 +85,7 @@ export function compose<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>(
     fn1: (arg1: T1) => T2,
 ): (initialValue: T1) => T11;
 
-export function compose<
-    T1,
-    T2,
-    T3,
-    T4,
-    T5,
-    T6,
-    T7,
-    T8,
-    T9,
-    T10,
-    T11,
-    T12,
->(
+export function compose<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>(
     fn11: (arg11: T11) => T12,
     fn10: (arg10: T10) => T11,
     fn9: (arg9: T9) => T10,
@@ -112,21 +99,7 @@ export function compose<
     fn1: (arg1: T1) => T2,
 ): (initialValue: T1) => T12;
 
-export function compose<
-    T1,
-    T2,
-    T3,
-    T4,
-    T5,
-    T6,
-    T7,
-    T8,
-    T9,
-    T10,
-    T11,
-    T12,
-    T13,
->(
+export function compose<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>(
     fn12: (arg12: T12) => T13,
     fn11: (arg11: T11) => T12,
     fn10: (arg10: T10) => T11,
@@ -141,22 +114,7 @@ export function compose<
     fn1: (arg1: T1) => T2,
 ): (initialValue: T1) => T13;
 
-export function compose<
-    T1,
-    T2,
-    T3,
-    T4,
-    T5,
-    T6,
-    T7,
-    T8,
-    T9,
-    T10,
-    T11,
-    T12,
-    T13,
-    T14,
->(
+export function compose<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>(
     fn13: (arg13: T13) => T14,
     fn12: (arg12: T12) => T13,
     fn11: (arg11: T11) => T12,
@@ -172,23 +130,7 @@ export function compose<
     fn1: (arg1: T1) => T2,
 ): (initialValue: T1) => T14;
 
-export function compose<
-    T1,
-    T2,
-    T3,
-    T4,
-    T5,
-    T6,
-    T7,
-    T8,
-    T9,
-    T10,
-    T11,
-    T12,
-    T13,
-    T14,
-    T15,
->(
+export function compose<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>(
     fn14: (arg14: T14) => T15,
     fn13: (arg13: T13) => T14,
     fn12: (arg12: T12) => T13,
@@ -205,24 +147,7 @@ export function compose<
     fn1: (arg1: T1) => T2,
 ): (initialValue: T1) => T15;
 
-export function compose<
-    T1,
-    T2,
-    T3,
-    T4,
-    T5,
-    T6,
-    T7,
-    T8,
-    T9,
-    T10,
-    T11,
-    T12,
-    T13,
-    T14,
-    T15,
-    T16,
->(
+export function compose<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>(
     fn15: (arg15: T15) => T16,
     fn14: (arg14: T14) => T15,
     fn13: (arg13: T13) => T14,
@@ -240,25 +165,7 @@ export function compose<
     fn1: (arg1: T1) => T2,
 ): (initialValue: T1) => T16;
 
-export function compose<
-    T1,
-    T2,
-    T3,
-    T4,
-    T5,
-    T6,
-    T7,
-    T8,
-    T9,
-    T10,
-    T11,
-    T12,
-    T13,
-    T14,
-    T15,
-    T16,
-    T17,
->(
+export function compose<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17>(
     fn16: (arg16: T16) => T17,
     fn15: (arg15: T15) => T16,
     fn14: (arg14: T14) => T15,
@@ -1092,6 +999,5 @@ export function compose<
  * ```
  */
 export function compose(...fns: readonly unknownFn[]): unknownFn {
-    return (initialParam) =>
-        fns.reduceRight((curr, fn) => fn(curr), initialParam);
+    return (initialParam) => fns.reduceRight((curr, fn) => fn(curr), initialParam);
 }

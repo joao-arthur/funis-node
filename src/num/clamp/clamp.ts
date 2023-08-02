@@ -37,13 +37,7 @@ type clampOptions = {
  */
 export function clamp(num: number, options: clampOptions): number {
     return std.pipe(
-        (current: number) =>
-            "min" in options
-                ? Math.max(current, options.min)
-                : current,
-        (current: number) =>
-            "max" in options
-                ? Math.min(current, options.max)
-                : current,
+        (current: number) => "min" in options ? Math.max(current, options.min) : current,
+        (current: number) => "max" in options ? Math.min(current, options.max) : current,
     )(num);
 }

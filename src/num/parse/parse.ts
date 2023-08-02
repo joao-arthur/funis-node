@@ -44,9 +44,7 @@ export function parse(
     const startIndex = "prefix" in options
         ? num.indexOf(options.prefix) + options.prefix.length
         : 0;
-    const endIndex = "suffix" in options
-        ? num.indexOf(options.suffix)
-        : num.length;
+    const endIndex = "suffix" in options ? num.indexOf(options.suffix) : num.length;
     const slice = num.slice(startIndex, endIndex);
     if (slice === "") {
         return undefined;
