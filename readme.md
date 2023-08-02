@@ -1,12 +1,12 @@
 # funis
 
-> Latin word for **rope**. Because **fun**ction **is** the way to go.
+> A word in _Latin_ close to **function**.
 
 Optionated type-safe utility library. Partially inspired by
 [radash](https://www.npmjs.com/package/radash).
 
 _funis_ provides a set of modularized basic operations that are common in a wide range of
-applications. It is a helper for `modern day js`.
+applications. It is a helper for the current standard JS.
 
 [![deno land](http://img.shields.io/badge/available%20on-deno.land/x-lightgrey.svg?logo=deno&labelColor=black)](https://deno.land/x/funis)
 [![CI](https://github.com/Joao-Arthur/funis-deno/actions/workflows/ci.yaml/badge.svg)](https://github.com/Joao-Arthur/funis-deno/actions/workflows/ci.yaml)
@@ -16,15 +16,7 @@ applications. It is a helper for `modern day js`.
 
 - Modularized functions
 - Fully typed
-- No side effects (The exceptions are highlighted in the
-  [docs](https://joao-arthur.github.io/funis-docs/))
-
-## What it can't offer
-
-- For `Date objects` consider [date-fns](https://www.npmjs.com/package/date-fns),
-  [dayjs](https://www.npmjs.com/package/dayjs), [luxon](https://www.npmjs.com/package/luxon)
-- For `random data generation` consider
-  [@faker-js/faker](https://www.npmjs.com/package/@faker-js/faker)
+- No side effects, except for some Promise operations
 
 ## License
 
