@@ -8,9 +8,9 @@ Optionated type-safe utility library. Partially inspired by
 _funis_ provides a set of modularized basic operations that are common in a wide range of
 applications. It is a helper for the current standard JS.
 
-[![deno land](http://img.shields.io/badge/available%20on-deno.land/x-lightgrey.svg?logo=deno&labelColor=black)](https://deno.land/x/funis)
-[![CI](https://github.com/Joao-Arthur/funis-deno/actions/workflows/ci.yaml/badge.svg)](https://github.com/Joao-Arthur/funis-deno/actions/workflows/ci.yaml)
-[![codecov](https://codecov.io/gh/Joao-Arthur/funis-deno/branch/main/graph/badge.svg?token=E29QWHVC0A)](https://codecov.io/gh/Joao-Arthur/funis-deno)
+[![npm module](https://badge.fury.io/js/funis.svg)](https://www.npmjs.org/package/funis)
+[![CI](https://github.com/Joao-Arthur/funis-node/actions/workflows/ci.yaml/badge.svg)](https://github.com/Joao-Arthur/funis-node/actions/workflows/ci.yaml)
+[![codecov](https://codecov.io/github/Joao-Arthur/funis-node/branch/main/graph/badge.svg?token=9FI5PDDFB3)](https://codecov.io/github/Joao-Arthur/funis-node)
 
 ## What it can offer
 
