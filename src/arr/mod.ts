@@ -6,7 +6,7 @@ import { unique } from "./unique/unique.js";
 import { disjoint } from "./disjoint/disjoint.js";
 import { intersect } from "./intersect/intersect.js";
 import { once } from "./once/once.js";
-import { combinations } from "./combinations/combinations.js";
+import { combinate } from "./combinate/combinate.js";
 import { random } from "./random/random.js";
 import { repeat } from "./repeat/repeat.js";
 
@@ -19,7 +19,7 @@ export const arr = {
     disjoint,
     intersect,
     once,
-    combinations,
+    combinate,
     random,
     repeat,
 } as const;

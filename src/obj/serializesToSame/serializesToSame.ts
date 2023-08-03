@@ -34,6 +34,5 @@ import { serialize } from "../serialize/serialize.js";
 export function serializesToSame(
     objs: plainObject[],
 ): boolean {
-    return arr.combinations(objs)
-        .every(([a, b]) => serialize(a) === serialize(b));
+    return arr.combinate(objs).every(([a, b]) => serialize(a) === serialize(b));
 }

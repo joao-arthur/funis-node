@@ -1,17 +1,17 @@
 /**
- * # combinations
+ * # combinate
  *
  * Returns an array with the non-repeating combination of the items.
  *
  * ## Example
  *
  * ```ts
- * arr.combinations([]) // []
- * arr.combinations([10]) // []
+ * arr.combinate([]) // []
+ * arr.combinate([10]) // []
  * ```
  *
  * ```ts
- * arr.combinations([10, 20, 30, 40, 50])
+ * arr.combinate([10, 20, 30, 40, 50])
  * // [
  * //     [10, 20],
  * //     [10, 30],
@@ -26,7 +26,7 @@
  * // ]
  * ```
  */
-export function combinations<const T>(
+export function combinate<const T>(
     arr: readonly T[],
 ): readonly (readonly [T, T])[] {
     const result: [T, T][] = [];
