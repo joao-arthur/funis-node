@@ -1,6 +1,12 @@
-import { expect, it } from "vitest";
+import { assert, expect, it } from "vitest";
 import { resolveTimeout } from "../../prm/resolveTimeout/resolveTimeout.js";
 import { throttle } from "./throttle.js";
+
+it("throttle", () => {
+    const timeoutId = throttle(() => {}, 1000)();
+    assert.notStrictEqual(timeoutId, 0);
+    globalThis.clearTimeout(timeoutId);
+});
 
 it("throttle", () => {
     const emptyArr: string[] = [];

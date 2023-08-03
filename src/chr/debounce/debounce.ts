@@ -34,10 +34,9 @@
 export function debounce(
     cb: () => unknown,
     timeout: number,
-): () => void {
+): () => number {
     let timeoutId = 0;
-
-    function closure(): void {
+    function closure(): number {
         if (timeoutId) {
             globalThis.clearTimeout(timeoutId);
         }
@@ -45,6 +44,7 @@ export function debounce(
             timeoutId = 0;
             cb();
         }, timeout);
+        return timeoutId;
     }
     return closure;
 }

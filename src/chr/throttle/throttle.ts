@@ -27,18 +27,19 @@
 export function throttle(
     cb: () => unknown,
     timeout: number,
-): () => void {
+): () => number {
     let inThrottleTimeout = false;
-
-    function closure(): void {
+    let timeoutId = 0;
+    function closure(): number {
         if (inThrottleTimeout) {
-            return;
+            return timeoutId;
         }
         inThrottleTimeout = true;
-        globalThis.setTimeout(() => {
+        timeoutId = globalThis.setTimeout(() => {
             inThrottleTimeout = false;
             cb();
         }, timeout);
+        return timeoutId;
     }
     return closure;
 }

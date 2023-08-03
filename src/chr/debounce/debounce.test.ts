@@ -1,6 +1,12 @@
-import { expect, it } from "vitest";
+import { assert, expect, it } from "vitest";
 import { resolveTimeout } from "../../prm/resolveTimeout/resolveTimeout.js";
 import { debounce } from "./debounce.js";
+
+it("debounce", () => {
+    const timeoutId = debounce(() => {}, 1000)();
+    assert.notStrictEqual(timeoutId, 0);
+    globalThis.clearTimeout(timeoutId);
+});
 
 it("debounce", () => {
     const emptyArr: string[] = [];
@@ -40,9 +46,10 @@ it("debounce", async () => {
     await resolveTimeout(undefined, 8);
     returnedFn();
     await resolveTimeout(undefined, 8);
-    returnedFn();
+    const timeoutId = returnedFn();
     await resolveTimeout(undefined, 8);
     expect(emptyArr).toEqual([]);
+    globalThis.clearTimeout(timeoutId);
 });
 
 it("debounce", async () => {
