@@ -28,7 +28,7 @@
 export function fromObjectArray<const T, const Id extends keyof T>(
     items: readonly T[],
     prop: Id,
-): Map<Id, T> {
+): Map<T[Id], T> {
     const values = new Map();
     for (const item of items) {
         values.set(item[prop], item);
