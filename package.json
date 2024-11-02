@@ -20,7 +20,7 @@
     },
     "main": "./dist/index.js",
     "scripts": {
-        "test": "vitest run",
+        "test": "vitest run --reporter=verbose",
         "test:cov": "vitest run --coverage",
         "build": "tsc"
     },
