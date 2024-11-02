@@ -1,6 +1,6 @@
 # funis
 
-> A word in _Latin_ close to **function**.
+> **fun**tion **is** the way.
 
 Optionated type-safe utility library. Partially inspired by
 [radash](https://www.npmjs.com/package/radash).
