@@ -1,8 +1,8 @@
 import { assert, it } from "vitest";
 import {
     mapEntries,
-    mapFromObject,
-    mapFromObjectArray,
+    mapFromObj,
+    mapFromObjArr,
     mapKeys,
     mapMapEntries,
     mapMapKeys,
@@ -10,32 +10,10 @@ import {
     mapValues,
 } from "./map.js";
 
-it("mapEntries", () => {
-    assert.deepStrictEqual(mapEntries(new Map()), []);
-});
-
-it("mapEntries", () => {
+it("mapFromObj", () => {
+    assert.deepStrictEqual(mapFromObj({}), new Map([]));
     assert.deepStrictEqual(
-        mapEntries(
-            new Map([
-                [1, { name: "Paul McCartney" }],
-                [2, { name: "George Harrison" }],
-            ]),
-        ),
-        [
-            [1, { name: "Paul McCartney" }],
-            [2, { name: "George Harrison" }],
-        ],
-    );
-});
-
-it("mapFromObject", () => {
-    assert.deepStrictEqual(mapFromObject({}), new Map([]));
-});
-
-it("mapFromObject", () => {
-    assert.deepStrictEqual(
-        mapFromObject({
+        mapFromObj({
             Paul: "Bass",
             John: "Guitar",
             George: "Guitar",
@@ -52,13 +30,10 @@ it("mapFromObject", () => {
     );
 });
 
-it("mapFromObjectArray", () => {
-    assert.deepStrictEqual(mapFromObjectArray([], "id"), new Map());
-});
-
-it("mapFromObjectArray", () => {
+it("mapFromObjArr", () => {
+    assert.deepStrictEqual(mapFromObjArr([], "id"), new Map());
     assert.deepStrictEqual(
-        mapFromObjectArray(
+        mapFromObjArr(
             [
                 { name: "Alex Lifeson", instrument: "Guitar" },
                 { name: "Geddy Lee", instrument: "Bass" },
@@ -74,11 +49,24 @@ it("mapFromObjectArray", () => {
     );
 });
 
-it("mapKeys", () => {
-    assert.deepStrictEqual(mapKeys(new Map()), []);
+it("mapEntries", () => {
+    assert.deepStrictEqual(mapEntries(new Map()), []);
+    assert.deepStrictEqual(
+        mapEntries(
+            new Map([
+                [1, { name: "Paul McCartney" }],
+                [2, { name: "George Harrison" }],
+            ]),
+        ),
+        [
+            [1, { name: "Paul McCartney" }],
+            [2, { name: "George Harrison" }],
+        ],
+    );
 });
 
 it("mapKeys", () => {
+    assert.deepStrictEqual(mapKeys(new Map()), []);
     assert.deepStrictEqual(
         mapKeys(
             new Map([
@@ -87,6 +75,19 @@ it("mapKeys", () => {
             ]),
         ),
         [1, 2],
+    );
+});
+
+it("mapValues", () => {
+    assert.deepStrictEqual(mapValues(new Map()), []);
+    assert.deepStrictEqual(
+        mapValues(
+            new Map([
+                [1, { name: "Paul McCartney" }],
+                [2, { name: "George Harrison" }],
+            ]),
+        ),
+        [{ name: "Paul McCartney" }, { name: "George Harrison" }],
     );
 });
 
@@ -239,21 +240,5 @@ it("mapMapValues", () => {
             ["c", "v2_true_test"],
             [4, "v2_nada_test"],
         ]),
-    );
-});
-
-it("mapValues", () => {
-    assert.deepStrictEqual(mapValues(new Map()), []);
-});
-
-it("mapValues", () => {
-    assert.deepStrictEqual(
-        mapValues(
-            new Map([
-                [1, { name: "Paul McCartney" }],
-                [2, { name: "George Harrison" }],
-            ]),
-        ),
-        [{ name: "Paul McCartney" }, { name: "George Harrison" }],
     );
 });

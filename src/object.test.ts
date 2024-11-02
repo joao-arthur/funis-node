@@ -12,31 +12,8 @@ import {
     objSerializesToSame,
 } from "./object.js";
 
-it("objDisjoint", () => {
-    assert.deepStrictEqual(objDisjoint([]), {});
-});
-
-it("objDisjoint", () => {
-    assert.deepStrictEqual(
-        objDisjoint([{ name: "Steve Harris", country: "UK" }]),
-        { name: "Steve Harris", country: "UK" },
-    );
-    assert.deepStrictEqual(
-        objDisjoint(
-            [
-                { name: "Steve Harris", country: "UK" },
-                { name: "Megadeth", foundation: 1983 },
-            ],
-        ),
-        { country: "UK", foundation: 1983 },
-    );
-});
-
 it("objFromMap", () => {
     assert.deepStrictEqual(objFromMap(new Map([])), {});
-});
-
-it("objFromMap", () => {
     assert.deepStrictEqual(
         objFromMap(
             new Map([
@@ -47,30 +24,6 @@ it("objFromMap", () => {
             ]),
         ),
         { Paul: "Bass", John: "Guitar", George: "Guitar", Ringo: "Drums" },
-    );
-});
-
-it("objIntersect", () => {
-    assert.deepStrictEqual(objIntersect([]), {});
-});
-
-it("objIntersect", () => {
-    assert.deepStrictEqual(
-        objIntersect([{ name: "Steve Harris", country: "UK" }]),
-        { name: "Steve Harris", country: "UK" },
-    );
-});
-
-it("objIntersect", () => {
-    assert.deepStrictEqual(
-        objIntersect(
-            [
-                { name: "Cliff Burton", band: "Metallica", country: "US" },
-                { name: "James Hetfield", band: "Metallica", country: "US" },
-                { name: "Kirk Hammett", band: "Metallica", country: "US" },
-            ],
-        ),
-        { band: "Metallica", country: "US" },
     );
 });
 
@@ -132,9 +85,6 @@ it("objMapValues", () => {
 it("objOmit", () => {
     assert.deepStrictEqual(objOmit({}, []), {});
     assert.deepStrictEqual(objOmit({}, ["animal", "species", "age"]), {});
-});
-
-it("objOmit", () => {
     assert.deepStrictEqual(
         objOmit({ animal: "dog", species: "Canis lupus", age: 5 }, []),
         { animal: "dog", species: "Canis lupus", age: 5 },
@@ -152,9 +102,6 @@ it("objOmit", () => {
 it("objPick", () => {
     assert.deepStrictEqual(objPick({}, []), {});
     assert.deepStrictEqual(objPick({}, ["animal", "species", "age"]), {});
-});
-
-it("objPick", () => {
     assert.deepStrictEqual(objPick({ animal: "dog", species: "Canis lupus", age: 5 }, []), {});
     assert.deepStrictEqual(
         objPick({ animal: "dog", species: "Canis lupus", age: 5 }, ["animal"]),
@@ -163,6 +110,41 @@ it("objPick", () => {
     assert.deepStrictEqual(
         objPick({ animal: "dog", species: "Canis lupus", age: 5 }, ["animal", "species", "age"]),
         { animal: "dog", species: "Canis lupus", age: 5 },
+    );
+});
+
+it("objDisjoint", () => {
+    assert.deepStrictEqual(objDisjoint([]), {});
+    assert.deepStrictEqual(
+        objDisjoint([{ name: "Steve Harris", country: "UK" }]),
+        { name: "Steve Harris", country: "UK" },
+    );
+    assert.deepStrictEqual(
+        objDisjoint(
+            [
+                { name: "Steve Harris", country: "UK" },
+                { name: "Megadeth", foundation: 1983 },
+            ],
+        ),
+        { country: "UK", foundation: 1983 },
+    );
+});
+
+it("objIntersect", () => {
+    assert.deepStrictEqual(objIntersect([]), {});
+    assert.deepStrictEqual(
+        objIntersect([{ name: "Steve Harris", country: "UK" }]),
+        { name: "Steve Harris", country: "UK" },
+    );
+    assert.deepStrictEqual(
+        objIntersect(
+            [
+                { name: "Cliff Burton", band: "Metallica", country: "US" },
+                { name: "James Hetfield", band: "Metallica", country: "US" },
+                { name: "Kirk Hammett", band: "Metallica", country: "US" },
+            ],
+        ),
+        { band: "Metallica", country: "US" },
     );
 });
 
@@ -178,9 +160,6 @@ it("objSerialize", () => {
         }),
         "{ name: Paul, numberOfBands: 4, bigNumberOfBands: 4, alive: true, birthday: 1942-06-18T03:00:00.000Z, unique: Symbol(Paul) }",
     );
-});
-
-it("objSerialize", () => {
     assert.deepStrictEqual(
         objSerialize({
             sayHi: (): string => "hi, my name is Eminem",
@@ -188,9 +167,6 @@ it("objSerialize", () => {
         }),
         "{ }",
     );
-});
-
-it("objSerialize", () => {
     assert.deepStrictEqual(
         objSerialize({ empty: [], oneValue: [1], multiValue: [true, false, "zaphod", 42n] }),
         "{ empty: , oneValue: 1, multiValue: true, false, zaphod, 42 }",
@@ -211,9 +187,6 @@ it("objSerialize", () => {
 it("objSerializesToSame", () => {
     assert.deepStrictEqual(objSerializesToSame([]), true);
     assert.deepStrictEqual(objSerializesToSame([{ r: 10, a: 57 }]), true);
-});
-
-it("objSerializesToSame", () => {
     assert.deepStrictEqual(
         objSerializesToSame([{ x: 10.12, y: -1.53 }, { x: 10.12, y: -1.53 }]),
         true,

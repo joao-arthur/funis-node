@@ -40,7 +40,7 @@ export function last<const T>(prms: readonly Promise<T>[]): Promise<T> {
     });
 }
 
-type returnType<V, E> = {
+export type ObjectifyResult<V, E> = {
     readonly value: V;
     readonly error: undefined;
     readonly type: "resolved";
@@ -51,31 +51,31 @@ type returnType<V, E> = {
 };
 
 /**
- * # proObjectify
+ * # objectify
  *
  * Returns an object with value and error entries corrensponding to resolved or rejected value of the promise.
  *
  * ## Example
  *
  * ```ts
- * await proObjectify(
+ * await objectify(
  *     Promise.resolve(undefined)
  * ) // { value: undefined, error: undefined, type: "resolved" }
- * await proObjectify(
+ * await objectify(
  *     Promise.resolve("Symbolic acts")
  * ) // { value: "Symbolic acts", error: undefined, type: "resolved" }
  * ```
  *
  * ```ts
- * await proObjectify(
+ * await objectify(
  *     Promise.reject(undefined)
  * ) // { value: undefined, error: undefined, type: "rejected" }
- * await proObjectify(
+ * await objectify(
  *     Promise.reject("So vivid")
  * ) // { value: undefined, error: "So vivid", type: "rejected" }
  * ```
  */
-export async function objectify<V, E>(prm: Promise<V>): Promise<returnType<V, E>> {
+export async function objectify<V, E>(prm: Promise<V>): Promise<ObjectifyResult<V, E>> {
     try {
         return {
             value: await prm,

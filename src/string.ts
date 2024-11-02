@@ -1,31 +1,31 @@
 import { numRandom } from "./number.js";
 
 /**
- * # strCamelCase
+ * # strIsValid
  *
- * Transforms a sequence of words into camel case.
+ * Returns false for _undefined_ and _null_. Returns true otherwise.
  *
  * ## Example
  *
  * ```ts
- * strCamelCase("hey") // "hey"
- * strCamelCase("j S o N") // "jSON"
- * strCamelCase("j_S_o_N") // "jSON"
- * strCamelCase("j-S-o-N") // "jSON"
+ * strIsValid(undefined) // false
+ * strIsValid(null) // false
+ * ```
+ *
+ * ```ts
+ * strIsValid(") // true
+ * strIsValid(" ") // true
+ * strIsValid("Lorem ipsum") // true
  * ```
  */
-export function strCamelCase(str: string): string {
-    if (str === "") {
-        return "";
+export function strIsValid(str: string | undefined | null): boolean {
+    if (typeof str !== "string") {
+        return false;
     }
-    return str
-        .split(/ |_|-/g)
-        .map((word, index) =>
-            index > 0
-                ? word[0].toLocaleUpperCase() + word.slice(1).toLocaleLowerCase()
-                : word.toLocaleLowerCase()
-        )
-        .join("");
+    if (str === "") {
+        return true;
+    }
+    return !!str;
 }
 
 /**
@@ -56,6 +56,94 @@ export function strCompAsc(a: string, b: string): number {
  */
 export function strCompDesc(a: string, b: string): number {
     return a > b ? -1 : 1;
+}
+
+/**
+ * # strCamelCase
+ *
+ * Transforms a sequence of words into camel case.
+ *
+ * ## Example
+ *
+ * ```ts
+ * strCamelCase("hey") // "hey"
+ * strCamelCase("j S o N") // "jSON"
+ * strCamelCase("j_S_o_N") // "jSON"
+ * strCamelCase("j-S-o-N") // "jSON"
+ * ```
+ */
+export function strCamelCase(str: string): string {
+    if (str === "") {
+        return "";
+    }
+    return str
+        .split(/ |_|-/g)
+        .map((word, index) =>
+            index > 0
+                ? word[0].toLocaleUpperCase() + word.slice(1).toLocaleLowerCase()
+                : word.toLocaleLowerCase()
+        )
+        .join("");
+}
+
+/**
+ * # strKebabCase
+ *
+ * Transforms a sequence of words into kebab case.
+ *
+ * ## Example
+ *
+ * ```ts
+ * strKebabCase("hey") // "hey"
+ * strKebabCase("j S o N") // "j-s-o-n"
+ * strKebabCase("j_S_o_N") // "j-s-o-n"
+ * strKebabCase("j-S-o-N") // "j-s-o-n"
+ * ```
+ */
+export function strKebabCase(str: string): string {
+    return str.split(/ |_|-/g).map((word) => word.toLocaleLowerCase()).join("-");
+}
+
+/**
+ * # strPascalCase
+ *
+ * Transforms a sequence of words into pascal case.
+ *
+ * ## Example
+ *
+ * ```ts
+ * strPascalCase("hey") // "Hey"
+ * strPascalCase("j S o N") // "JSON"
+ * strPascalCase("j_S_o_N") // "JSON"
+ * strPascalCase("j-S-o-N") // "JSON"
+ * ```
+ */
+export function strPascalCase(str: string): string {
+    if (str === "") {
+        return "";
+    }
+    return str
+        .split(/ |_|-/g)
+        .map((word) => word[0].toLocaleUpperCase() + word.slice(1).toLocaleLowerCase())
+        .join("");
+}
+
+/**
+ * # strSnakeCase
+ *
+ * Transforms a sequence of words into snake case.
+ *
+ * ## Example
+ *
+ * ```ts
+ * strSnakeCase("hey") // "hey"
+ * strSnakeCase("j S o N") // "j_s_o_n"
+ * strSnakeCase("j_S_o_N") // "j_s_o_n"
+ * strSnakeCase("j-S-o-N") // "j_s_o_n"
+ * ```
+ */
+export function strSnakeCase(str: string): string {
+    return str.split(/ |_|-/g).map((word) => word.toLocaleLowerCase()).join("_");
 }
 
 export const accents = new Map([
@@ -267,73 +355,41 @@ export const accents = new Map([
 ]);
 
 /**
- * # strIsValid
+ * # strRemoveAccents
  *
- * Returns false for _undefined_ and _null_. Returns true otherwise.
+ * Remove accentuated characters.
  *
  * ## Example
  *
  * ```ts
- * strIsValid(undefined) // false
- * strIsValid(null) // false
- * ```
- *
- * ```ts
- * strIsValid(") // true
- * strIsValid(" ") // true
- * strIsValid("Lorem ipsum") // true
+ * strRemoveAccents("loção") // loo
+ * strRemoveAccents("fianceé") // fiance
+ * strRemoveAccents("Äpfel") // pfel
+ * strRemoveAccents("këndon") // kndon
+ * strRemoveAccents("pálmafák") // plmafk
  * ```
  */
-export function strIsValid(str: string | undefined | null): boolean {
-    if (typeof str !== "string") {
-        return false;
-    }
-    if (str === "") {
-        return true;
-    }
-    return !!str;
+export function strRemoveAccents(str: string): string {
+    return Array.from(str).filter((letter) => !accents.has(letter)).join("");
 }
 
 /**
- * # strKebabCase
+ * # strReplaceAccents
  *
- * Transforms a sequence of words into kebab case.
- *
- * ## Example
- *
- * ```ts
- * strKebabCase("hey") // "hey"
- * strKebabCase("j S o N") // "j-s-o-n"
- * strKebabCase("j_S_o_N") // "j-s-o-n"
- * strKebabCase("j-S-o-N") // "j-s-o-n"
- * ```
- */
-export function strKebabCase(str: string): string {
-    return str.split(/ |_|-/g).map((word) => word.toLocaleLowerCase()).join("-");
-}
-
-/**
- * # strPascalCase
- *
- * Transforms a sequence of words into pascal case.
+ * Replace accentuated characters by unaccentuated ones.
  *
  * ## Example
  *
  * ```ts
- * strPascalCase("hey") // "Hey"
- * strPascalCase("j S o N") // "JSON"
- * strPascalCase("j_S_o_N") // "JSON"
- * strPascalCase("j-S-o-N") // "JSON"
+ * strReplaceAccents("loção") // locao
+ * strReplaceAccents("fianceé") // fiancee
+ * strReplaceAccents("Äpfel") // Apfel
+ * strReplaceAccents("këndon") // kendon
+ * strReplaceAccents("pálmafák") // palmafak
  * ```
  */
-export function strPascalCase(str: string): string {
-    if (str === "") {
-        return "";
-    }
-    return str
-        .split(/ |_|-/g)
-        .map((word) => word[0].toLocaleUpperCase() + word.slice(1).toLocaleLowerCase())
-        .join("");
+export function strReplaceAccents(str: string): string {
+    return Array.from(str).map((letter) => accents.get(letter) || letter).join("");
 }
 
 /**
@@ -354,60 +410,4 @@ export function strRandom(str: string): string {
         return "";
     }
     return str[numRandom(0, str.length - 1)];
-}
-
-/**
- * # strRemoveAccentuation
- *
- * Remove accentuated characters.
- *
- * ## Example
- *
- * ```ts
- * strRemoveAccentuation("loção") // loo
- * strRemoveAccentuation("fianceé") // fiance
- * strRemoveAccentuation("Äpfel") // pfel
- * strRemoveAccentuation("këndon") // kndon
- * strRemoveAccentuation("pálmafák") // plmafk
- * ```
- */
-export function strRemoveAccentuation(str: string): string {
-    return Array.from(str).filter((letter) => !accents.has(letter)).join("");
-}
-
-/**
- * # strReplaceAccentuation
- *
- * Replace accentuated characters by unaccentuated ones.
- *
- * ## Example
- *
- * ```ts
- * strReplaceAccentuation("loção") // locao
- * strReplaceAccentuation("fianceé") // fiancee
- * strReplaceAccentuation("Äpfel") // Apfel
- * strReplaceAccentuation("këndon") // kendon
- * strReplaceAccentuation("pálmafák") // palmafak
- * ```
- */
-export function strReplaceAccentuation(str: string): string {
-    return Array.from(str).map((letter) => accents.get(letter) || letter).join("");
-}
-
-/**
- * # strSnakeCase
- *
- * Transforms a sequence of words into snake case.
- *
- * ## Example
- *
- * ```ts
- * strSnakeCase("hey") // "hey"
- * strSnakeCase("j S o N") // "j_s_o_n"
- * strSnakeCase("j_S_o_N") // "j_s_o_n"
- * strSnakeCase("j-S-o-N") // "j_s_o_n"
- * ```
- */
-export function strSnakeCase(str: string): string {
-    return str.split(/ |_|-/g).map((word) => word.toLocaleLowerCase()).join("_");
 }

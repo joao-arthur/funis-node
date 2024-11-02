@@ -44,12 +44,11 @@ it("pipe", () => {
 });
 
 it("self", () => {
-    const symbol = Symbol("symbol");
-
     assert.deepStrictEqual(self(1), 1);
     assert.deepStrictEqual(self("hello world"), "hello world");
     assert.deepStrictEqual(self(true), true);
     assert.deepStrictEqual(self({ a: "a" }), { a: "a" });
     assert.deepStrictEqual(self([3, 2, 1]), [3, 2, 1]);
+    const symbol = Symbol("symbol");
     assert.deepStrictEqual(self(symbol), symbol);
 });

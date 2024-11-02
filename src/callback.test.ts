@@ -7,6 +7,12 @@ it("eq", () => {
     assert.deepStrictEqual(eq(1)(2), false);
 });
 
+it("ne", () => {
+    assert.deepStrictEqual(ne(1)(0), true);
+    assert.deepStrictEqual(ne(1)(1), false);
+    assert.deepStrictEqual(ne(1)(2), true);
+});
+
 it("ge", () => {
     assert.deepStrictEqual(ge(1)(0), false);
     assert.deepStrictEqual(ge(1)(1), true);
@@ -29,10 +35,4 @@ it("lt", () => {
     assert.deepStrictEqual(lt(1)(0), true);
     assert.deepStrictEqual(lt(1)(1), false);
     assert.deepStrictEqual(lt(1)(2), false);
-});
-
-it("ne", () => {
-    assert.deepStrictEqual(ne(1)(0), true);
-    assert.deepStrictEqual(ne(1)(1), false);
-    assert.deepStrictEqual(ne(1)(2), true);
 });

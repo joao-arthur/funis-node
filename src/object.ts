@@ -1,41 +1,7 @@
 import { mapEntries } from "./map.js";
 import { PlainObject } from "./types.js";
-import { arrCombinate, arrGroupToArray, arrUnique } from "./array.js";
+import { arrCombinate, arrGroup, arrUnique } from "./array.js";
 import { pipe, self } from "./standard.js";
-
-/**
- * # objDisjoint
- *
- * Returns an object with the entries which the key appears in only one of them.
- *
- * ## Example
- *
- * ```ts
- * objDisjoint([
- *     { name: "Steve Harris", country: "UK" },
- *     { name: "Megadeth", foundation: 1983 },
- * ]) // { country: "UK", foundation: 1983 }
- * ```
- */
-export function objDisjoint(
-    objs: readonly PlainObject[],
-): PlainObject {
-    const allEntries = objs
-        .map((obj) => Object.entries(obj))
-        .flat();
-    const allEntriesObject = Object.fromEntries(allEntries);
-    const uniqueKeys = arrUnique(
-        arrGroupToArray(
-            allEntries.map(([key]) => key),
-            self,
-        )
-            .filter((group) => group.length === 1)
-            .flat(),
-    );
-    return Object.fromEntries(
-        uniqueKeys.map((key) => [key, allEntriesObject[key]]),
-    );
-}
 
 /**
  * # objFromMap
@@ -69,45 +35,6 @@ export function objFromMap<const T>(
     map: Map<string | number, T>,
 ): PlainObject<T> {
     return Object.fromEntries(mapEntries(map));
-}
-
-/**
- * # objIntersect
- *
- * Returns an object with the entries that appear in all of them.
- *
- * ## Example
- *
- * ```ts
- * objIntersect([
- *     { name: "Cliff Burton", band: "Metallica", country: "US" },
- *     { name: "James Hetfield", band: "Metallica", country: "US" },
- *     { name: "Kirk Hammett", band: "Metallica", country: "US" },
- * ]) // { band: "Metallica", country: "US" }
- * ```
- */
-export function objIntersect(
-    objs: readonly PlainObject[],
-): PlainObject {
-    const allEntries = objs
-        .map((obj) => Object.entries(obj))
-        .flat();
-    const allEntriesObject = Object.fromEntries(allEntries);
-    const uniqueKeys = arrUnique(
-        arrGroupToArray(allEntries.map(([key]) => key), self)
-            .filter((group) => group.length === objs.length)
-            .flat(),
-    );
-    return Object.fromEntries(
-        uniqueKeys
-            .filter((key) =>
-                arrUnique(
-                    allEntries
-                        .filter(([entryKey]) => entryKey === key)
-                        .map(([, value]) => value),
-                ).length === 1
-            ).map((key) => [key, allEntriesObject[key]]),
-    );
 }
 
 /**
@@ -277,6 +204,79 @@ export function objPick<const T>(
     keys: readonly string[],
 ): PlainObject<T> {
     return Object.fromEntries(Object.entries(obj).filter(([key]) => keys.includes(key)));
+}
+
+/**
+ * # objDisjoint
+ *
+ * Returns an object with the entries which the key appears in only one of them.
+ *
+ * ## Example
+ *
+ * ```ts
+ * objDisjoint([
+ *     { name: "Steve Harris", country: "UK" },
+ *     { name: "Megadeth", foundation: 1983 },
+ * ]) // { country: "UK", foundation: 1983 }
+ * ```
+ */
+export function objDisjoint(
+    objs: readonly PlainObject[],
+): PlainObject {
+    const allEntries = objs
+        .map((obj) => Object.entries(obj))
+        .flat();
+    const allEntriesObject = Object.fromEntries(allEntries);
+    const uniqueKeys = arrUnique(
+        arrGroup(
+            allEntries.map(([key]) => key),
+            self,
+        )
+            .filter((group) => group.length === 1)
+            .flat(),
+    );
+    return Object.fromEntries(
+        uniqueKeys.map((key) => [key, allEntriesObject[key]]),
+    );
+}
+
+/**
+ * # objIntersect
+ *
+ * Returns an object with the entries that appear in all of them.
+ *
+ * ## Example
+ *
+ * ```ts
+ * objIntersect([
+ *     { name: "Cliff Burton", band: "Metallica", country: "US" },
+ *     { name: "James Hetfield", band: "Metallica", country: "US" },
+ *     { name: "Kirk Hammett", band: "Metallica", country: "US" },
+ * ]) // { band: "Metallica", country: "US" }
+ * ```
+ */
+export function objIntersect(
+    objs: readonly PlainObject[],
+): PlainObject {
+    const allEntries = objs
+        .map((obj) => Object.entries(obj))
+        .flat();
+    const allEntriesObject = Object.fromEntries(allEntries);
+    const uniqueKeys = arrUnique(
+        arrGroup(allEntries.map(([key]) => key), self)
+            .filter((group) => group.length === objs.length)
+            .flat(),
+    );
+    return Object.fromEntries(
+        uniqueKeys
+            .filter((key) =>
+                arrUnique(
+                    allEntries
+                        .filter(([entryKey]) => entryKey === key)
+                        .map(([, value]) => value),
+                ).length === 1
+            ).map((key) => [key, allEntriesObject[key]]),
+    );
 }
 
 /**

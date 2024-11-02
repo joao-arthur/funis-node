@@ -3,6 +3,42 @@ import { pipe } from "./standard.js";
 import { numRandom, numRange } from "./number.js";
 
 /**
+ * # arrGroup
+ *
+ * Group the items by the returned value of the callback. Then return the groups in an array.
+ *
+ * ## Example
+ *
+ * ```ts
+ * arrGroup(
+ *     [
+ *         { type: "grass", name: "bulbasaur" },
+ *         { type: "fire", name: "charmander" },
+ *         { type: "water", name: "squirtle" },
+ *         { type: "bug", name: "caterpie" },
+ *         { type: "water", name: "psyduck" },
+ *     ],
+ *     item => item.type,
+ * )
+ * // [
+ * //     [{ type: "grass", name: "bulbasaur" }],
+ * //     [{ type: "fire", name: "charmander" }],
+ * //     [
+ * //         { type: "water", name: "squirtle" },
+ * //         { type: "water", name: "psyduck" },
+ * //     ],
+ * //     [{ type: "bug", name: "caterpie" }],
+ * // ]
+ * ```
+ */
+export function arrGroup<K, V>(
+    arr: readonly V[],
+    cb: (item: V) => K,
+): readonly (readonly V[])[] {
+    return arrGroupToEntries(arr, cb).map(([, value]) => value);
+}
+
+/**
  * # arrGroupToEntries
  *
  * Group the items by the returned value of the callback. Then return the groups in entries.
@@ -44,42 +80,6 @@ export function arrGroupToEntries<K, V>(
 }
 
 /**
- * # arrGroupToArray
- *
- * Group the items by the returned value of the callback. Then return the groups in an array.
- *
- * ## Example
- *
- * ```ts
- * arrGroupToArray(
- *     [
- *         { type: "grass", name: "bulbasaur" },
- *         { type: "fire", name: "charmander" },
- *         { type: "water", name: "squirtle" },
- *         { type: "bug", name: "caterpie" },
- *         { type: "water", name: "psyduck" },
- *     ],
- *     item => item.type,
- * )
- * // [
- * //     [{ type: "grass", name: "bulbasaur" }],
- * //     [{ type: "fire", name: "charmander" }],
- * //     [
- * //         { type: "water", name: "squirtle" },
- * //         { type: "water", name: "psyduck" },
- * //     ],
- * //     [{ type: "bug", name: "caterpie" }],
- * // ]
- * ```
- */
-export function arrGroupToArray<K, V>(
-    arr: readonly V[],
-    cb: (item: V) => K,
-): readonly (readonly V[])[] {
-    return arrGroupToEntries(arr, cb).map(([, value]) => value);
-}
-
-/**
  * # arrGroupToMap
  *
  * Group the items by the returned value of the callback. Then return the groups in an Map instance.
@@ -113,14 +113,14 @@ export function arrGroupToMap<K, V>(arr: readonly V[], cb: (item: V) => K): Map<
 }
 
 /**
- * # arrGroupToObject
+ * # arrGroupToObj
  *
  * Group the items by the returned value of the callback. Then return the groups in an plain object.
  *
  * ## Example
  *
  * ```ts
- * arrGroupToObject(
+ * arrGroupToObj(
  *     [
  *         { type: "grass", name: "bulbasaur" },
  *         { type: "fire", name: "charmander" },
@@ -141,7 +141,7 @@ export function arrGroupToMap<K, V>(arr: readonly V[], cb: (item: V) => K): Map<
  * // }
  * ```
  */
-export function arrGroupToObject<K, V>(arr: readonly V[], cb: (item: V) => K): PlainObject<V[]> {
+export function arrGroupToObj<K, V>(arr: readonly V[], cb: (item: V) => K): PlainObject<V[]> {
     return Object.fromEntries(arrGroupToEntries(arr, cb));
 }
 
@@ -214,26 +214,6 @@ export function arrIntersect<const T>(arrs: readonly (readonly T[])[]): readonly
 }
 
 /**
- * # arrOnce
- *
- * Returns true if the callback returns true once. Returns false otherwise.
- *
- * ## Example
- *
- * ```ts
- * arrOnce(["Axl", "Slash", "Duff", "Buckethead"], item => item === "Roses") // false
- * arrOnce(["Axl", "Slash", "Duff", "Buckethead"], item => item === "Buckethead") // true
- * arrOnce(["Axl", "Slash", "Duff", "Buckethead"], item => item.length > 2) // false
- * ```
- */
-export function arrOnce<const T>(
-    arr: readonly T[],
-    cb: (item: T, index: number, arr: readonly T[]) => boolean,
-): boolean {
-    return arr.map(cb).filter(Boolean).length === 1;
-}
-
-/**
  * # arrCombinate
  *
  * Returns an array with the non-repeating combination of the items.
@@ -272,23 +252,23 @@ export function arrCombinate<const T>(arr: readonly T[]): readonly (readonly [T,
 }
 
 /**
- * # arrRandom
+ * # arrOnce
  *
- * Returns a random item of the array.
+ * Returns true if the callback returns true once. Returns false otherwise.
  *
  * ## Example
  *
  * ```ts
- * arrRandom([]) // undefined
- * ```
- *
- * ```ts
- * arrRandom([true]) // [true]
- * arrRandom(false, 0, "n") // false | 0 | "n"
+ * arrOnce(["Axl", "Slash", "Duff", "Buckethead"], item => item === "Roses") // false
+ * arrOnce(["Axl", "Slash", "Duff", "Buckethead"], item => item === "Buckethead") // true
+ * arrOnce(["Axl", "Slash", "Duff", "Buckethead"], item => item.length > 2) // false
  * ```
  */
-export function arrRandom<const T>(arr: readonly T[]): T | undefined {
-    return arr[numRandom(0, arr.length - 1)];
+export function arrOnce<const T>(
+    arr: readonly T[],
+    cb: (item: T, index: number, arr: readonly T[]) => boolean,
+): boolean {
+    return arr.map(cb).filter(Boolean).length === 1;
 }
 
 /**
@@ -306,4 +286,24 @@ export function arrRandom<const T>(arr: readonly T[]): T | undefined {
  */
 export function arrRepeat<const T>(arr: readonly T[], times: number): readonly T[] {
     return numRange(1, times).flatMap(() => arr);
+}
+
+/**
+ * # arrRandom
+ *
+ * Returns a random item of the array.
+ *
+ * ## Example
+ *
+ * ```ts
+ * arrRandom([]) // undefined
+ * ```
+ *
+ * ```ts
+ * arrRandom([true]) // [true]
+ * arrRandom(false, 0, "n") // false | 0 | "n"
+ * ```
+ */
+export function arrRandom<const T>(arr: readonly T[]): T | undefined {
+    return arr[numRandom(0, arr.length - 1)];
 }

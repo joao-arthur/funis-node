@@ -21,6 +21,28 @@ export function eq<T>(val2: T): (val1: T) => boolean {
 }
 
 /**
+ * # ne
+ *
+ * Returns a function that compares val1 !== val2.
+ *
+ * ## Example
+ *
+ * ```ts
+ * cb.ne(1)(2) // true
+ * ```
+ *
+ * ```ts
+ * cb.ne(2)(1) // true
+ * ```
+ */
+export function ne<T>(val2: T): (val1: T) => boolean {
+    function closure(val1: T): boolean {
+        return val1 !== val2;
+    }
+    return closure;
+}
+
+/**
  * # ge
  *
  * Returns a function that compares val1 >= val2.
@@ -104,28 +126,6 @@ export function le<T>(val2: T): (val1: T) => boolean {
 export function lt<T>(val2: T): (val1: T) => boolean {
     function closure(val1: T): boolean {
         return val1 < val2;
-    }
-    return closure;
-}
-
-/**
- * # ne
- *
- * Returns a function that compares val1 !== val2.
- *
- * ## Example
- *
- * ```ts
- * cb.ne(1)(2) // true
- * ```
- *
- * ```ts
- * cb.ne(2)(1) // true
- * ```
- */
-export function ne<T>(val2: T): (val1: T) => boolean {
-    function closure(val1: T): boolean {
-        return val1 !== val2;
     }
     return closure;
 }
