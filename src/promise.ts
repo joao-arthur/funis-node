@@ -16,21 +16,20 @@
  * ]) // "Aristotle"
  * ```
  */
-export function last<const T>(prms: readonly Promise<T>[]): Promise<T> {
+export function last<const T>(pros: readonly Promise<T>[]): Promise<T> {
     return new Promise((resolve, reject) => {
         let resulted = 0;
-
-        prms.forEach((promise) => {
+        pros.forEach((promise) => {
             promise
                 .then((value) => {
-                    if (resulted === prms.length - 1) {
+                    if (resulted === pros.length - 1) {
                         resolve(value);
                     } else {
                         resulted++;
                     }
                 })
                 .catch((error) => {
-                    if (resulted === prms.length - 1) {
+                    if (resulted === pros.length - 1) {
                         reject(error);
                     } else {
                         resulted++;
@@ -75,10 +74,10 @@ export type ObjectifyResult<V, E> = {
  * ) // { value: undefined, error: "So vivid", type: "rejected" }
  * ```
  */
-export async function objectify<V, E>(prm: Promise<V>): Promise<ObjectifyResult<V, E>> {
+export async function objectify<V, E>(pro: Promise<V>): Promise<ObjectifyResult<V, E>> {
     try {
         return {
-            value: await prm,
+            value: await pro,
             error: undefined,
             type: "resolved",
         };

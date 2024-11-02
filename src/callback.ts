@@ -6,11 +6,11 @@
  * ## Example
  *
  * ```ts
- * cb.eq(1)(1) // true
+ * eq(1)(1) // true
  * ```
  *
  * ```ts
- * cb.eq(2)(2) // true
+ * eq(2)(2) // true
  * ```
  */
 export function eq<T>(val2: T): (val1: T) => boolean {
@@ -28,11 +28,11 @@ export function eq<T>(val2: T): (val1: T) => boolean {
  * ## Example
  *
  * ```ts
- * cb.ne(1)(2) // true
+ * ne(1)(2) // true
  * ```
  *
  * ```ts
- * cb.ne(2)(1) // true
+ * ne(2)(1) // true
  * ```
  */
 export function ne<T>(val2: T): (val1: T) => boolean {
@@ -50,11 +50,11 @@ export function ne<T>(val2: T): (val1: T) => boolean {
  * ## Example
  *
  * ```ts
- * cb.ge(1)(2) // true
+ * ge(1)(2) // true
  * ```
  *
  * ```ts
- * cb.ge(1)(1) // true
+ * ge(1)(1) // true
  * ```
  */
 export function ge<T>(val2: T): (val1: T) => boolean {
@@ -72,11 +72,11 @@ export function ge<T>(val2: T): (val1: T) => boolean {
  * ## Example
  *
  * ```ts
- * cb.gt(1)(2) // true
+ * gt(1)(2) // true
  * ```
  *
  * ```ts
- * cb.gt(1)(1) // false
+ * gt(1)(1) // false
  * ```
  */
 export function gt<T>(val2: T): (val1: T) => boolean {
@@ -94,11 +94,11 @@ export function gt<T>(val2: T): (val1: T) => boolean {
  * ## Example
  *
  * ```ts
- * cb.le(2)(1) // true
+ * le(2)(1) // true
  * ```
  *
  * ```ts
- * cb.le(1)(1) // true
+ * le(1)(1) // true
  * ```
  */
 export function le<T>(val2: T): (val1: T) => boolean {
@@ -116,11 +116,11 @@ export function le<T>(val2: T): (val1: T) => boolean {
  * ## Example
  *
  * ```ts
- * cb.lt(2)(1) // true
+ * lt(2)(1) // true
  * ```
  *
  * ```ts
- * cb.lt(1)(1) // false
+ * lt(1)(1) // false
  * ```
  */
 export function lt<T>(val2: T): (val1: T) => boolean {

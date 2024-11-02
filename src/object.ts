@@ -1,7 +1,10 @@
 import { mapEntries } from "./map.js";
-import { PlainObject } from "./types.js";
 import { arrCombinate, arrGroup, arrUnique } from "./array.js";
 import { pipe, self } from "./standard.js";
+
+export type PlainObject<T = unknown> = {
+    readonly [key: string | number]: T;
+};
 
 /**
  * # objFromMap
@@ -31,9 +34,7 @@ import { pipe, self } from "./standard.js";
  * // }
  * ```
  */
-export function objFromMap<const T>(
-    map: Map<string | number, T>,
-): PlainObject<T> {
+export function objFromMap<const T>(map: Map<string | number, T>): PlainObject<T> {
     return Object.fromEntries(mapEntries(map));
 }
 
@@ -64,9 +65,7 @@ export function objFromMap<const T>(
  */
 export function objMapEntries(
     obj: PlainObject,
-    cb: (
-        entry: readonly [string | number, unknown],
-    ) => readonly [string | number, unknown],
+    cb: (entry: readonly [string | number, unknown]) => readonly [string | number, unknown],
 ): PlainObject {
     return pipe(
         () => obj,
@@ -138,10 +137,7 @@ export function objMapKeys(
  * // }
  * ```
  */
-export function objMapValues<const T>(
-    obj: PlainObject,
-    cb: (value: T) => T,
-): PlainObject {
+export function objMapValues<const T>(obj: PlainObject, cb: (value: T) => T): PlainObject {
     return pipe(
         () => obj,
         Object.entries,
@@ -171,10 +167,7 @@ export function objMapValues<const T>(
  * ) // { species: "Canis lupus", age: 5 }
  * ```
  */
-export function objOmit<const T>(
-    obj: PlainObject<T>,
-    keys: readonly string[],
-): PlainObject<T> {
+export function objOmit<const T>(obj: PlainObject<T>, keys: readonly string[]): PlainObject<T> {
     return Object.fromEntries(Object.entries(obj).filter(([key]) => !keys.includes(key)));
 }
 
@@ -199,10 +192,7 @@ export function objOmit<const T>(
  * ) // { animal: "dog" }
  * ```
  */
-export function objPick<const T>(
-    obj: PlainObject<T>,
-    keys: readonly string[],
-): PlainObject<T> {
+export function objPick<const T>(obj: PlainObject<T>, keys: readonly string[]): PlainObject<T> {
     return Object.fromEntries(Object.entries(obj).filter(([key]) => keys.includes(key)));
 }
 
@@ -220,24 +210,13 @@ export function objPick<const T>(
  * ]) // { country: "UK", foundation: 1983 }
  * ```
  */
-export function objDisjoint(
-    objs: readonly PlainObject[],
-): PlainObject {
-    const allEntries = objs
-        .map((obj) => Object.entries(obj))
-        .flat();
+export function objDisjoint(objs: readonly PlainObject[]): PlainObject {
+    const allEntries = objs.map((obj) => Object.entries(obj)).flat();
     const allEntriesObject = Object.fromEntries(allEntries);
     const uniqueKeys = arrUnique(
-        arrGroup(
-            allEntries.map(([key]) => key),
-            self,
-        )
-            .filter((group) => group.length === 1)
-            .flat(),
+        arrGroup(allEntries.map(([key]) => key), self).filter((group) => group.length === 1).flat(),
     );
-    return Object.fromEntries(
-        uniqueKeys.map((key) => [key, allEntriesObject[key]]),
-    );
+    return Object.fromEntries(uniqueKeys.map((key) => [key, allEntriesObject[key]]));
 }
 
 /**
@@ -255,12 +234,8 @@ export function objDisjoint(
  * ]) // { band: "Metallica", country: "US" }
  * ```
  */
-export function objIntersect(
-    objs: readonly PlainObject[],
-): PlainObject {
-    const allEntries = objs
-        .map((obj) => Object.entries(obj))
-        .flat();
+export function objIntersect(objs: readonly PlainObject[]): PlainObject {
+    const allEntries = objs.map((obj) => Object.entries(obj)).flat();
     const allEntriesObject = Object.fromEntries(allEntries);
     const uniqueKeys = arrUnique(
         arrGroup(allEntries.map(([key]) => key), self)
@@ -271,11 +246,10 @@ export function objIntersect(
         uniqueKeys
             .filter((key) =>
                 arrUnique(
-                    allEntries
-                        .filter(([entryKey]) => entryKey === key)
-                        .map(([, value]) => value),
+                    allEntries.filter(([entryKey]) => entryKey === key).map(([, value]) => value),
                 ).length === 1
-            ).map((key) => [key, allEntriesObject[key]]),
+            )
+            .map((key) => [key, allEntriesObject[key]]),
     );
 }
 
@@ -363,8 +337,6 @@ export function objSerialize<const T>(obj: PlainObject<T>): string {
  * ]) // true
  * ```
  */
-export function objSerializesToSame(
-    objs: PlainObject[],
-): boolean {
+export function objSerializesToSame(objs: PlainObject[]): boolean {
     return arrCombinate(objs).every(([a, b]) => objSerialize(a) === objSerialize(b));
 }

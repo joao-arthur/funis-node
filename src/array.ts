@@ -1,4 +1,4 @@
-import { PlainObject } from "./types.js";
+import { PlainObject } from "./object.js";
 import { pipe } from "./standard.js";
 import { numRandom, numRange } from "./number.js";
 
@@ -31,10 +31,7 @@ import { numRandom, numRange } from "./number.js";
  * // ]
  * ```
  */
-export function arrGroup<K, V>(
-    arr: readonly V[],
-    cb: (item: V) => K,
-): readonly (readonly V[])[] {
+export function arrGroup<K, V>(arr: readonly V[], cb: (item: V) => K): readonly (readonly V[])[] {
     return arrGroupToEntries(arr, cb).map(([, value]) => value);
 }
 

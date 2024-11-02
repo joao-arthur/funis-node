@@ -1,4 +1,4 @@
-import { PlainObject } from "./types.js";
+import { PlainObject } from "./object.js";
 import { pipe } from "./standard.js";
 
 /**

@@ -13,7 +13,7 @@ import { numRandom } from "./number.js";
  * ```
  *
  * ```ts
- * strIsValid(") // true
+ * strIsValid("") // true
  * strIsValid(" ") // true
  * strIsValid("Lorem ipsum") // true
  * ```
@@ -36,7 +36,7 @@ export function strIsValid(str: string | undefined | null): boolean {
  * ## Example
  *
  * ```ts
- * ["q", "p", "Q", "P"].sort(str.compareAsc) // ["P", "Q", "p", "q"]
+ * ["q", "p", "Q", "P"].sort(strCompAsc) // ["P", "Q", "p", "q"]
  * ```
  */
 export function strCompAsc(a: string, b: string): number {
@@ -51,7 +51,7 @@ export function strCompAsc(a: string, b: string): number {
  * ## Example
  *
  * ```ts
- * ["q", "p", "Q", "P"].sort(str.compareDesc) // ["Q", "P", "q", "p"]
+ * ["q", "p", "Q", "P"].sort(strCompDesc) // ["Q", "P", "q", "p"]
  * ```
  */
 export function strCompDesc(a: string, b: string): number {
@@ -400,7 +400,7 @@ export function strReplaceAccents(str: string): string {
  * ## Example
  *
  * ```ts
- * strRandom(") // "
+ * strRandom("") // ""
  * strRandom("a") // "a"
  * strRandom("Rafael") // "R" | "a" | "f" | "a" | "e" | "l"
  * ```

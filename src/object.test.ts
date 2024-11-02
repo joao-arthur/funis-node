@@ -10,6 +10,7 @@ import {
     objPick,
     objSerialize,
     objSerializesToSame,
+    PlainObject,
 } from "./object.js";
 
 it("objFromMap", () => {

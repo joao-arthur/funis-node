@@ -228,7 +228,6 @@ export function numLazyRange(from: number, to: number, step = 1): IterableIterat
         (deltaByStep) => Math.floor(deltaByStep) + 1,
         (length) => Math.max(length, 0),
     )(undefined);
-
     let i = -1;
     return {
         next(): IteratorResult<number> {
