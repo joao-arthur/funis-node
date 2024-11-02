@@ -1,8 +1,20 @@
 import { assert, it } from "vitest";
 import { compose, pipe, self } from "./standard.js";
 
+const assertEquals = assert.deepStrictEqual;
+
+it("self", () => {
+    assertEquals(self(1), 1);
+    assertEquals(self("hello world"), "hello world");
+    assertEquals(self(true), true);
+    assertEquals(self({ a: "a" }), { a: "a" });
+    assertEquals(self([3, 2, 1]), [3, 2, 1]);
+    const symbol = Symbol("symbol");
+    assertEquals(self(symbol), symbol);
+});
+
 it("compose", () => {
-    assert.deepStrictEqual(
+    assertEquals(
         compose(
             (num) => `${num}${num}.${num}${num}`,
             (num: number) => num / 2,
@@ -10,7 +22,7 @@ it("compose", () => {
         )(100),
         "55.55",
     );
-    assert.deepStrictEqual(
+    assertEquals(
         compose(
             (num) => num + 10,
             (num: number) => -num,
@@ -23,7 +35,7 @@ it("compose", () => {
 });
 
 it("pipe", () => {
-    assert.deepStrictEqual(
+    assertEquals(
         pipe(
             (num: number) => num - 90,
             (num) => num / 2,
@@ -31,7 +43,7 @@ it("pipe", () => {
         )(100),
         "55.55",
     );
-    assert.deepStrictEqual(
+    assertEquals(
         pipe(
             (num: number) => num - 90,
             (num) => num / 2,
@@ -41,14 +53,4 @@ it("pipe", () => {
         )(100),
         7,
     );
-});
-
-it("self", () => {
-    assert.deepStrictEqual(self(1), 1);
-    assert.deepStrictEqual(self("hello world"), "hello world");
-    assert.deepStrictEqual(self(true), true);
-    assert.deepStrictEqual(self({ a: "a" }), { a: "a" });
-    assert.deepStrictEqual(self([3, 2, 1]), [3, 2, 1]);
-    const symbol = Symbol("symbol");
-    assert.deepStrictEqual(self(symbol), symbol);
 });

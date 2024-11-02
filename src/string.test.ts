@@ -12,229 +12,231 @@ import {
     strSnakeCase,
 } from "./string.js";
 
+const assertEquals = assert.deepStrictEqual;
+
 it("strIsValid", () => {
-    assert.deepStrictEqual(strIsValid(undefined), false);
-    assert.deepStrictEqual(strIsValid(null), false);
-    assert.deepStrictEqual(strIsValid(""), true);
-    assert.deepStrictEqual(strIsValid(" "), true);
-    assert.deepStrictEqual(strIsValid("Lorem ipsum"), true);
+    assertEquals(strIsValid(undefined), false);
+    assertEquals(strIsValid(null), false);
+    assertEquals(strIsValid(""), true);
+    assertEquals(strIsValid(" "), true);
+    assertEquals(strIsValid("Lorem ipsum"), true);
 });
 
 it("strCompAsc", () => {
-    assert.deepStrictEqual(
+    assertEquals(
         ["q", "p", "w", "o", "Q", "P", "W", "O"].sort(strCompAsc),
         ["O", "P", "Q", "W", "o", "p", "q", "w"],
     );
 });
 
 it("strCompDesc", () => {
-    assert.deepStrictEqual(
+    assertEquals(
         ["q", "p", "w", "o", "Q", "P", "W", "O"].sort(strCompDesc),
         ["w", "q", "p", "o", "W", "Q", "P", "O"],
     );
 });
 
 it("strCamelCase", () => {
-    assert.deepStrictEqual(strCamelCase(""), "");
-    assert.deepStrictEqual(strCamelCase("hey"), "hey");
-    assert.deepStrictEqual(strCamelCase("j S o N"), "jSON");
-    assert.deepStrictEqual(strCamelCase("j_S_o_N"), "jSON");
-    assert.deepStrictEqual(strCamelCase("j-S-o-N"), "jSON");
-    assert.deepStrictEqual(strCamelCase("hey Jo3"), "heyJo3");
-    assert.deepStrictEqual(strCamelCase("hey_Jo3"), "heyJo3");
-    assert.deepStrictEqual(strCamelCase("hey-Jo3"), "heyJo3");
+    assertEquals(strCamelCase(""), "");
+    assertEquals(strCamelCase("hey"), "hey");
+    assertEquals(strCamelCase("j S o N"), "jSON");
+    assertEquals(strCamelCase("j_S_o_N"), "jSON");
+    assertEquals(strCamelCase("j-S-o-N"), "jSON");
+    assertEquals(strCamelCase("hey Jo3"), "heyJo3");
+    assertEquals(strCamelCase("hey_Jo3"), "heyJo3");
+    assertEquals(strCamelCase("hey-Jo3"), "heyJo3");
 });
 
 it("strKebabCase", () => {
-    assert.deepStrictEqual(strKebabCase(""), "");
-    assert.deepStrictEqual(strKebabCase("hey"), "hey");
-    assert.deepStrictEqual(strKebabCase("j S o N"), "j-s-o-n");
-    assert.deepStrictEqual(strKebabCase("j_S_o_N"), "j-s-o-n");
-    assert.deepStrictEqual(strKebabCase("j-S-o-N"), "j-s-o-n");
-    assert.deepStrictEqual(strKebabCase("hey Jo3"), "hey-jo3");
-    assert.deepStrictEqual(strKebabCase("hey_Jo3"), "hey-jo3");
-    assert.deepStrictEqual(strKebabCase("hey-Jo3"), "hey-jo3");
+    assertEquals(strKebabCase(""), "");
+    assertEquals(strKebabCase("hey"), "hey");
+    assertEquals(strKebabCase("j S o N"), "j-s-o-n");
+    assertEquals(strKebabCase("j_S_o_N"), "j-s-o-n");
+    assertEquals(strKebabCase("j-S-o-N"), "j-s-o-n");
+    assertEquals(strKebabCase("hey Jo3"), "hey-jo3");
+    assertEquals(strKebabCase("hey_Jo3"), "hey-jo3");
+    assertEquals(strKebabCase("hey-Jo3"), "hey-jo3");
 });
 
 it("strPascalCase", () => {
-    assert.deepStrictEqual(strPascalCase(""), "");
-    assert.deepStrictEqual(strPascalCase("hey"), "Hey");
-    assert.deepStrictEqual(strPascalCase("j S o N"), "JSON");
-    assert.deepStrictEqual(strPascalCase("j_S_o_N"), "JSON");
-    assert.deepStrictEqual(strPascalCase("j-S-o-N"), "JSON");
-    assert.deepStrictEqual(strPascalCase("hey Jo3"), "HeyJo3");
-    assert.deepStrictEqual(strPascalCase("hey_Jo3"), "HeyJo3");
-    assert.deepStrictEqual(strPascalCase("hey-Jo3"), "HeyJo3");
+    assertEquals(strPascalCase(""), "");
+    assertEquals(strPascalCase("hey"), "Hey");
+    assertEquals(strPascalCase("j S o N"), "JSON");
+    assertEquals(strPascalCase("j_S_o_N"), "JSON");
+    assertEquals(strPascalCase("j-S-o-N"), "JSON");
+    assertEquals(strPascalCase("hey Jo3"), "HeyJo3");
+    assertEquals(strPascalCase("hey_Jo3"), "HeyJo3");
+    assertEquals(strPascalCase("hey-Jo3"), "HeyJo3");
 });
 
 it("strSnakeCase", () => {
-    assert.deepStrictEqual(strSnakeCase(""), "");
-    assert.deepStrictEqual(strSnakeCase("hey"), "hey");
-    assert.deepStrictEqual(strSnakeCase("j S o N"), "j_s_o_n");
-    assert.deepStrictEqual(strSnakeCase("j_S_o_N"), "j_s_o_n");
-    assert.deepStrictEqual(strSnakeCase("j-S-o-N"), "j_s_o_n");
-    assert.deepStrictEqual(strSnakeCase("hey Jo3"), "hey_jo3");
-    assert.deepStrictEqual(strSnakeCase("hey_Jo3"), "hey_jo3");
-    assert.deepStrictEqual(strSnakeCase("hey-Jo3"), "hey_jo3");
+    assertEquals(strSnakeCase(""), "");
+    assertEquals(strSnakeCase("hey"), "hey");
+    assertEquals(strSnakeCase("j S o N"), "j_s_o_n");
+    assertEquals(strSnakeCase("j_S_o_N"), "j_s_o_n");
+    assertEquals(strSnakeCase("j-S-o-N"), "j_s_o_n");
+    assertEquals(strSnakeCase("hey Jo3"), "hey_jo3");
+    assertEquals(strSnakeCase("hey_Jo3"), "hey_jo3");
+    assertEquals(strSnakeCase("hey-Jo3"), "hey_jo3");
 });
 
 it("strRemoveAccents", () => {
-    assert.deepStrictEqual(strRemoveAccents("áéíóú"), "");
-    assert.deepStrictEqual(strRemoveAccents("àèìòù"), "");
-    assert.deepStrictEqual(strRemoveAccents("ãẽĩõũ"), "");
-    assert.deepStrictEqual(strRemoveAccents("äëïöü"), "");
-    assert.deepStrictEqual(strRemoveAccents("âêîôû"), "");
-    assert.deepStrictEqual(strRemoveAccents("ȁȅȉȍȕ"), "");
-    assert.deepStrictEqual(strRemoveAccents("āēīōū"), "");
-    assert.deepStrictEqual(strRemoveAccents("ăĕ"), "");
-    assert.deepStrictEqual(strRemoveAccents("ęį"), "");
-    assert.deepStrictEqual(strRemoveAccents("őű"), "");
-    assert.deepStrictEqual(strRemoveAccents("åů"), "");
-    assert.deepStrictEqual(strRemoveAccents("ė"), "");
-    assert.deepStrictEqual(strRemoveAccents("ě"), "");
-    assert.deepStrictEqual(strRemoveAccents("ø"), "");
-    assert.deepStrictEqual(strRemoveAccents("ǘ"), "");
-    assert.deepStrictEqual(strRemoveAccents("ǜ"), "");
-    assert.deepStrictEqual(strRemoveAccents("ÁÉÍÓÚ"), "");
-    assert.deepStrictEqual(strRemoveAccents("ÀÈÌÒÙ"), "");
-    assert.deepStrictEqual(strRemoveAccents("ÃẼĨÕŨ"), "");
-    assert.deepStrictEqual(strRemoveAccents("ÄËÏÖÜ"), "");
-    assert.deepStrictEqual(strRemoveAccents("ÂÊÎÔÛ"), "");
-    assert.deepStrictEqual(strRemoveAccents("ȀȄȈȌȔ"), "");
-    assert.deepStrictEqual(strRemoveAccents("ĀĒĪŌŪ"), "");
-    assert.deepStrictEqual(strRemoveAccents("ĂĔ"), "");
-    assert.deepStrictEqual(strRemoveAccents("ĘĮ"), "");
-    assert.deepStrictEqual(strRemoveAccents("ŐŰ"), "");
-    assert.deepStrictEqual(strRemoveAccents("ÅŮ"), "");
-    assert.deepStrictEqual(strRemoveAccents("Ė"), "");
-    assert.deepStrictEqual(strRemoveAccents("Ě"), "");
-    assert.deepStrictEqual(strRemoveAccents("Ø"), "");
-    assert.deepStrictEqual(strRemoveAccents("Ǘ"), "");
-    assert.deepStrictEqual(strRemoveAccents("Ǜ"), "");
-    assert.deepStrictEqual(strRemoveAccents("ćǵḱĺḿńṕŕśẃýź"), "");
-    assert.deepStrictEqual(strRemoveAccents("ĉĝĥĵŝŵŷẑ"), "");
-    assert.deepStrictEqual(strRemoveAccents("čňřšž"), "");
-    assert.deepStrictEqual(strRemoveAccents("ḧẗẅẍÿ"), "");
-    assert.deepStrictEqual(strRemoveAccents("ķļņț"), "");
-    assert.deepStrictEqual(strRemoveAccents("çḉşţ"), "");
-    assert.deepStrictEqual(strRemoveAccents("đħłŧ"), "");
-    assert.deepStrictEqual(strRemoveAccents("ǹẁỳ"), "");
-    assert.deepStrictEqual(strRemoveAccents("ñṽỹ"), "");
-    assert.deepStrictEqual(strRemoveAccents("ďľť"), "");
-    assert.deepStrictEqual(strRemoveAccents("ȑ"), "");
-    assert.deepStrictEqual(strRemoveAccents("ģ"), "");
-    assert.deepStrictEqual(strRemoveAccents("ğ"), "");
-    assert.deepStrictEqual(strRemoveAccents("ż"), "");
-    assert.deepStrictEqual(strRemoveAccents("ĆǴḰĹḾŃṔŔŚẂÝŹ"), "");
-    assert.deepStrictEqual(strRemoveAccents("ĈĜĤĴŜŴŶẐ"), "");
-    assert.deepStrictEqual(strRemoveAccents("ČĎŇŘŠŤŽ"), "");
-    assert.deepStrictEqual(strRemoveAccents("ḦẄẌŸ"), "");
-    assert.deepStrictEqual(strRemoveAccents("ÇḈŞŢ"), "");
-    assert.deepStrictEqual(strRemoveAccents("ĐĦŁŦ"), "");
-    assert.deepStrictEqual(strRemoveAccents("ǸẀỲ"), "");
-    assert.deepStrictEqual(strRemoveAccents("ÑṼỸ"), "");
-    assert.deepStrictEqual(strRemoveAccents("ĻŅȚ"), "");
-    assert.deepStrictEqual(strRemoveAccents("ĢĶ"), "");
-    assert.deepStrictEqual(strRemoveAccents("Ȑ"), "");
-    assert.deepStrictEqual(strRemoveAccents("Ğ"), "");
-    assert.deepStrictEqual(strRemoveAccents("Ľ"), "");
-    assert.deepStrictEqual(strRemoveAccents("Ż"), "");
-    assert.deepStrictEqual(
+    assertEquals(strRemoveAccents("áéíóú"), "");
+    assertEquals(strRemoveAccents("àèìòù"), "");
+    assertEquals(strRemoveAccents("ãẽĩõũ"), "");
+    assertEquals(strRemoveAccents("äëïöü"), "");
+    assertEquals(strRemoveAccents("âêîôû"), "");
+    assertEquals(strRemoveAccents("ȁȅȉȍȕ"), "");
+    assertEquals(strRemoveAccents("āēīōū"), "");
+    assertEquals(strRemoveAccents("ăĕ"), "");
+    assertEquals(strRemoveAccents("ęį"), "");
+    assertEquals(strRemoveAccents("őű"), "");
+    assertEquals(strRemoveAccents("åů"), "");
+    assertEquals(strRemoveAccents("ė"), "");
+    assertEquals(strRemoveAccents("ě"), "");
+    assertEquals(strRemoveAccents("ø"), "");
+    assertEquals(strRemoveAccents("ǘ"), "");
+    assertEquals(strRemoveAccents("ǜ"), "");
+    assertEquals(strRemoveAccents("ÁÉÍÓÚ"), "");
+    assertEquals(strRemoveAccents("ÀÈÌÒÙ"), "");
+    assertEquals(strRemoveAccents("ÃẼĨÕŨ"), "");
+    assertEquals(strRemoveAccents("ÄËÏÖÜ"), "");
+    assertEquals(strRemoveAccents("ÂÊÎÔÛ"), "");
+    assertEquals(strRemoveAccents("ȀȄȈȌȔ"), "");
+    assertEquals(strRemoveAccents("ĀĒĪŌŪ"), "");
+    assertEquals(strRemoveAccents("ĂĔ"), "");
+    assertEquals(strRemoveAccents("ĘĮ"), "");
+    assertEquals(strRemoveAccents("ŐŰ"), "");
+    assertEquals(strRemoveAccents("ÅŮ"), "");
+    assertEquals(strRemoveAccents("Ė"), "");
+    assertEquals(strRemoveAccents("Ě"), "");
+    assertEquals(strRemoveAccents("Ø"), "");
+    assertEquals(strRemoveAccents("Ǘ"), "");
+    assertEquals(strRemoveAccents("Ǜ"), "");
+    assertEquals(strRemoveAccents("ćǵḱĺḿńṕŕśẃýź"), "");
+    assertEquals(strRemoveAccents("ĉĝĥĵŝŵŷẑ"), "");
+    assertEquals(strRemoveAccents("čňřšž"), "");
+    assertEquals(strRemoveAccents("ḧẗẅẍÿ"), "");
+    assertEquals(strRemoveAccents("ķļņț"), "");
+    assertEquals(strRemoveAccents("çḉşţ"), "");
+    assertEquals(strRemoveAccents("đħłŧ"), "");
+    assertEquals(strRemoveAccents("ǹẁỳ"), "");
+    assertEquals(strRemoveAccents("ñṽỹ"), "");
+    assertEquals(strRemoveAccents("ďľť"), "");
+    assertEquals(strRemoveAccents("ȑ"), "");
+    assertEquals(strRemoveAccents("ģ"), "");
+    assertEquals(strRemoveAccents("ğ"), "");
+    assertEquals(strRemoveAccents("ż"), "");
+    assertEquals(strRemoveAccents("ĆǴḰĹḾŃṔŔŚẂÝŹ"), "");
+    assertEquals(strRemoveAccents("ĈĜĤĴŜŴŶẐ"), "");
+    assertEquals(strRemoveAccents("ČĎŇŘŠŤŽ"), "");
+    assertEquals(strRemoveAccents("ḦẄẌŸ"), "");
+    assertEquals(strRemoveAccents("ÇḈŞŢ"), "");
+    assertEquals(strRemoveAccents("ĐĦŁŦ"), "");
+    assertEquals(strRemoveAccents("ǸẀỲ"), "");
+    assertEquals(strRemoveAccents("ÑṼỸ"), "");
+    assertEquals(strRemoveAccents("ĻŅȚ"), "");
+    assertEquals(strRemoveAccents("ĢĶ"), "");
+    assertEquals(strRemoveAccents("Ȑ"), "");
+    assertEquals(strRemoveAccents("Ğ"), "");
+    assertEquals(strRemoveAccents("Ľ"), "");
+    assertEquals(strRemoveAccents("Ż"), "");
+    assertEquals(
         strRemoveAccents("abcdefghijklmnopqrstuvwyxz0123456789"),
         "abcdefghijklmnopqrstuvwyxz0123456789",
     );
-    assert.deepStrictEqual(
+    assertEquals(
         strRemoveAccents("ABCDEFGHIJKLMNOPQRSTUVWYXZ0123456789"),
         "ABCDEFGHIJKLMNOPQRSTUVWYXZ0123456789",
     );
-    assert.deepStrictEqual(
+    assertEquals(
         strRemoveAccents("¹²³£¢¬{[]}!@#$%¨&*()_+§/?°®←↓→þ´ªæßªĸ´~º«»©“”nµ"),
         "¹²³£¢¬{[]}!@#$%¨&*()_+§/?°®←↓→þ´ªæßªĸ´~º«»©“”nµ",
     );
 });
 
 it("strReplaceAccents", () => {
-    assert.deepStrictEqual(strReplaceAccents("áéíóú"), "aeiou");
-    assert.deepStrictEqual(strReplaceAccents("àèìòù"), "aeiou");
-    assert.deepStrictEqual(strReplaceAccents("ãẽĩõũ"), "aeiou");
-    assert.deepStrictEqual(strReplaceAccents("äëïöü"), "aeiou");
-    assert.deepStrictEqual(strReplaceAccents("âêîôû"), "aeiou");
-    assert.deepStrictEqual(strReplaceAccents("ȁȅȉȍȕ"), "aeiou");
-    assert.deepStrictEqual(strReplaceAccents("āēīōū"), "aeiou");
-    assert.deepStrictEqual(strReplaceAccents("ăĕ"), "ae");
-    assert.deepStrictEqual(strReplaceAccents("ęį"), "ei");
-    assert.deepStrictEqual(strReplaceAccents("őű"), "ou");
-    assert.deepStrictEqual(strReplaceAccents("åů"), "au");
-    assert.deepStrictEqual(strReplaceAccents("ė"), "e");
-    assert.deepStrictEqual(strReplaceAccents("ě"), "e");
-    assert.deepStrictEqual(strReplaceAccents("ø"), "o");
-    assert.deepStrictEqual(strReplaceAccents("ǘ"), "u");
-    assert.deepStrictEqual(strReplaceAccents("ǜ"), "u");
-    assert.deepStrictEqual(strReplaceAccents("ÁÉÍÓÚ"), "AEIOU");
-    assert.deepStrictEqual(strReplaceAccents("ÀÈÌÒÙ"), "AEIOU");
-    assert.deepStrictEqual(strReplaceAccents("ÃẼĨÕŨ"), "AEIOU");
-    assert.deepStrictEqual(strReplaceAccents("ÄËÏÖÜ"), "AEIOU");
-    assert.deepStrictEqual(strReplaceAccents("ÂÊÎÔÛ"), "AEIOU");
-    assert.deepStrictEqual(strReplaceAccents("ȀȄȈȌȔ"), "AEIOU");
-    assert.deepStrictEqual(strReplaceAccents("ĀĒĪŌŪ"), "AEIOU");
-    assert.deepStrictEqual(strReplaceAccents("ĂĔ"), "AE");
-    assert.deepStrictEqual(strReplaceAccents("ĘĮ"), "EI");
-    assert.deepStrictEqual(strReplaceAccents("ŐŰ"), "OU");
-    assert.deepStrictEqual(strReplaceAccents("ÅŮ"), "AU");
-    assert.deepStrictEqual(strReplaceAccents("Ė"), "E");
-    assert.deepStrictEqual(strReplaceAccents("Ě"), "E");
-    assert.deepStrictEqual(strReplaceAccents("Ø"), "O");
-    assert.deepStrictEqual(strReplaceAccents("Ǘ"), "U");
-    assert.deepStrictEqual(strReplaceAccents("Ǜ"), "U");
-    assert.deepStrictEqual(strReplaceAccents("ćǵḱĺḿńṕŕśẃýź"), "cgklmnprswyz");
-    assert.deepStrictEqual(strReplaceAccents("ĉĝĥĵŝŵŷẑ"), "cghjswyz");
-    assert.deepStrictEqual(strReplaceAccents("čňřšž"), "cnrsz");
-    assert.deepStrictEqual(strReplaceAccents("ḧẗẅẍÿ"), "htwxy");
-    assert.deepStrictEqual(strReplaceAccents("ķļņț"), "klnt");
-    assert.deepStrictEqual(strReplaceAccents("çḉşţ"), "ccst");
-    assert.deepStrictEqual(strReplaceAccents("đħłŧ"), "dhlt");
-    assert.deepStrictEqual(strReplaceAccents("ǹẁỳ"), "nwy");
-    assert.deepStrictEqual(strReplaceAccents("ñṽỹ"), "nvy");
-    assert.deepStrictEqual(strReplaceAccents("ďľť"), "dlt");
-    assert.deepStrictEqual(strReplaceAccents("ȑ"), "r");
-    assert.deepStrictEqual(strReplaceAccents("ģ"), "g");
-    assert.deepStrictEqual(strReplaceAccents("ğ"), "g");
-    assert.deepStrictEqual(strReplaceAccents("ż"), "z");
-    assert.deepStrictEqual(strReplaceAccents("ĆǴḰĹḾŃṔŔŚẂÝŹ"), "CGKLMNPRSWYZ");
-    assert.deepStrictEqual(strReplaceAccents("ĈĜĤĴŜŴŶẐ"), "CGHJSWYZ");
-    assert.deepStrictEqual(strReplaceAccents("ČĎŇŘŠŤŽ"), "CDNRSTZ");
-    assert.deepStrictEqual(strReplaceAccents("ḦẄẌŸ"), "HWXY");
-    assert.deepStrictEqual(strReplaceAccents("ÇḈŞŢ"), "CCST");
-    assert.deepStrictEqual(strReplaceAccents("ĐĦŁŦ"), "DHLT");
-    assert.deepStrictEqual(strReplaceAccents("ǸẀỲ"), "NWY");
-    assert.deepStrictEqual(strReplaceAccents("ÑṼỸ"), "NVY");
-    assert.deepStrictEqual(strReplaceAccents("ĻŅȚ"), "LNT");
-    assert.deepStrictEqual(strReplaceAccents("ĢĶ"), "GK");
-    assert.deepStrictEqual(strReplaceAccents("Ȑ"), "R");
-    assert.deepStrictEqual(strReplaceAccents("Ğ"), "G");
-    assert.deepStrictEqual(strReplaceAccents("Ľ"), "L");
-    assert.deepStrictEqual(strReplaceAccents("Ż"), "Z");
-    assert.deepStrictEqual(
+    assertEquals(strReplaceAccents("áéíóú"), "aeiou");
+    assertEquals(strReplaceAccents("àèìòù"), "aeiou");
+    assertEquals(strReplaceAccents("ãẽĩõũ"), "aeiou");
+    assertEquals(strReplaceAccents("äëïöü"), "aeiou");
+    assertEquals(strReplaceAccents("âêîôû"), "aeiou");
+    assertEquals(strReplaceAccents("ȁȅȉȍȕ"), "aeiou");
+    assertEquals(strReplaceAccents("āēīōū"), "aeiou");
+    assertEquals(strReplaceAccents("ăĕ"), "ae");
+    assertEquals(strReplaceAccents("ęį"), "ei");
+    assertEquals(strReplaceAccents("őű"), "ou");
+    assertEquals(strReplaceAccents("åů"), "au");
+    assertEquals(strReplaceAccents("ė"), "e");
+    assertEquals(strReplaceAccents("ě"), "e");
+    assertEquals(strReplaceAccents("ø"), "o");
+    assertEquals(strReplaceAccents("ǘ"), "u");
+    assertEquals(strReplaceAccents("ǜ"), "u");
+    assertEquals(strReplaceAccents("ÁÉÍÓÚ"), "AEIOU");
+    assertEquals(strReplaceAccents("ÀÈÌÒÙ"), "AEIOU");
+    assertEquals(strReplaceAccents("ÃẼĨÕŨ"), "AEIOU");
+    assertEquals(strReplaceAccents("ÄËÏÖÜ"), "AEIOU");
+    assertEquals(strReplaceAccents("ÂÊÎÔÛ"), "AEIOU");
+    assertEquals(strReplaceAccents("ȀȄȈȌȔ"), "AEIOU");
+    assertEquals(strReplaceAccents("ĀĒĪŌŪ"), "AEIOU");
+    assertEquals(strReplaceAccents("ĂĔ"), "AE");
+    assertEquals(strReplaceAccents("ĘĮ"), "EI");
+    assertEquals(strReplaceAccents("ŐŰ"), "OU");
+    assertEquals(strReplaceAccents("ÅŮ"), "AU");
+    assertEquals(strReplaceAccents("Ė"), "E");
+    assertEquals(strReplaceAccents("Ě"), "E");
+    assertEquals(strReplaceAccents("Ø"), "O");
+    assertEquals(strReplaceAccents("Ǘ"), "U");
+    assertEquals(strReplaceAccents("Ǜ"), "U");
+    assertEquals(strReplaceAccents("ćǵḱĺḿńṕŕśẃýź"), "cgklmnprswyz");
+    assertEquals(strReplaceAccents("ĉĝĥĵŝŵŷẑ"), "cghjswyz");
+    assertEquals(strReplaceAccents("čňřšž"), "cnrsz");
+    assertEquals(strReplaceAccents("ḧẗẅẍÿ"), "htwxy");
+    assertEquals(strReplaceAccents("ķļņț"), "klnt");
+    assertEquals(strReplaceAccents("çḉşţ"), "ccst");
+    assertEquals(strReplaceAccents("đħłŧ"), "dhlt");
+    assertEquals(strReplaceAccents("ǹẁỳ"), "nwy");
+    assertEquals(strReplaceAccents("ñṽỹ"), "nvy");
+    assertEquals(strReplaceAccents("ďľť"), "dlt");
+    assertEquals(strReplaceAccents("ȑ"), "r");
+    assertEquals(strReplaceAccents("ģ"), "g");
+    assertEquals(strReplaceAccents("ğ"), "g");
+    assertEquals(strReplaceAccents("ż"), "z");
+    assertEquals(strReplaceAccents("ĆǴḰĹḾŃṔŔŚẂÝŹ"), "CGKLMNPRSWYZ");
+    assertEquals(strReplaceAccents("ĈĜĤĴŜŴŶẐ"), "CGHJSWYZ");
+    assertEquals(strReplaceAccents("ČĎŇŘŠŤŽ"), "CDNRSTZ");
+    assertEquals(strReplaceAccents("ḦẄẌŸ"), "HWXY");
+    assertEquals(strReplaceAccents("ÇḈŞŢ"), "CCST");
+    assertEquals(strReplaceAccents("ĐĦŁŦ"), "DHLT");
+    assertEquals(strReplaceAccents("ǸẀỲ"), "NWY");
+    assertEquals(strReplaceAccents("ÑṼỸ"), "NVY");
+    assertEquals(strReplaceAccents("ĻŅȚ"), "LNT");
+    assertEquals(strReplaceAccents("ĢĶ"), "GK");
+    assertEquals(strReplaceAccents("Ȑ"), "R");
+    assertEquals(strReplaceAccents("Ğ"), "G");
+    assertEquals(strReplaceAccents("Ľ"), "L");
+    assertEquals(strReplaceAccents("Ż"), "Z");
+    assertEquals(
         strReplaceAccents("abcdefghijklmnopqrstuvwyxz0123456789"),
         "abcdefghijklmnopqrstuvwyxz0123456789",
     );
-    assert.deepStrictEqual(
+    assertEquals(
         strReplaceAccents("ABCDEFGHIJKLMNOPQRSTUVWYXZ0123456789"),
         "ABCDEFGHIJKLMNOPQRSTUVWYXZ0123456789",
     );
-    assert.deepStrictEqual(
+    assertEquals(
         strReplaceAccents("¹²³£¢¬{[]}!@#$%¨&*()_+§/?°®←↓→þ´ªæßªĸ´~º«»©“”nµ"),
         "¹²³£¢¬{[]}!@#$%¨&*()_+§/?°®←↓→þ´ªæßªĸ´~º«»©“”nµ",
     );
 });
 
 it("strRandom", () => {
-    assert.deepStrictEqual(strRandom(""), "");
-    assert.deepStrictEqual(strRandom("a"), "a");
-    assert.deepStrictEqual(strRandom("b"), "b");
-    assert.deepStrictEqual(strRandom("c"), "c");
-    assert.deepStrictEqual(strRandom("Botticelli").length, 1);
-    assert.deepStrictEqual("Botticelli".includes(strRandom("Botticelli")), true);
-    assert.deepStrictEqual(strRandom("Michelangelo").length, 1);
-    assert.deepStrictEqual("Michelangelo".includes(strRandom("Michelangelo")), true);
+    assertEquals(strRandom(""), "");
+    assertEquals(strRandom("a"), "a");
+    assertEquals(strRandom("b"), "b");
+    assertEquals(strRandom("c"), "c");
+    assertEquals(strRandom("Botticelli").length, 1);
+    assertEquals("Botticelli".includes(strRandom("Botticelli")), true);
+    assertEquals(strRandom("Michelangelo").length, 1);
+    assertEquals("Michelangelo".includes(strRandom("Michelangelo")), true);
 });

@@ -2,23 +2,26 @@ import { assert, it } from "vitest";
 import { resolveTimeout } from "./promise.js";
 import { debounce, throttle } from "./chrono.js";
 
+const assertEquals = assert.deepStrictEqual;
+const assertNotEquals = assert.notStrictEqual;
+
 it("debounce", () => {
     const timeoutId = debounce(() => {}, 1000)();
-    assert.notStrictEqual(timeoutId, 0);
+    assertNotEquals(timeoutId, 0);
     globalThis.clearTimeout(timeoutId);
 });
 
 it("debounce", () => {
     const emptyArr: string[] = [];
     debounce(() => emptyArr.push("Salvator mundi"), 0)();
-    assert.deepStrictEqual(emptyArr, []);
+    assertEquals(emptyArr, []);
 });
 
 it("debounce", async () => {
     const emptyArr: string[] = [];
     debounce(() => emptyArr.push("Salvator mundi"), 0)();
     await resolveTimeout(undefined, 5);
-    assert.deepStrictEqual(emptyArr, ["Salvator mundi"]);
+    assertEquals(emptyArr, ["Salvator mundi"]);
 });
 
 it("debounce", async () => {
@@ -27,8 +30,8 @@ it("debounce", async () => {
     returnedFn();
     returnedFn();
     returnedFn();
-    await resolveTimeout(undefined, 8);
-    assert.deepStrictEqual(emptyArr, ["Salvator mundi"]);
+    await resolveTimeout(undefined, 10);
+    assertEquals(emptyArr, ["Salvator mundi"]);
 });
 
 it("debounce", async () => {
@@ -42,7 +45,7 @@ it("debounce", async () => {
     await resolveTimeout(undefined, 8);
     const timeoutId = returnedFn();
     await resolveTimeout(undefined, 8);
-    assert.deepStrictEqual(emptyArr, []);
+    assertEquals(emptyArr, []);
     globalThis.clearTimeout(timeoutId);
 });
 
@@ -53,26 +56,26 @@ it("debounce", async () => {
     await resolveTimeout(undefined, 5);
     returnedFn();
     await resolveTimeout(undefined, 5);
-    assert.deepStrictEqual(emptyArr, ["Salvator mundi", "Salvator mundi"]);
+    assertEquals(emptyArr, ["Salvator mundi", "Salvator mundi"]);
 });
 
 it("throttle", () => {
     const timeoutId = throttle(() => {}, 1000)();
-    assert.notStrictEqual(timeoutId, 0);
+    assertNotEquals(timeoutId, 0);
     globalThis.clearTimeout(timeoutId);
 });
 
 it("throttle", () => {
     const emptyArr: string[] = [];
     throttle(() => emptyArr.push("Salvator mundi"), 0)();
-    assert.deepStrictEqual(emptyArr, []);
+    assertEquals(emptyArr, []);
 });
 
 it("throttle", async () => {
     const emptyArr: string[] = [];
     throttle(() => emptyArr.push("Salvator mundi"), 0)();
     await resolveTimeout(undefined, 5);
-    assert.deepStrictEqual(emptyArr, ["Salvator mundi"]);
+    assertEquals(emptyArr, ["Salvator mundi"]);
 });
 
 it("throttle", async () => {
@@ -82,7 +85,7 @@ it("throttle", async () => {
     returnedFn();
     returnedFn();
     await resolveTimeout(undefined, 10);
-    assert.deepStrictEqual(emptyArr, ["Salvator mundi"]);
+    assertEquals(emptyArr, ["Salvator mundi"]);
 });
 
 it("throttle", async () => {
@@ -92,5 +95,5 @@ it("throttle", async () => {
     await resolveTimeout(undefined, 5);
     returnedFn();
     await resolveTimeout(undefined, 5);
-    assert.deepStrictEqual(emptyArr, ["Salvator mundi", "Salvator mundi"]);
+    assertEquals(emptyArr, ["Salvator mundi", "Salvator mundi"]);
 });

@@ -10,15 +10,12 @@ import {
     mapValues,
 } from "./map.js";
 
+const assertEquals = assert.deepStrictEqual;
+
 it("mapFromObj", () => {
-    assert.deepStrictEqual(mapFromObj({}), new Map([]));
-    assert.deepStrictEqual(
-        mapFromObj({
-            Paul: "Bass",
-            John: "Guitar",
-            George: "Guitar",
-            Ringo: "Drums",
-        }),
+    assertEquals(mapFromObj({}), new Map([]));
+    assertEquals(
+        mapFromObj({ Paul: "Bass", John: "Guitar", George: "Guitar", Ringo: "Drums" }),
         new Map(
             [
                 ["Paul", "Bass"],
@@ -31,8 +28,8 @@ it("mapFromObj", () => {
 });
 
 it("mapFromObjArr", () => {
-    assert.deepStrictEqual(mapFromObjArr([], "id"), new Map());
-    assert.deepStrictEqual(
+    assertEquals(mapFromObjArr([], "id"), new Map());
+    assertEquals(
         mapFromObjArr(
             [
                 { name: "Alex Lifeson", instrument: "Guitar" },
@@ -50,49 +47,31 @@ it("mapFromObjArr", () => {
 });
 
 it("mapEntries", () => {
-    assert.deepStrictEqual(mapEntries(new Map()), []);
-    assert.deepStrictEqual(
-        mapEntries(
-            new Map([
-                [1, { name: "Paul McCartney" }],
-                [2, { name: "George Harrison" }],
-            ]),
-        ),
-        [
-            [1, { name: "Paul McCartney" }],
-            [2, { name: "George Harrison" }],
-        ],
+    assertEquals(mapEntries(new Map()), []);
+    assertEquals(
+        mapEntries(new Map([[1, { name: "Paul McCartney" }], [2, { name: "George Harrison" }]])),
+        [[1, { name: "Paul McCartney" }], [2, { name: "George Harrison" }]],
     );
 });
 
 it("mapKeys", () => {
-    assert.deepStrictEqual(mapKeys(new Map()), []);
-    assert.deepStrictEqual(
-        mapKeys(
-            new Map([
-                [1, { name: "Paul McCartney" }],
-                [2, { name: "George Harrison" }],
-            ]),
-        ),
+    assertEquals(mapKeys(new Map()), []);
+    assertEquals(
+        mapKeys(new Map([[1, { name: "Paul McCartney" }], [2, { name: "George Harrison" }]])),
         [1, 2],
     );
 });
 
 it("mapValues", () => {
-    assert.deepStrictEqual(mapValues(new Map()), []);
-    assert.deepStrictEqual(
-        mapValues(
-            new Map([
-                [1, { name: "Paul McCartney" }],
-                [2, { name: "George Harrison" }],
-            ]),
-        ),
+    assertEquals(mapValues(new Map()), []);
+    assertEquals(
+        mapValues(new Map([[1, { name: "Paul McCartney" }], [2, { name: "George Harrison" }]])),
         [{ name: "Paul McCartney" }, { name: "George Harrison" }],
     );
 });
 
 it("mapMapEntries", () => {
-    assert.deepStrictEqual(
+    assertEquals(
         mapMapEntries(
             new Map<string | number, string | number | boolean>([
                 ["a", 1],
@@ -109,7 +88,7 @@ it("mapMapEntries", () => {
             [4, "nada"],
         ]),
     );
-    assert.deepStrictEqual(
+    assertEquals(
         mapMapEntries(
             new Map<string | number, string | number | boolean>([
                 ["a", 1],
@@ -126,7 +105,7 @@ it("mapMapEntries", () => {
             ["key_4", "value_nada"],
         ]),
     );
-    assert.deepStrictEqual(
+    assertEquals(
         mapMapEntries(
             new Map<string | number, string | number | boolean>([
                 ["a", 1],
@@ -141,7 +120,7 @@ it("mapMapEntries", () => {
 });
 
 it("mapMapKeys", () => {
-    assert.deepStrictEqual(
+    assertEquals(
         mapMapKeys(
             new Map<string | number, string | number | boolean>([
                 ["a", 1],
@@ -158,7 +137,7 @@ it("mapMapKeys", () => {
             [4, "nada"],
         ]),
     );
-    assert.deepStrictEqual(
+    assertEquals(
         mapMapKeys(
             new Map<string | number, string | number | boolean>([
                 ["a", 1],
@@ -175,7 +154,7 @@ it("mapMapKeys", () => {
             ["v2_4_test", "nada"],
         ]),
     );
-    assert.deepStrictEqual(
+    assertEquals(
         mapMapKeys(
             new Map<string | number, string | number | boolean>([
                 ["a", 1],
@@ -190,7 +169,7 @@ it("mapMapKeys", () => {
 });
 
 it("mapMapValues", () => {
-    assert.deepStrictEqual(
+    assertEquals(
         mapMapValues(
             new Map<string | number, string | number | boolean>([
                 ["a", 1],
@@ -207,7 +186,7 @@ it("mapMapValues", () => {
             [4, "nada"],
         ]),
     );
-    assert.deepStrictEqual(
+    assertEquals(
         mapMapValues(
             new Map<string | number, string | number | boolean>([
                 ["a", 1],
@@ -224,7 +203,7 @@ it("mapMapValues", () => {
             [4, false],
         ]),
     );
-    assert.deepStrictEqual(
+    assertEquals(
         mapMapValues(
             new Map<string | number, string | number | boolean>([
                 ["a", 1],

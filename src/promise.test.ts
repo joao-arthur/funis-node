@@ -1,8 +1,10 @@
 import { assert, it } from "vitest";
 import { last, objectify, rejectTimeout, resolveTimeout, retry } from "./promise.js";
 
+const assertEquals = assert.deepStrictEqual;
+
 it("last", async () => {
-    assert.deepStrictEqual(
+    assertEquals(
         await last([
             resolveTimeout("Aristotle", 5),
             rejectTimeout("Aristotle", 5),
@@ -21,27 +23,24 @@ it("last", async () => {
             rejectTimeout("Aristotle", 20),
         ]);
     } catch (e) {
-        assert.deepStrictEqual(e, "Aristotle");
+        assertEquals(e, "Aristotle");
     }
 });
 
 it("objectify", async () => {
-    assert.deepStrictEqual(
+    assertEquals(
         await objectify(Promise.reject(undefined)),
         { value: undefined, error: undefined, type: "rejected" },
     );
-    assert.deepStrictEqual(
-        await objectify(Promise.reject("So vivid")),
-        { value: undefined, error: "So vivid", type: "rejected" },
-    );
-});
-
-it("objectify", async () => {
-    assert.deepStrictEqual(
+    assertEquals(
         await objectify(Promise.resolve("Symbolic acts")),
         { value: "Symbolic acts", error: undefined, type: "resolved" },
     );
-    assert.deepStrictEqual(
+    assertEquals(
+        await objectify(Promise.reject("So vivid")),
+        { value: undefined, error: "So vivid", type: "rejected" },
+    );
+    assertEquals(
         await objectify(Promise.resolve(undefined)),
         { value: undefined, error: undefined, type: "resolved" },
     );
@@ -51,25 +50,24 @@ it("rejectTimeout", async () => {
     try {
         await rejectTimeout("Hello, promise!", 50);
     } catch (e) {
-        assert.deepStrictEqual(e, "Hello, promise!");
+        assertEquals(e, "Hello, promise!");
     }
 });
 
 it("resolveTimeout", async () => {
-    assert.deepStrictEqual(
+    assertEquals(
         await resolveTimeout("Hello, promise!", 50),
         "Hello, promise!",
     );
 });
 
 it("retry", async () => {
-    assert.deepStrictEqual(await retry(() => Promise.reject("Donatello"), 0), undefined);
+    assertEquals(await retry(() => Promise.reject("Donatello"), 0), undefined);
 });
 
 it("retry", async () => {
     let i = 1;
-
-    assert.deepStrictEqual(
+    assertEquals(
         await retry(() => {
             i++;
             if (i === 5) {
@@ -84,8 +82,8 @@ it("retry", async () => {
 
 it("retry", async () => {
     try {
-        await retry(() => Promise.reject("Donatello!"), 5);
+        await retry(() => Promise.reject("Donatello"), 5);
     } catch (e) {
-        assert.deepStrictEqual(e, "Donatello!");
+        assertEquals(e, "Donatello");
     }
 });
