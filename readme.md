@@ -20,4 +20,4 @@ applications. It is a helper for the current standard JS.
 
 ## License
 
-[AGPLv3](LICENSE)
+[AGPLv3](license)
