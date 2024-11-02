@@ -1,3 +1,4 @@
+import type { PlainObject } from "./object.js";
 import { assert, it } from "vitest";
 import {
     objDisjoint,
@@ -10,7 +11,6 @@ import {
     objPick,
     objSerialize,
     objSerializesToSame,
-    PlainObject,
 } from "./object.js";
 
 const assertEquals = assert.deepStrictEqual;
